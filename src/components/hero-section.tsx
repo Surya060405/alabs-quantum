@@ -10,31 +10,31 @@ const techNodes = [
     title: "Mobile & Web Apps",
     description: "Cross-platform applications with modern UX/UI design",
     color: "neon-blue",
-    position: { x: 0, y: -120 }
+    position: { x: 0, y: -140 }
   },
   {
     id: 2,
     icon: Brain,
-    title: "AI/ML, NLP, GenAI",
+    title: "AI/ML, NLP/GenAI",
     description: "Advanced AI solutions and machine learning models",
     color: "neon-purple",
-    position: { x: 104, y: -60 }
+    position: { x: 121, y: -70 }
   },
   {
     id: 3,
     icon: Cloud,
-    title: "Cloud & Big Data",
+    title: "Cloud, Big Data Analytics",
     description: "Scalable cloud infrastructure and data analytics",
     color: "neon-green",
-    position: { x: 104, y: 60 }
+    position: { x: 121, y: 70 }
   },
   {
     id: 4,
     icon: Shield,
-    title: "Blockchain & DLT",
+    title: "Blockchain, DLT",
     description: "Distributed ledger technologies and smart contracts",
     color: "neon-blue",
-    position: { x: 0, y: 120 }
+    position: { x: 0, y: 140 }
   },
   {
     id: 5,
@@ -42,15 +42,15 @@ const techNodes = [
     title: "VLSI IC, EDA/CAD",
     description: "Integrated circuit design and electronic automation",
     color: "neon-purple",
-    position: { x: -104, y: 60 }
+    position: { x: -121, y: 70 }
   },
   {
     id: 6,
     icon: Wifi,
-    title: "IoT & Embedded",
+    title: "IoT, Embedded",
     description: "Internet of Things and embedded system solutions",
     color: "neon-green",
-    position: { x: -104, y: -60 }
+    position: { x: -121, y: -70 }
   }
 ];
 
@@ -125,24 +125,43 @@ export const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Side - Hexagonal Tech Diagram */}
+          {/* Right Side - Modern Hexagonal Hub */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
             className="flex-1 relative flex items-center justify-center"
           >
-            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-              {/* Center Node */}
+            <div className="relative w-96 h-96 lg:w-[480px] lg:h-[480px]">
+              {/* Central Hexagon */}
               <motion.div
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 glassmorphism rounded-full flex items-center justify-center border-2 border-neon-blue/30 glow-blue"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
               >
-                <span className="text-sm font-bold text-neon-blue">R&D</span>
+                <div className="w-24 h-24 lg:w-32 lg:h-32 relative">
+                  {/* Hexagon Shape */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/20 via-neon-purple/20 to-neon-green/20 backdrop-blur-md border border-neon-blue/30">
+                    <div className="w-full h-full" style={{
+                      clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)'
+                    }} />
+                  </div>
+                  
+                  {/* Central Content */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+                    <span className="text-xs lg:text-sm font-bold text-neon-blue tracking-wider">R&D</span>
+                    <span className="text-[8px] lg:text-xs text-neon-purple font-medium">Solutions</span>
+                    <span className="text-[8px] lg:text-xs text-neon-green font-medium">Tech-Biz</span>
+                  </div>
+                  
+                  {/* Glowing border */}
+                  <div className="absolute inset-0 glow-blue opacity-60" style={{
+                    clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)'
+                  }} />
+                </div>
               </motion.div>
 
-              {/* Tech Nodes */}
+              {/* Surrounding Hexagonal Nodes */}
               {techNodes.map((node, index) => {
                 const Icon = node.icon;
                 return (
@@ -156,44 +175,83 @@ export const HeroSection = () => {
                     }}
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.6, delay: 1.2 + index * 0.15 }}
+                    whileHover={{ scale: 1.1, y: -5 }}
                     onMouseEnter={() => setHoveredNode(node.id)}
                     onMouseLeave={() => setHoveredNode(null)}
                   >
-                    <motion.div
-                      className="relative w-16 h-16 glassmorphism rounded-full flex items-center justify-center border-2 border-neon-blue/30 cursor-pointer animate-float glow-blue"
-                      style={{ animationDelay: `${index * 0.5}s` }}
-                    >
-                      <Icon className="h-6 w-6 text-neon-blue" />
+                    <div className="relative w-18 h-18 lg:w-20 lg:h-20">
+                      {/* Hexagon Shape */}
+                      <div className={`absolute inset-0 bg-gradient-to-br from-${node.color}/10 via-background/80 to-background/60 backdrop-blur-sm border border-${node.color}/40 cursor-pointer`}>
+                        <div className="w-full h-full" style={{
+                          clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)'
+                        }} />
+                      </div>
                       
-                      {/* Connection Line to Center */}
-                      <div 
-                        className={`absolute w-px bg-gradient-to-r from-${node.color}/20 to-transparent`}
+                      {/* Icon */}
+                      <div className="absolute inset-0 flex items-center justify-center z-10">
+                        <Icon className={`h-6 w-6 lg:h-8 lg:w-8 text-${node.color}`} />
+                      </div>
+                      
+                      {/* Glowing edge effect */}
+                      <motion.div 
+                        className={`absolute inset-0 glow-${node.color.replace('-', '-neon-')} opacity-0 group-hover:opacity-60`}
                         style={{
-                          height: Math.sqrt(node.position.x ** 2 + node.position.y ** 2),
-                          transform: `rotate(${Math.atan2(-node.position.y, -node.position.x)}rad)`,
-                          transformOrigin: '0 0',
+                          clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)'
+                        }}
+                        animate={{
+                          opacity: hoveredNode === node.id ? 0.8 : 0.3
+                        }}
+                        transition={{ duration: 0.3 }}
+                      />
+
+                      {/* Connection Line */}
+                      <div 
+                        className={`absolute w-px h-20 lg:h-24 bg-gradient-to-b from-${node.color}/30 via-${node.color}/10 to-transparent`}
+                        style={{
+                          transformOrigin: 'center bottom',
+                          transform: `rotate(${Math.atan2(-node.position.y, -node.position.x) * 180 / Math.PI + 90}deg)`,
                           left: '50%',
-                          top: '50%'
+                          bottom: '50%'
                         }}
                       />
 
-                      {/* Tooltip */}
+                      {/* Enhanced Tooltip */}
                       {hoveredNode === node.id && (
                         <motion.div
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          className="absolute top-20 left-1/2 transform -translate-x-1/2 glassmorphism p-3 rounded-lg w-48 z-20"
+                          initial={{ opacity: 0, scale: 0.8, y: 10 }}
+                          animate={{ opacity: 1, scale: 1, y: 0 }}
+                          className="absolute top-24 left-1/2 transform -translate-x-1/2 z-20"
                         >
-                          <h4 className="font-semibold text-sm text-foreground mb-1">{node.title}</h4>
-                          <p className="text-xs text-muted-foreground">{node.description}</p>
+                          <div className="glassmorphism p-4 rounded-xl w-52 border border-neon-blue/20 glow-subtle">
+                            <h4 className={`font-bold text-sm text-${node.color} mb-2`}>{node.title}</h4>
+                            <p className="text-xs text-muted-foreground leading-relaxed">{node.description}</p>
+                          </div>
                         </motion.div>
                       )}
-                    </motion.div>
+                    </div>
                   </motion.div>
                 );
               })}
+
+              {/* Animated light trails */}
+              <motion.div
+                className="absolute inset-0"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+              >
+                {Array.from({ length: 3 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="absolute w-1 h-1 bg-neon-blue/40 rounded-full"
+                    style={{
+                      left: `${50 + 30 * Math.cos((i * 120) * Math.PI / 180)}%`,
+                      top: `${50 + 30 * Math.sin((i * 120) * Math.PI / 180)}%`,
+                      filter: 'blur(2px)'
+                    }}
+                  />
+                ))}
+              </motion.div>
             </div>
           </motion.div>
         </div>

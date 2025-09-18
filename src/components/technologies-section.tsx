@@ -14,45 +14,66 @@ import {
 const technologies = [
   {
     icon: Smartphone,
-    title: "Mobile & Web Development",
-    description: "Cross-platform apps with React Native, Flutter, and modern web frameworks",
+    title: "Full Stack Web & Mobile",
+    description: "Complete R&D of native and hybrid applications with UI/UX/CX, DevOps, API, Backend and Analytics",
     color: "neon-blue",
-    features: ["React Native", "Flutter", "Progressive Web Apps", "Responsive Design"]
+    features: ["React Native", "Flutter", "DevOps", "API Development", "Backend Systems", "Analytics"]
   },
   {
     icon: Brain,
-    title: "AI/ML & Natural Language Processing",
-    description: "Advanced machine learning models, NLP solutions, and generative AI applications",
+    title: "Data Science & Analytics",
+    description: "AI, ML/DL, Computer Vision, AR/VR, NLP, Conv. AI powered smart & interactive solutions",
     color: "neon-purple",
-    features: ["Deep Learning", "Computer Vision", "NLP", "Generative AI"]
+    features: ["Machine Learning", "Computer Vision", "AR/VR", "NLP", "Conversational AI", "Deep Learning"]
   },
   {
-    icon: Cloud,
-    title: "Cloud & Big Data Analytics",
-    description: "Scalable cloud infrastructure and real-time data processing solutions",
+    icon: Database,
+    title: "Big Data Analytics",
+    description: "Apache/Hadoop and Modern systems, Data lakes, ETL, NoSQL, Containers, Multi-tenant systems, Search",
     color: "neon-green",
-    features: ["AWS/Azure/GCP", "Kubernetes", "Big Data", "Real-time Analytics"]
-  },
-  {
-    icon: Shield,
-    title: "Blockchain & Distributed Ledger",
-    description: "Smart contracts, DeFi solutions, and distributed application development",
-    color: "neon-blue",
-    features: ["Smart Contracts", "DeFi", "Web3", "Cryptocurrency"]
-  },
-  {
-    icon: Cpu,
-    title: "VLSI IC Design & EDA/CAD",
-    description: "Integrated circuit design, verification, and electronic design automation",
-    color: "neon-purple",
-    features: ["IC Design", "FPGA", "Verification", "EDA Tools"]
+    features: ["Apache/Hadoop", "Data Lakes", "ETL", "NoSQL", "Containers", "Multi-tenant Systems"]
   },
   {
     icon: Wifi,
     title: "IoT & Embedded Systems",
-    description: "Connected devices, sensor networks, and edge computing solutions",
+    description: "Embedded systems, Sensors, Actuators, Firmware, FPGA, IIOT, Board level design, Connection protocols",
+    color: "neon-blue",
+    features: ["Embedded Systems", "Sensors", "Actuators", "Firmware", "FPGA", "IIOT"]
+  },
+  {
+    icon: Cpu,
+    title: "Digital & Analog VLSI IC Design",
+    description: "ASIC/CPU/SOC Arch, RTL & Verification, Custom & Memory, RF, Synthesis & PD, Timing & Power",
+    color: "neon-purple",
+    features: ["ASIC/CPU/SOC", "RTL & Verification", "Custom & Memory", "RF Design", "Synthesis & PD", "Timing & Power"]
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Computing",
+    description: "Public and private cloud platforms, CAAS, PAAS, SAAS, Serverless, Streaming analytics",
     color: "neon-green",
-    features: ["Sensor Networks", "Edge Computing", "Embedded C/C++", "Real-time OS"]
+    features: ["Public/Private Cloud", "CAAS", "PAAS", "SAAS", "Serverless", "Streaming Analytics"]
+  },
+  {
+    icon: Code,
+    title: "EDA SW & CAD Flows",
+    description: "Front & Back end EDA tools, Math/Stat Optimization, CAD for different design phases & process corners",
+    color: "neon-blue",
+    features: ["EDA Tools", "Math/Stat Optimization", "CAD Flows", "Design Phases", "Process Corners", "Verification"]
+  },
+  {
+    icon: Shield,
+    title: "Blockchain & Security",
+    description: "Smart contracts, Decentralisation, DLT, Arbitrage, Tamper-proof supply chain, Logistics, Data security",
+    color: "neon-purple",
+    features: ["Smart Contracts", "DLT", "Arbitrage", "Supply Chain", "Logistics", "Data Security"]
+  },
+  {
+    icon: Zap,
+    title: "Bioinformatics & Life Sciences",
+    description: "Genomics, Protein-protein interactions, wearables, drug discovery, personalization, digital pharmacy",
+    color: "neon-green",
+    features: ["Genomics", "Protein Interactions", "Wearables", "Drug Discovery", "Personalization", "Digital Pharmacy"]
   }
 ];
 
