@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
+import logo from "@/assets/logo.png";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,9 +41,9 @@ export const Navigation = () => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="text-2xl font-bold text-gradient-blue"
+            className="flex items-center"
           >
-            Adyakshar Labs
+            <img src={logo} alt="Adyakshar Labs" className="h-10" />
           </motion.div>
 
           {/* Desktop Navigation */}
