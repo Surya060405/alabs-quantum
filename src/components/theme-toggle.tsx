@@ -3,19 +3,32 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 export const ThemeToggle = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState<'light' | 'dark'>("dark");
 
+  // Initialize from localStorage or system preference; apply without flash
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "dark";
-    setTheme(savedTheme);
-    document.documentElement.className = savedTheme;
+    try {
+      const stored = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const initial = stored ? (stored === "dark" ? "dark" : "light") : (prefersDark ? "dark" : "light");
+      setTheme(initial);
+      document.documentElement.classList.toggle("dark", initial === "dark");
+    } catch {
+      document.documentElement.classList.add("dark");
+      setTheme("dark");
+    }
   }, []);
 
+  // Persist and apply when theme changes
+  useEffect(() => {
+    try {
+      localStorage.setItem("theme", theme);
+    } catch {}
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, [theme]);
+
   const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.className = newTheme;
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   return (
