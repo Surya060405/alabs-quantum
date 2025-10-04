@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "./theme-toggle";
 import logo from "@/assets/logo.png";
 
 export const Navigation = () => {
@@ -59,15 +58,13 @@ export const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-blue transition-all duration-300 group-hover:w-full" />
               </motion.a>
             ))}
-            <ThemeToggle />
             <Button className="bg-primary hover:bg-primary/80 text-primary-foreground glow-neon-blue">
               Get Started
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
-            <ThemeToggle />
+          <div className="md:hidden">
             <Button
               variant="ghost"
               size="sm"

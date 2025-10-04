@@ -10,19 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <meta name="author" content="Lovable" />
 
-    <script>
-      (function() {
-        try {
-          const stored = localStorage.getItem('theme');
-          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-          const isDark = stored ? stored === 'dark' : prefersDark;
-          document.documentElement.classList.toggle('dark', isDark);
-        } catch (_) {
-          document.documentElement.classList.add('dark');
-        }
-      })();
-    </script>
-
     <meta property="og:title" content="Adyakshar Labs - R&D, Solutions, Tech-Biz Innovation" />
     <meta property="og:description" content="Turning Cutting-Edge Research into Real-World Innovation. Global R&D lab specializing in AI/ML, Blockchain, IoT, VLSI, and Web Technologies." />
     <meta property="og:type" content="website" />
