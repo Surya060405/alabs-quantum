@@ -142,18 +142,7 @@ export const HeroSection = () => {
           >
             <div className="relative w-[420px] h-[420px] md:w-[520px] md:h-[520px] lg:w-[600px] lg:h-[600px]">
               {/* Animated Moving Hexagon - R&D Solutions, Tech-Biz */}
-              <motion.div
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
-                animate={{
-                  x: [0, 60, 60, 0, -60, -60, 0],
-                  y: [0, -35, 35, 70, 35, -35, 0],
-                }}
-                transition={{
-                  duration: 18,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
                 <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 relative">
                   {/* Hexagon Shape */}
                   <div className="absolute inset-0 bg-gradient-to-br from-neon-purple/30 via-neon-blue/30 to-neon-green/30 backdrop-blur-md border-2 border-neon-purple/50">
@@ -173,7 +162,7 @@ export const HeroSection = () => {
                     clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)'
                   }} />
                 </div>
-              </motion.div>
+              </div>
 
               {/* Surrounding Hexagonal Nodes */}
               {techNodes.map((node, index) => {
