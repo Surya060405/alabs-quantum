@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Smartphone, Brain, Cloud, Shield, Cpu, Wifi } from "lucide-react";
+import { Smartphone, Brain, Cloud, Shield, Cpu, Wifi, Atom } from "lucide-react";
 import { useState } from "react";
 import heroBackground from "@/assets/hero-background.jpg";
 
@@ -136,13 +136,14 @@ export const HeroSection = () => {
             className="flex-1 relative flex items-center justify-center"
           >
             <div className="relative w-96 h-96 lg:w-[480px] lg:h-[480px]">
-              {/* Central Hexagon */}
+              {/* Central Hexagon - Quantum Computing */}
               <motion.div
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                animate={{ rotate: [0, 360] }}
-                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.8 }}
               >
-                <div className="w-24 h-24 lg:w-32 lg:h-32 relative">
+                <div className="w-32 h-32 lg:w-40 lg:h-40 relative">
                   {/* Hexagon Shape */}
                   <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/20 via-neon-purple/20 to-neon-green/20 backdrop-blur-md border border-neon-blue/30">
                     <div className="w-full h-full" style={{
@@ -152,9 +153,9 @@ export const HeroSection = () => {
                   
                   {/* Central Content */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-                    <span className="text-xs lg:text-sm font-bold text-neon-blue tracking-wider">R&D</span>
-                    <span className="text-[8px] lg:text-xs text-neon-purple font-medium">Solutions</span>
-                    <span className="text-[8px] lg:text-xs text-neon-green font-medium">Tech-Biz</span>
+                    <Atom className="h-6 w-6 lg:h-8 lg:w-8 text-white mb-1" />
+                    <span className="text-xs lg:text-sm font-bold text-primary tracking-wider">Quantum</span>
+                    <span className="text-xs lg:text-sm font-bold text-neon-green tracking-wider">Computing</span>
                   </div>
                   
                   {/* Glowing border */}
