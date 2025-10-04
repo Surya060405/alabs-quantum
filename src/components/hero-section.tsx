@@ -112,7 +112,7 @@ export const HeroSection = () => {
               <span className="text-slate-50">Labs</span>
             </motion.h1>
             
-            <motion.p className="text-xl lg:text-2xl text-muted-foreground mb-8 max-w-2xl" initial={{
+            <motion.p className="text-xl lg:text-2xl text-slate-300 mb-8 max-w-2xl" initial={{
             opacity: 0,
             y: 20
           }} animate={{
@@ -249,7 +249,7 @@ export const HeroSection = () => {
                   }} className="absolute top-24 left-1/2 transform -translate-x-1/2 z-20">
                           <div className="glassmorphism p-4 rounded-xl w-52 border border-neon-blue/20 glow-subtle">
                             <h4 className={`font-bold text-sm text-${node.color} mb-2`}>{node.title}</h4>
-                            <p className="text-xs text-muted-foreground leading-relaxed">{node.description}</p>
+                            <p className="text-xs text-slate-400 leading-relaxed">{node.description}</p>
                           </div>
                         </motion.div>}
                     </div>
