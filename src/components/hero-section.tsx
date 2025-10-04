@@ -10,7 +10,7 @@ const techNodes = [
     title: "Mobile & Web Apps",
     description: "Cross-platform applications with modern UX/UI design",
     color: "neon-blue",
-    position: { x: 0, y: -140 }
+    position: { x: 0, y: -175 }
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const techNodes = [
     title: "AI/ML, NLP/GenAI",
     description: "Advanced AI solutions and machine learning models",
     color: "neon-purple",
-    position: { x: 121, y: -70 }
+    position: { x: 151, y: -87 }
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const techNodes = [
     title: "Cloud, Big Data Analytics",
     description: "Scalable cloud infrastructure and data analytics",
     color: "neon-green",
-    position: { x: 121, y: 70 }
+    position: { x: 151, y: 87 }
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const techNodes = [
     title: "Blockchain, DLT",
     description: "Distributed ledger technologies and smart contracts",
     color: "neon-blue",
-    position: { x: 0, y: 140 }
+    position: { x: 0, y: 175 }
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const techNodes = [
     title: "VLSI IC, EDA/CAD",
     description: "Integrated circuit design and electronic automation",
     color: "neon-purple",
-    position: { x: -121, y: 70 }
+    position: { x: -151, y: 87 }
   },
   {
     id: 6,
@@ -50,7 +50,7 @@ const techNodes = [
     title: "IoT, Embedded",
     description: "Internet of Things and embedded system solutions",
     color: "neon-green",
-    position: { x: -121, y: -70 }
+    position: { x: -151, y: -87 }
   }
 ];
 
@@ -135,7 +135,7 @@ export const HeroSection = () => {
             transition={{ duration: 1, delay: 0.8 }}
             className="flex-1 relative flex items-center justify-center"
           >
-            <div className="relative w-96 h-96 lg:w-[480px] lg:h-[480px]">
+            <div className="relative w-[420px] h-[420px] md:w-[520px] md:h-[520px] lg:w-[600px] lg:h-[600px]">
               {/* Central Hexagon - Quantum Computing */}
               <motion.div
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
@@ -144,7 +144,7 @@ export const HeroSection = () => {
                 transition={{ duration: 1, delay: 0.8 }}
                 style={{ rotate: 0 }}
               >
-                <div className="w-26 h-26 lg:w-32 lg:h-32 relative">
+                <div className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 relative">
                   {/* Hexagon Shape */}
                   <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/20 via-neon-purple/20 to-neon-green/20 backdrop-blur-md border border-neon-blue/30">
                     <div className="w-full h-full" style={{
@@ -154,9 +154,9 @@ export const HeroSection = () => {
                   
                   {/* Central Content */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-                    <Atom className="h-6 w-6 lg:h-8 lg:w-8 text-white mb-1" />
-                    <span className="text-xs lg:text-sm font-bold text-primary tracking-wider">Quantum</span>
-                    <span className="text-xs lg:text-sm font-bold text-neon-green tracking-wider">Computing</span>
+                    <Atom className="h-7 w-7 md:h-8 md:w-8 lg:h-10 lg:w-10 text-white mb-1" />
+                    <span className="text-xs md:text-sm lg:text-base font-bold text-primary tracking-wider">Quantum</span>
+                    <span className="text-xs md:text-sm lg:text-base font-bold text-neon-green tracking-wider">Computing</span>
                   </div>
                   
                   {/* Glowing border */}
@@ -185,7 +185,7 @@ export const HeroSection = () => {
                     onMouseEnter={() => setHoveredNode(node.id)}
                     onMouseLeave={() => setHoveredNode(null)}
                   >
-                    <div className="relative w-18 h-18 lg:w-20 lg:h-20">
+                    <div className="relative w-20 h-20 md:w-22 md:h-22 lg:w-24 lg:h-24">
                       {/* Hexagon Shape */}
                       <div className={`absolute inset-0 bg-gradient-to-br from-${node.color}/10 via-background/80 to-background/60 backdrop-blur-sm border border-${node.color}/40 cursor-pointer`}>
                         <div className="w-full h-full" style={{
@@ -195,7 +195,7 @@ export const HeroSection = () => {
                       
                       {/* Icon */}
                       <div className="absolute inset-0 flex items-center justify-center z-10">
-                        <Icon className={`h-6 w-6 lg:h-8 lg:w-8 text-${node.color}`} />
+                        <Icon className={`h-6 w-6 md:h-7 md:w-7 lg:h-8 lg:w-8 text-${node.color}`} />
                       </div>
                       
                       {/* Glowing edge effect */}
@@ -212,7 +212,7 @@ export const HeroSection = () => {
 
                       {/* Connection Line */}
                       <div 
-                        className={`absolute w-px h-20 lg:h-24 bg-gradient-to-b from-${node.color}/30 via-${node.color}/10 to-transparent`}
+                        className={`absolute w-px h-24 md:h-28 lg:h-32 bg-gradient-to-b from-${node.color}/30 via-${node.color}/10 to-transparent`}
                         style={{
                           transformOrigin: 'center bottom',
                           transform: `rotate(${Math.atan2(-node.position.y, -node.position.x) * 180 / Math.PI + 90}deg)`,
