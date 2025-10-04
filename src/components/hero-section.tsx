@@ -140,10 +140,11 @@ export const HeroSection = () => {
               <motion.div
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.8 }}
+                style={{ rotate: 0 }}
               >
-                <div className="w-32 h-32 lg:w-40 lg:h-40 relative">
+                <div className="w-26 h-26 lg:w-32 lg:h-32 relative">
                   {/* Hexagon Shape */}
                   <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/20 via-neon-purple/20 to-neon-green/20 backdrop-blur-md border border-neon-blue/30">
                     <div className="w-full h-full" style={{
