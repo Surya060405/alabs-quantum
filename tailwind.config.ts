@@ -42,6 +42,14 @@ export default {
         "neon-blue": "hsl(var(--neon-blue))",
         "neon-purple": "hsl(var(--neon-purple))",
         "neon-green": "hsl(var(--neon-green))",
+        quantaforge: {
+          primary: "hsl(var(--quantaforge-primary))",
+          secondary: "hsl(var(--quantaforge-secondary))",
+          accent: "hsl(var(--quantaforge-accent))",
+          success: "hsl(var(--quantaforge-success))",
+          dark: "hsl(var(--quantaforge-dark))",
+          light: "hsl(var(--quantaforge-light))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

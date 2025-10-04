@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Smartphone, Brain, Cloud, Shield, Cpu, Wifi, Atom } from "lucide-react";
+import { Smartphone, Brain, Cloud, Shield, Cpu, Wifi, Atom, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const techNodes = [

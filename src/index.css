@@ -32,6 +32,14 @@
     --neon-purple: 270 60% 55%;
     --neon-green: 145 85% 45%;
     
+    /* QuantaForge colors */
+    --quantaforge-primary: 229 84% 11%;
+    --quantaforge-secondary: 188 100% 50%;
+    --quantaforge-accent: 271 65% 47%;
+    --quantaforge-success: 158 100% 51%;
+    --quantaforge-dark: 229 100% 3%;
+    --quantaforge-light: 200 23% 94%;
+    
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
@@ -84,6 +92,14 @@
     --neon-blue: 25 100% 55%;
     --neon-purple: 270 75% 70%;
     --neon-green: 145 100% 50%;
+
+    /* QuantaForge colors - dark mode */
+    --quantaforge-primary: 229 84% 11%;
+    --quantaforge-secondary: 188 100% 50%;
+    --quantaforge-accent: 271 65% 47%;
+    --quantaforge-success: 158 100% 51%;
+    --quantaforge-dark: 229 100% 3%;
+    --quantaforge-light: 200 23% 94%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -159,6 +175,25 @@
 
   .bg-gradient-radial {
     background: radial-gradient(circle at center, hsl(var(--neon-blue) / 0.1), transparent 70%);
+  }
+
+  /* QuantaForge specific utilities */
+  .quantaforge-glow {
+    box-shadow: 0 0 20px hsl(var(--quantaforge-secondary) / 0.3);
+  }
+
+  .quantaforge-text-gradient {
+    background: linear-gradient(135deg, hsl(var(--quantaforge-secondary)), hsl(var(--quantaforge-accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .quantum-grid {
+    background-image: 
+      linear-gradient(hsl(var(--quantaforge-secondary) / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--quantaforge-secondary) / 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
   }
 }
 
