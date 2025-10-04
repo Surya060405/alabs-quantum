@@ -124,8 +124,8 @@ export const HeroSection = () => {
                 Explore Our Work
               </button>
               <Link to="/quantaforge">
-                <button className="px-8 py-4 border border-border/20 text-foreground rounded-lg font-semibold hover:border-neon-purple/50 hover:text-neon-purple transition-all duration-300 flex items-center gap-2">
-                  <Atom className="h-5 w-5" />
+                <button className="px-8 py-4 bg-gradient-to-r from-neon-purple via-neon-blue to-neon-green text-white rounded-lg font-semibold glow-purple hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-neon-purple/50">
+                  <Atom className="h-5 w-5 animate-pulse" />
                   Explore QuantaForge
                   <ArrowRight className="h-5 w-5" />
                 </button>
@@ -141,31 +141,35 @@ export const HeroSection = () => {
             className="flex-1 relative flex items-center justify-center"
           >
             <div className="relative w-[420px] h-[420px] md:w-[520px] md:h-[520px] lg:w-[600px] lg:h-[600px]">
-              {/* Central Hexagon - Quantum Computing */}
+              {/* Animated Moving Hexagon - R&D Solutions, Tech-Biz */}
               <motion.div
-                className="absolute top-1/2 left-1/2 transform "
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{ duration: 1, delay: 0.8 }}
-                style={{ rotate: 0 }}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
+                animate={{
+                  x: [0, ...techNodes.map(n => n.position.x), 0],
+                  y: [0, ...techNodes.map(n => n.position.y), 0],
+                }}
+                transition={{
+                  duration: 18,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
-                <div className="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 relative">
+                <div className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 relative">
                   {/* Hexagon Shape */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/20 via-neon-purple/20 to-neon-green/20 backdrop-blur-md border border-neon-blue/30">
+                  <div className="absolute inset-0 bg-gradient-to-br from-neon-purple/30 via-neon-blue/30 to-neon-green/30 backdrop-blur-md border-2 border-neon-purple/50">
                     <div className="w-full h-full" style={{
                       clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)'
                     }} />
                   </div>
                   
-                  {/* Central Content */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-                    <Atom className="h-7 w-7 md:h-8 md:w-8 lg:h-10 lg:w-10 text-white mb-1" />
-                    <span className="text-xs md:text-sm lg:text-base font-bold text-primary tracking-wider">Quantum</span>
-                    <span className="text-xs md:text-sm lg:text-base font-bold text-neon-green tracking-wider">Computing</span>
+                  {/* Content */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center z-10 px-2">
+                    <span className="text-xs md:text-sm font-bold text-neon-purple tracking-wide text-center">R&D Solutions</span>
+                    <span className="text-xs md:text-sm font-bold text-neon-green tracking-wide text-center">Tech-Biz</span>
                   </div>
                   
                   {/* Glowing border */}
-                  <div className="absolute inset-0 glow-blue opacity-60" style={{
+                  <div className="absolute inset-0 glow-purple opacity-70" style={{
                     clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)'
                   }} />
                 </div>
