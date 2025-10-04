@@ -59,6 +59,9 @@ export const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Dark background for light mode to match dark theme */}
+      <div className="absolute inset-0 bg-[hsl(220,25%,6%)] dark:bg-transparent" />
+      
       {/* Hero Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
