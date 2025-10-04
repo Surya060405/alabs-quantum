@@ -142,7 +142,7 @@ export const HeroSection = () => {
           >
             <div className="relative w-[420px] h-[420px] md:w-[520px] md:h-[520px] lg:w-[600px] lg:h-[600px]">
               {/* Animated Moving Hexagon - R&D Solutions, Tech-Biz */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+              <div className="absolute z-20" style={{ left: 'calc(50% + 60px)', top: 'calc(50% - 35px)', transform: 'translate(-50%, -50%)' }}>
                 <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 relative">
                   {/* Hexagon Shape */}
                   <div className="absolute inset-0 bg-gradient-to-br from-neon-purple/30 via-neon-blue/30 to-neon-green/30 backdrop-blur-md border-2 border-neon-purple/50">
