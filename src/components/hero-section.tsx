@@ -61,15 +61,12 @@ export const HeroSection = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Hero Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 dark:opacity-20"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{ backgroundImage: `url(${heroBackground})` }}
       />
       
-      {/* Light mode gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-background opacity-90 dark:opacity-0" />
-      
       {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-radial opacity-0 dark:opacity-50" />
+      <div className="absolute inset-0 bg-gradient-radial opacity-50" />
       <div className="absolute inset-0">
         {Array.from({ length: 50 }).map((_, i) => (
           <div

@@ -32,7 +32,7 @@ export const Navigation = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "glassmorphism border-b border-border/20"
+          ? "glassmorphism border-b border-border/20 bg-white/95 dark:bg-background/10"
           : "bg-transparent"
       }`}
     >
@@ -84,7 +84,7 @@ export const Navigation = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-4 glassmorphism rounded-lg p-4"
+            className="md:hidden mt-4 glassmorphism rounded-lg p-4 bg-white/95 dark:bg-background/10"
           >
             {navItems.map((item) => (
               <a
