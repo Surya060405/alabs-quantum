@@ -124,7 +124,7 @@ export const HeroSection = () => {
                 Explore Our Work
               </button>
               <Link to="/quantaforge">
-                <button className="px-8 py-4 bg-gradient-to-r from-neon-purple via-neon-blue to-neon-green text-white rounded-lg font-semibold glow-purple hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-neon-purple/50">
+                <button className="px-8 py-4 bg-gradient-to-r from-[hsl(229,84%,25%)] to-[hsl(229,84%,15%)] text-white rounded-lg font-semibold hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-[hsl(229,84%,25%)]/50 border border-[hsl(229,84%,35%)]/30">
                   <Atom className="h-5 w-5 animate-pulse" />
                   Explore QuantaForge
                   <ArrowRight className="h-5 w-5" />
@@ -145,8 +145,8 @@ export const HeroSection = () => {
               <motion.div
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20"
                 animate={{
-                  x: [0, ...techNodes.map(n => n.position.x), 0],
-                  y: [0, ...techNodes.map(n => n.position.y), 0],
+                  x: [0, 60, 60, 0, -60, -60, 0],
+                  y: [0, -35, 35, 70, 35, -35, 0],
                 }}
                 transition={{
                   duration: 18,
@@ -154,7 +154,7 @@ export const HeroSection = () => {
                   ease: "easeInOut",
                 }}
               >
-                <div className="w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 relative">
+                <div className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 relative">
                   {/* Hexagon Shape */}
                   <div className="absolute inset-0 bg-gradient-to-br from-neon-purple/30 via-neon-blue/30 to-neon-green/30 backdrop-blur-md border-2 border-neon-purple/50">
                     <div className="w-full h-full" style={{
