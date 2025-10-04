@@ -26,6 +26,7 @@ export const QuantaForgeFooter = () => {
       links: [
         { name: "About Us", href: "/quantaforge/about" },
         { name: "Technology", href: "/quantaforge/technology" },
+        { name: "Case Studies", href: "/quantaforge/case-studies" },
         { name: "Resources", href: "/quantaforge/resources" },
         { name: "Contact", href: "/quantaforge/contact" },
       ],

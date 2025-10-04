@@ -1,47 +1,58 @@
+import { useEffect } from "react";
 import { QuantaForgeNavigation } from "@/components/quantaforge/navigation";
 import { QuantaForgeFooter } from "@/components/quantaforge/footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Atom, Beaker, Layers, Cpu } from "lucide-react";
+import { ArrowRight, Atom, Beaker, BrainCircuit, Blend, Server, CheckCircle, Notebook, GitCommit, Database, BarChart, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet";
 
 const Simulation = () => {
-  const capabilities = [
-    {
-      icon: Atom,
-      title: "VQE/QAOA Solvers",
-      description: "Variational quantum eigensolvers for ground state energy calculations and optimization",
-    },
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const whatWeBuild = [
     {
       icon: Beaker,
-      title: "Molecular Simulation",
-      description: "Quantum chemistry workflows for drug discovery and materials research",
+      title: "Chemistry pipelines",
+      description: "Electronic structure (VQE, ADAPT-VQE), excited states, unitary coupled-cluster, problem mapping (Jordan-Wigner/Bravyi-Kitaev), ansätze libraries.",
     },
     {
-      icon: Layers,
-      title: "Hybrid Quantum-Classical",
-      description: "Seamless integration between quantum circuits and classical ML/HPC systems",
+      icon: Atom,
+      title: "Materials & catalysis",
+      description: "Lattice models, time evolution (Trotter/LCU), variational dynamics, error-aware approximations.",
     },
     {
-      icon: Cpu,
-      title: "Workflow Orchestration",
-      description: "End-to-end pipeline management from problem encoding to result analysis",
+      icon: BrainCircuit,
+      title: "Hybrid ML",
+      description: "Kernel methods, QAOA for optimization, quantum feature maps, classical-quantum loops with PyTorch/JAX bridges.",
+    },
+    {
+      icon: Blend,
+      title: "Experiment orchestration",
+      description: "Batch sweepers, parameter servers, active-learning loops, surrogate models.",
+    },
+    {
+      icon: Server,
+      title: "HPC integration",
+      description: "GPU simulators, tensor-network back-ends, CUDA-Quantum bridges, Slurm/K8s runtimes.",
     },
   ];
 
-  const sectors = [
-    {
-      name: "Pharma & Biotech",
-      applications: ["Protein folding simulation", "Drug-target binding affinity", "Molecular dynamics acceleration"],
-    },
-    {
-      name: "Materials Science",
-      applications: ["Battery material optimization", "Catalyst discovery", "Polymer property prediction"],
-    },
-  ];
+  const deliverables = [
+      { icon: Notebook, text: "Reproducible notebooks" },
+      { icon: GitCommit, text: "Workflow DAGs" },
+      { icon: Database, text: "Data packs" },
+      { icon: BarChart, text: "Benchmark baselines" },
+      { icon: GraduationCap, text: "Handoff training" },
+  ]
 
   return (
     <div className="min-h-screen bg-quantaforge-dark">
+      <Helmet>
+        <title>Quantum simulation for drug discovery and materials + Quantum-AI workflows</title>
+      </Helmet>
       <QuantaForgeNavigation />
       
       <main className="pt-20">
@@ -57,29 +68,22 @@ const Simulation = () => {
               <div className="inline-block px-4 py-1 rounded-full bg-quantaforge-success/20 text-quantaforge-success text-sm font-semibold mb-6">
                 Solution
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-quantaforge-light">
-                Quantum Simulation & AI
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-quantaforge-success">
+                Quantum Simulation and AI
               </h1>
-              <p className="text-2xl text-quantaforge-light/70 mb-8">
-                Accelerate discovery with quantum-enhanced simulation.
-              </p>
-              <p className="text-lg text-quantaforge-light/60 mb-8 max-w-3xl">
-                Classical computers struggle with molecular-scale simulations critical for drug discovery 
-                and materials design. Our quantum simulation workflows combine variational algorithms, 
-                hybrid quantum-classical approaches, and seamless HPC/ML integration to deliver 10× faster 
-                property calculations.
-              </p>
+              
               <Link to="/quantaforge/contact">
                 <Button className="bg-quantaforge-success text-quantaforge-dark hover:bg-quantaforge-success/90 shadow-lg shadow-quantaforge-success/30">
-                  Explore Simulation Workflows
+                  Explore sample molecules & benchmarks
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
+              <p className="text-lg text-quantaforge-light/70 mt-4">Faster insights in chemistry, materials, and design.</p>
             </motion.div>
           </div>
         </section>
 
-        {/* Capabilities */}
+        {/* What We Build */}
         <section className="py-24 bg-quantaforge-primary/50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -88,14 +92,11 @@ const Simulation = () => {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="text-4xl font-bold mb-4 text-quantaforge-light">Core Capabilities</h2>
-              <p className="text-lg text-quantaforge-light/60 max-w-2xl">
-                End-to-end quantum simulation infrastructure
-              </p>
+              <h2 className="text-4xl font-bold mb-4 text-quantaforge-light">What We Build</h2>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {capabilities.map((item, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {whatWeBuild.map((item, index) => (
                 <motion.div
                   key={item.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -104,63 +105,19 @@ const Simulation = () => {
                   transition={{ delay: index * 0.1 }}
                   className="p-6 rounded-xl border border-quantaforge-success/20 bg-quantaforge-dark/50 hover:border-quantaforge-success/50 transition-all duration-300"
                 >
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-quantaforge-success to-quantaforge-secondary flex items-center justify-center flex-shrink-0">
-                      <item.icon className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-2 text-quantaforge-light">{item.title}</h3>
-                      <p className="text-quantaforge-light/70">{item.description}</p>
-                    </div>
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-quantaforge-success to-quantaforge-accent flex items-center justify-center mb-4">
+                    <item.icon className="h-6 w-6 text-white" />
                   </div>
+                  <h3 className="text-xl font-bold mb-2 text-quantaforge-light">{item.title}</h3>
+                  <p className="text-quantaforge-light/70">{item.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Target Sectors */}
+        {/* Deliverables */}
         <section className="py-24 bg-quantaforge-dark">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-4 text-quantaforge-light">Target Sectors</h2>
-              <p className="text-lg text-quantaforge-light/60 max-w-2xl">
-                Industries where quantum simulation delivers immediate value
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {sectors.map((sector, index) => (
-                <motion.div
-                  key={sector.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="glassmorphism p-8 rounded-xl border border-quantaforge-success/20"
-                >
-                  <h3 className="text-2xl font-bold mb-6 text-quantaforge-success">{sector.name}</h3>
-                  <ul className="space-y-3">
-                    {sector.applications.map((app) => (
-                      <li key={app} className="flex items-start gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-quantaforge-success mt-2 flex-shrink-0" />
-                        <span className="text-quantaforge-light/80">{app}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Integration */}
-        <section className="py-24 bg-quantaforge-primary/50">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -168,38 +125,28 @@ const Simulation = () => {
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
             >
-              <h2 className="text-4xl font-bold mb-8 text-quantaforge-light">
-                HPC/ML Workflow Integration
-              </h2>
-              <div className="glassmorphism p-8 rounded-xl border border-quantaforge-success/20">
-                <p className="text-quantaforge-light/70 mb-6">
-                  Our quantum simulation platform integrates seamlessly with your existing infrastructure:
-                </p>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-quantaforge-light mb-3">Classical HPC</h4>
-                    <ul className="space-y-2 text-quantaforge-light/70">
-                      <li>• SLURM/PBS job scheduling</li>
-                      <li>• MPI parallelization</li>
-                      <li>• GPU acceleration</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-quantaforge-light mb-3">ML Frameworks</h4>
-                    <ul className="space-y-2 text-quantaforge-light/70">
-                      <li>• PyTorch/TensorFlow integration</li>
-                      <li>• Automated hyperparameter tuning</li>
-                      <li>• Result analysis pipelines</li>
-                    </ul>
-                  </div>
-                </div>
+              <h2 className="text-4xl font-bold mb-8 text-quantaforge-light">Deliverables</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                  {deliverables.map((item, index) => (
+                      <motion.div 
+                          key={index} 
+                          className="p-4 rounded-lg bg-quantaforge-primary/50 border border-quantaforge-success/20 flex items-center gap-4"
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.1 }}
+                      >
+                          <item.icon className="h-6 w-6 text-quantaforge-success flex-shrink-0" />
+                          <span className="text-lg text-quantaforge-light/80">{item.text}</span>
+                      </motion.div>
+                  ))}
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-24 bg-quantaforge-dark">
+        <section className="py-24 bg-quantaforge-primary/50">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -208,14 +155,14 @@ const Simulation = () => {
               className="max-w-3xl mx-auto text-center"
             >
               <h2 className="text-4xl font-bold mb-6 text-quantaforge-light">
-                Ready to accelerate your research?
+                Ready to accelerate your R&D?
               </h2>
               <p className="text-lg text-quantaforge-light/70 mb-8">
-                Explore how quantum simulation can transform your drug discovery or materials workflows
+                See how our quantum simulation workflows can give you a competitive edge.
               </p>
               <Link to="/quantaforge/contact">
                 <Button size="lg" className="bg-quantaforge-success text-quantaforge-dark hover:bg-quantaforge-success/90 shadow-lg shadow-quantaforge-success/30">
-                  Explore Simulation Workflows
+                  Explore sample molecules & benchmarks
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>

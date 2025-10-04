@@ -1,12 +1,20 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Menu, X, Atom } from "lucide-react";
+import { Menu, X, Atom, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+} from "@/components/ui/dropdown-menu";
 
 export const QuantaForgeNavigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,13 +24,32 @@ export const QuantaForgeNavigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
+    e.preventDefault();
+    if (location.pathname === "/quantaforge" || location.pathname === "/quantaforge/") {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.location.href = `/quantaforge#${sectionId}`;
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   const navItems = [
-    { name: "Solutions", href: "/quantaforge/solutions" },
     { name: "Industries", href: "/quantaforge/industries" },
-    { name: "Technology", href: "/quantaforge/technology" },
-    { name: "Resources", href: "/quantaforge/resources" },
+    { name: "Technology", href: "/quantaforge/technologies" },
+    { name: "Pricing", href: "#pricing-section" },
+    { name: "Resources", href: "#resources-section" },
     { name: "About", href: "/quantaforge/about" },
   ];
+  
+  const solutionItems = [
+      { name: "Quantum Compiler Studio", href: "/quantaforge/compiler"},
+      { name: "Quantum-Secure Tokenization", href: "/quantaforge/tokenization"},
+      { name: "Quantum Simulation & AI", href: "/quantaforge/simulation"},
+  ]
 
   return (
     <motion.nav
@@ -41,14 +68,42 @@ export const QuantaForgeNavigation = () => {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center text-sm font-medium text-quantaforge-light/80 hover:text-quantaforge-secondary transition-colors focus:outline-none">
+                Solutions <ChevronDown className="h-4 w-4 ml-1" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-quantaforge-dark border-quantaforge-light/10 text-quantaforge-light">
+                {solutionItems.map((item) => (
+                    <DropdownMenuItem key={item.name} asChild>
+                        <Link to={item.href}>{item.name}</Link>
+                    </DropdownMenuItem>
+                ))}
+                <DropdownMenuSeparator className="bg-quantaforge-light/10" />
+                <DropdownMenuItem asChild>
+                  <a href="#solutions-section" onClick={(e) => handleLinkClick(e, 'solutions-section')}>All Solutions</a>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-sm font-medium text-quantaforge-light/80 hover:text-quantaforge-secondary transition-colors"
-              >
-                {item.name}
-              </Link>
+              item.href.startsWith("#") ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={(e) => handleLinkClick(e, item.href.substring(1))}
+                  className="text-sm font-medium text-quantaforge-light/80 hover:text-quantaforge-secondary transition-colors"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-sm font-medium text-quantaforge-light/80 hover:text-quantaforge-secondary transition-colors"
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
             <Link to="/">
               <Button variant="outline" size="sm" className="border-quantaforge-secondary/50 text-quantaforge-secondary hover:bg-quantaforge-secondary/10">
@@ -77,15 +132,28 @@ export const QuantaForgeNavigation = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
           >
+            {/* Mobile menu needs update too */}
+            <a href="#solutions-section" className="block py-3 text-quantaforge-light/80 hover:text-quantaforge-secondary" onClick={(e) => handleLinkClick(e, 'solutions-section')}>Solutions</a>
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="block py-3 text-quantaforge-light/80 hover:text-quantaforge-secondary"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
+              item.href.startsWith("#") ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="block py-3 text-quantaforge-light/80 hover:text-quantaforge-secondary"
+                  onClick={(e) => handleLinkClick(e, item.href.substring(1))}
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="block py-3 text-quantaforge-light/80 hover:text-quantaforge-secondary"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
             <Link to="/">
               <Button variant="outline" className="w-full mt-3 border-quantaforge-secondary/50 text-quantaforge-secondary">

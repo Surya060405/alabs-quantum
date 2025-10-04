@@ -12,6 +12,7 @@ import Compiler from "./pages/quantaforge/Compiler";
 import Tokenization from "./pages/quantaforge/Tokenization";
 import Simulation from "./pages/quantaforge/Simulation";
 import Industries from "./pages/quantaforge/Industries";
+import Technologies from "./pages/quantaforge/Technologies";
 import Contact from "./pages/quantaforge/Contact";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/quantaforge/tokenization" element={<Tokenization />} />
           <Route path="/quantaforge/simulation" element={<Simulation />} />
           <Route path="/quantaforge/industries" element={<Industries />} />
+          <Route path="/quantaforge/technologies" element={<Technologies />} />
           <Route path="/quantaforge/contact" element={<Contact />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

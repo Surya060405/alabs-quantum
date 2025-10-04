@@ -1,42 +1,91 @@
+import { useEffect } from "react";
 import { QuantaForgeNavigation } from "@/components/quantaforge/navigation";
 import { QuantaForgeFooter } from "@/components/quantaforge/footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Cpu, GitBranch, Zap, Shield } from "lucide-react";
+import { ArrowRight, CheckCircle, Cpu, GitBranch, Zap, Shield, Atom, Clock, Rocket, Briefcase, FileText, BarChart, HardHat, Code, Sliders } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet";
 
 const Compiler = () => {
-  const deliverables = [
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const whatWeDeliver = [
     {
       icon: GitBranch,
       title: "Architecture & IR",
-      description: "Design of QIR/OpenQASM-compatible pipelines; custom passes and dialects",
+      description: "Design of QIR/OpenQASM-compatible pipelines; custom passes and dialects.",
     },
     {
       icon: Cpu,
       title: "Gate decomposition",
-      description: "Basis conversion optimized for native gate sets",
+      description: "Basis conversion optimized for native gate sets.",
     },
     {
-      icon: Zap,
-      title: "Routing & Scheduling",
-      description: "Topology-aware qubit mapping, SWAP minimization, time-optimal scheduling",
+      icon: Sliders,
+      title: "Qubit mapping & routing",
+      description: "Heuristics (e.g., SABRE/A*), noise-aware placement, SWAP minimization.",
+    },
+    {
+      icon: Clock,
+      title: "Scheduling",
+      description: "ASAP/ALAP scheduling, cross-talk avoidance, idle-time decoupling.",
     },
     {
       icon: Shield,
       title: "Error mitigation",
-      description: "ZNE, PEC, CDR strategies tuned to device noise profiles",
+      description: "Dynamical decoupling, randomized compiling, twirling, bias-aware transpilation.",
+    },
+    {
+      icon: Zap,
+      title: "Pulse-level optimization",
+      description: "Drive-shape synthesis, parametric gates, closed-loop calibration hooks.",
+    },
+    {
+      icon: Code,
+      title: "Hybrid runtime",
+      description: "Mid-circuit measurement/branching, classical feedback, parameter sweeping.",
+    },
+    {
+      icon: Atom,
+      title: "QEC-ready design",
+      description: "Logical op compilation, syndrome orchestration, decoder integration.",
     },
   ];
 
-  const benchmarks = [
-    { metric: "Circuit depth", before: "~800 gates", after: "~320 gates", improvement: "60% reduction" },
-    { metric: "Fidelity (VQE)", before: "0.65", after: "0.89", improvement: "37% increase" },
-    { metric: "Compile time", before: "12 min", after: "45 sec", improvement: "93% faster" },
+  const engagementModels = [
+    {
+      icon: Rocket,
+      title: "Compiler Sprint (4–6 weeks)",
+      description: "Target a single backend; deliver measurable depth/fidelity gains.",
+    },
+    {
+      icon: Briefcase,
+      title: "Multi-backend Portability (8–12 weeks)",
+      description: "IR + adapters for ≥3 devices; portability suite & CI.",
+    },
+    {
+      icon: HardHat,
+      title: "Full-stack Residency (retainer)",
+      description: "Ongoing passes, calibration hooks, and release engineering.",
+    },
+  ];
+
+  const deliverablesList = [
+    "Technical design doc",
+    "Pass library",
+    "Benchmarking report",
+    "CI pipelines",
+    "Integration SDK",
   ];
 
   return (
     <div className="min-h-screen bg-quantaforge-dark">
+      <Helmet>
+        <title>Hardware-aware quantum compiler services (routing, scheduling, error mitigation)</title>
+      </Helmet>
       <QuantaForgeNavigation />
       
       <main className="pt-20">
@@ -52,20 +101,18 @@ const Compiler = () => {
               <div className="inline-block px-4 py-1 rounded-full bg-quantaforge-secondary/20 text-quantaforge-secondary text-sm font-semibold mb-6">
                 Solution
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-quantaforge-light">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4 text-quantaforge-secondary">
                 Quantum Compiler Studio
               </h1>
-              <p className="text-2xl text-quantaforge-light/70 mb-8">
+              <p className="text-3xl md:text-4xl font-bold mb-6 text-quantaforge-light">
                 Make any quantum device useful, faster.
               </p>
-              <p className="text-lg text-quantaforge-light/60 mb-8 max-w-3xl">
-                Hardware heterogeneity, constrained connectivity, short coherence times, and noisy gates 
-                make raw circuits impractical. The right compiler stack can be the difference between a 
-                failed experiment and production-ready results.
+              <p className="text-2xl text-quantaforge-light/70 mb-8">
+                Hardware heterogeneity, constrained connectivity, short coherence times, and noisy gates make raw circuits impractical. The right compiler stack can be the difference between a failed experiment and production-ready results.
               </p>
               <Link to="/quantaforge/contact">
                 <Button className="bg-quantaforge-secondary text-quantaforge-dark hover:bg-quantaforge-secondary/90 quantaforge-glow">
-                  Request Architecture Review
+                  Request a sample report
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
@@ -83,13 +130,10 @@ const Compiler = () => {
               className="mb-16"
             >
               <h2 className="text-4xl font-bold mb-4 text-quantaforge-light">What We Deliver</h2>
-              <p className="text-lg text-quantaforge-light/60 max-w-2xl">
-                End-to-end compiler infrastructure tailored to your hardware
-              </p>
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {deliverables.map((item, index) => (
+              {whatWeDeliver.map((item, index) => (
                 <motion.div
                   key={item.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -113,115 +157,70 @@ const Compiler = () => {
           </div>
         </section>
 
-        {/* Tech Stack */}
+        {/* Engagement Models */}
         <section className="py-24 bg-quantaforge-dark">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
+              className="mb-16"
             >
-              <h2 className="text-4xl font-bold mb-8 text-quantaforge-light">Tech Stack Compatibility</h2>
-              <div className="glassmorphism p-8 rounded-xl border border-quantaforge-secondary/20">
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div>
-                    <h3 className="text-lg font-semibold mb-3 text-quantaforge-secondary">Quantum Frameworks</h3>
-                    <ul className="space-y-2 text-quantaforge-light/70">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-quantaforge-success" />
-                        Qiskit
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-quantaforge-success" />
-                        Cirq
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-quantaforge-success" />
-                        PennyLane
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-3 text-quantaforge-secondary">IR Standards</h3>
-                    <ul className="space-y-2 text-quantaforge-light/70">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-quantaforge-success" />
-                        OpenQASM 3.0
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-quantaforge-success" />
-                        QIR
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-quantaforge-success" />
-                        Custom dialects
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-3 text-quantaforge-secondary">Hardware Targets</h3>
-                    <ul className="space-y-2 text-quantaforge-light/70">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-quantaforge-success" />
-                        Superconducting
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-quantaforge-success" />
-                        Ion trap
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-quantaforge-success" />
-                        Neutral atom
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <h2 className="text-4xl font-bold mb-4 text-quantaforge-light">Engagement Models</h2>
             </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {engagementModels.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="p-6 rounded-xl border border-quantaforge-secondary/20 bg-quantaforge-primary/50 text-center"
+                >
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-quantaforge-secondary to-quantaforge-accent flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-quantaforge-light">{item.title}</h3>
+                  <p className="text-quantaforge-light/70">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Benchmarks */}
+        {/* Deliverables */}
         <section className="py-24 bg-quantaforge-primary/50">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
+              className="mb-16"
             >
-              <h2 className="text-4xl font-bold mb-8 text-quantaforge-light">Performance Benchmarks</h2>
-              <p className="text-lg text-quantaforge-light/60 mb-8">
-                Real improvements on a 27-qubit superconducting device (QAOA, 12-node MaxCut)
-              </p>
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-quantaforge-secondary/20">
-                      <th className="text-left py-4 px-4 text-quantaforge-light">Metric</th>
-                      <th className="text-left py-4 px-4 text-quantaforge-light">Before</th>
-                      <th className="text-left py-4 px-4 text-quantaforge-light">After</th>
-                      <th className="text-left py-4 px-4 text-quantaforge-light">Improvement</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {benchmarks.map((row) => (
-                      <tr key={row.metric} className="border-b border-quantaforge-secondary/10">
-                        <td className="py-4 px-4 text-quantaforge-light/80 font-medium">{row.metric}</td>
-                        <td className="py-4 px-4 text-quantaforge-light/60">{row.before}</td>
-                        <td className="py-4 px-4 text-quantaforge-light/60">{row.after}</td>
-                        <td className="py-4 px-4 text-quantaforge-success font-semibold">{row.improvement}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+              <h2 className="text-4xl font-bold mb-4 text-quantaforge-light">Deliverables</h2>
             </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {deliverablesList.map((item, index) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08 }}
+                  className="p-4 rounded-lg border border-quantaforge-secondary/20 bg-quantaforge-dark/50 flex items-center gap-3"
+                >
+                  <CheckCircle className="h-5 w-5 text-quantaforge-success flex-shrink-0" />
+                  <span className="text-lg text-quantaforge-light/80">{item}</span>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* CTA */}
+        {/* Call to Action */}
         <section className="py-24 bg-quantaforge-dark">
           <div className="container mx-auto px-4">
             <motion.div
@@ -231,17 +230,25 @@ const Compiler = () => {
               className="max-w-3xl mx-auto text-center"
             >
               <h2 className="text-4xl font-bold mb-6 text-quantaforge-light">
-                Ready to optimize your quantum circuits?
+                Ready to make your quantum device useful, faster?
               </h2>
               <p className="text-lg text-quantaforge-light/70 mb-8">
-                Let's discuss your hardware, workloads, and compiler requirements
+                Request a sample report | See benchmark methodology
               </p>
-              <Link to="/quantaforge/contact">
-                <Button size="lg" className="bg-quantaforge-secondary text-quantaforge-dark hover:bg-quantaforge-secondary/90 quantaforge-glow">
-                  Request Architecture Review
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link to="/quantaforge/contact">
+                  <Button size="lg" className="bg-quantaforge-secondary text-quantaforge-dark hover:bg-quantaforge-secondary/90 quantaforge-glow">
+                    Request a Sample Report
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link to="/quantaforge/benchmarks">
+                  <Button size="lg" variant="outline" className="border-quantaforge-secondary text-quantaforge-secondary hover:bg-quantaforge-secondary/10">
+                    See Benchmark Methodology
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+              </div>
             </motion.div>
           </div>
         </section>

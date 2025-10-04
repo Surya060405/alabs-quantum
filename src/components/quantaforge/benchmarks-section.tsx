@@ -4,21 +4,21 @@ import { TrendingUp, Zap, Shield } from "lucide-react";
 const benchmarks = [
   {
     icon: TrendingUp,
-    metric: "2-10×",
-    label: "Effective fidelity uplift",
-    description: "On NISQ workloads (benchmark-backed)",
+    metric: "1.5-5×",
+    label: "Effective fidelity",
+    description: "Uplift on NISQ workloads (benchmark-backed)",
   },
   {
     icon: Zap,
-    metric: "Weeks → Days",
-    label: "Port algorithms across devices",
-    description: "Via neutral IR",
+    metric: "Hours → Mins",
+    label: "Port algorithms",
+    description: "Across devices via neutral IR",
   },
   {
     icon: Shield,
-    metric: "Zero-trust",
-    label: "By default tokenization",
-    description: "And post-quantum rollouts",
+    metric: "PQC-ready",
+    label: "Tokenization",
+    description: "Zero-trust and post-quantum rollouts",
   },
 ];
 
@@ -50,18 +50,18 @@ export const BenchmarksSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="text-center p-8 rounded-xl border border-quantaforge-secondary/20 bg-quantaforge-primary/30 hover:border-quantaforge-secondary/50 transition-all duration-300"
+              className="text-center p-6 rounded-xl border border-quantaforge-secondary/20 bg-quantaforge-primary/30 hover:border-quantaforge-secondary/50 transition-all duration-300 flex flex-col items-center justify-center"
             >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-quantaforge-secondary to-quantaforge-accent flex items-center justify-center">
-                <benchmark.icon className="h-8 w-8 text-white" />
+              <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-gradient-to-br from-quantaforge-secondary to-quantaforge-accent flex items-center justify-center">
+                <benchmark.icon className="h-7 w-7 text-white" />
               </div>
-              <div className="text-5xl font-bold mb-2 quantaforge-text-gradient">
+              <div className="text-4xl font-bold mb-1 quantaforge-text-gradient">
                 {benchmark.metric}
               </div>
-              <div className="text-xl font-semibold mb-2 text-quantaforge-light">
+              <div className="text-lg font-semibold mb-2 text-quantaforge-light">
                 {benchmark.label}
               </div>
-              <p className="text-quantaforge-light/60">
+              <p className="text-quantaforge-light/60 text-sm">
                 {benchmark.description}
               </p>
             </motion.div>
