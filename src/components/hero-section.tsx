@@ -139,7 +139,7 @@ export const HeroSection = () => {
               <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold glow-blue hover:scale-105 transition-all duration-300">
                 Explore Our Work
               </button>
-              <button className="px-8 py-4 border border-border/20 text-foreground rounded-lg font-semibold hover:border-neon-purple/50 hover:text-neon-purple transition-all duration-300">
+              <button className="px-8 py-4 border border-border/20 rounded-lg font-semibold hover:border-neon-purple/50 hover:text-neon-purple transition-all duration-300 text-slate-50">
                 Learn More
               </button>
             </motion.div>
