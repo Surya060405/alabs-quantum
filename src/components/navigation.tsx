@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,18 @@ export const Navigation = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (location.pathname === "/" && href.startsWith("/#")) {
+      e.preventDefault();
+      const id = href.replace("/#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+        setIsMobileMenuOpen(false);
+      }
+    }
+  };
 
   const navItems = [
     { name: "Home", href: "/#home" },
@@ -51,7 +64,7 @@ export const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link key={item.name} to={item.href}>
+              <Link key={item.name} to={item.href} onClick={(e) => handleNavClick(e, item.href)}>
                 <motion.span
                   whileHover={{ y: -2 }}
                   className="text-foreground/80 hover:text-neon-blue transition-colors duration-300 relative group inline-block"
@@ -61,7 +74,7 @@ export const Navigation = () => {
                 </motion.span>
               </Link>
             ))}
-            <Link to="/#contact">
+            <Link to="/#contact" onClick={(e) => handleNavClick(e, "/#contact")}>
               <Button className="bg-primary hover:bg-primary/80 text-primary-foreground glow-neon-blue">
                 Get Started
               </Button>
@@ -93,12 +106,12 @@ export const Navigation = () => {
                 key={item.name}
                 to={item.href}
                 className="block py-2 text-foreground/80 hover:text-neon-blue transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, item.href)}
               >
                 {item.name}
               </Link>
             ))}
-            <Link to="/#contact" className="block mt-4">
+            <Link to="/#contact" className="block mt-4" onClick={(e) => handleNavClick(e, "/#contact")}>
               <Button className="w-full bg-primary hover:bg-primary/80 text-primary-foreground">
                 Get Started
               </Button>
