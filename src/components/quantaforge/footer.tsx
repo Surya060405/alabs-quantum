@@ -13,19 +13,10 @@ export const QuantaForgeFooter = () => {
       ],
     },
     {
-      title: "Industries",
-      links: [
-        { name: "Pharma & Biotech", href: "/quantaforge/industries#pharma" },
-        { name: "Financial Services", href: "/quantaforge/industries#finance" },
-        { name: "Semiconductor & Hardware", href: "/quantaforge/industries#semiconductor" },
-        { name: "Government & Labs", href: "/quantaforge/industries#government" },
-      ],
-    },
-    {
       title: "Company",
       links: [
         { name: "About Us", href: "/quantaforge/about" },
-        { name: "Technology", href: "/quantaforge/technology" },
+        { name: "Technology", href: "/quantaforge/technologies" },
         { name: "Case Studies", href: "/quantaforge/case-studies" },
         { name: "Resources", href: "/quantaforge/resources" },
         { name: "Contact", href: "/quantaforge/contact" },
@@ -36,9 +27,9 @@ export const QuantaForgeFooter = () => {
   return (
     <footer className="bg-quantaforge-dark border-t border-quantaforge-secondary/20">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="lg:col-span-2">
-            <Link to="/quantaforge" className="flex items-center gap-2 mb-4">
+            <Link to="/quantaforge" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-2 mb-4">
               <Atom className="h-8 w-8 text-quantaforge-secondary" />
               <span className="text-2xl font-bold quantaforge-text-gradient">Quantum Solutions</span>
             </Link>
@@ -46,7 +37,7 @@ export const QuantaForgeFooter = () => {
               Build. Secure. Accelerate. Quantum software for real hardware.
             </p>
             <p className="text-sm text-quantaforge-light/50 mb-4">
-              A specialized division of <Link to="/" className="text-quantaforge-secondary hover:underline">Adyakshar Labs</Link>
+              A specialized division of <Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-quantaforge-secondary hover:underline">Adyakshar Labs</Link>
             </p>
             <div className="flex gap-4">
               <motion.a
@@ -88,6 +79,7 @@ export const QuantaForgeFooter = () => {
                   <li key={link.name}>
                     <Link
                       to={link.href}
+                      onClick={() => window.scrollTo(0, 0)}
                       className="text-quantaforge-light/60 hover:text-quantaforge-secondary transition-colors text-sm"
                     >
                       {link.name}
@@ -104,10 +96,10 @@ export const QuantaForgeFooter = () => {
             © 2025 Quantum Solutions. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
-            <Link to="/quantaforge/privacy" className="text-quantaforge-light/60 hover:text-quantaforge-secondary">
+            <Link to="/quantaforge/privacy" onClick={() => window.scrollTo(0, 0)} className="text-quantaforge-light/60 hover:text-quantaforge-secondary">
               Privacy Policy
             </Link>
-            <Link to="/quantaforge/terms" className="text-quantaforge-light/60 hover:text-quantaforge-secondary">
+            <Link to="/quantaforge/terms" onClick={() => window.scrollTo(0, 0)} className="text-quantaforge-light/60 hover:text-quantaforge-secondary">
               Terms of Service
             </Link>
           </div>

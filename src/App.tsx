@@ -14,6 +14,9 @@ import Simulation from "./pages/quantaforge/Simulation";
 import Industries from "./pages/quantaforge/Industries";
 import Technologies from "./pages/quantaforge/Technologies";
 import Contact from "./pages/quantaforge/Contact";
+import About from "./pages/quantaforge/About";
+import CaseStudies from "./pages/quantaforge/CaseStudies";
+import Resources from "./pages/quantaforge/Resources";
 
 // Feature pages
 import MobileWebApps from "./pages/features/MobileWebApps";
@@ -42,6 +45,9 @@ const App = () => (
           <Route path="/quantaforge/industries" element={<Industries />} />
           <Route path="/quantaforge/technologies" element={<Technologies />} />
           <Route path="/quantaforge/contact" element={<Contact />} />
+          <Route path="/quantaforge/about" element={<About />} />
+          <Route path="/quantaforge/case-studies" element={<CaseStudies />} />
+          <Route path="/quantaforge/resources" element={<Resources />} />
           
           {/* Feature routes */}
           <Route path="/features/mobile-web-apps" element={<MobileWebApps />} />
