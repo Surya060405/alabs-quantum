@@ -132,7 +132,7 @@ export const HeroSection = () => {
               <Link to="/quantaforge">
                 <button className="px-8 py-4 bg-quantaforge-secondary text-white rounded-lg font-semibold hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg border border-[hsl(229,84%,35%)]/30">
                   <Atom className="h-5 w-5 animate-pulse" />
-                  Explore QuantaForge
+                  Explore Quantum Solutions
                   <ArrowRight className="h-5 w-5" />
                 </button>
               </Link>
