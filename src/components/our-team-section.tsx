@@ -1,17 +1,19 @@
 import { motion } from "framer-motion";
+import RajRayImage from "@/assets/RajRay.png";
+import DevRoyImage from "@/assets/DevRoy.png";
 
 const teamMembers = [
   {
     name: "Dr. Raj Ray",
     title: "Founder, CEO & CTO",
     description: "Dr. Raj Ray is an accomplished US-based high-tech executive with over 20 years of experience. He is an expert in leading advanced software/hardware R&D and innovation, managing engineering teams, and spearheading strategic tech-business initiatives. With senior leadership roles at tech giants like Intel and Motorola, and a prolific background in AI/ML, Blockchain, IoT, VLSI, and Web Technologies, he has built 7 ventures with 5 M&A's, and is a passionate advocate for digital innovation and transformation. He is also a trained vocalist, voice artist, and award-winning debater.",
-    image: "/src/assets/RajRay.png",
+    image: RajRayImage,
   },
   {
     name: "Dr. Dave Roy",
     title: "CSO & Co-Founder",
     description: "Dr. Dave Roy is an Associate Professor of Biology at Alcorn State University, USA, holding a BVSC & AH degree from CU, India, a doctoral degree in pathobiology from the University of Texas, and postdoctoral training at Mayo Clinic. His research focuses on metabolic alterations in gynecological cancers and preclinical drug studies. He actively publishes in peer-reviewed journals and is involved in national and international collaborative projects, currently funded by NSF EPSCoR and NIH-MS INBRE research grants. He is also a trained Sitarist and involved in music and media shows.",
-    image: "/src/assets/DevRoy.png",
+    image: DevRoyImage,
   },
 ];
 
