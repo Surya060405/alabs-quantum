@@ -11,7 +11,8 @@ const techNodes = [
     title: "Mobile & Web Apps",
     description: "Cross-platform applications with modern UX/UI design",
     color: "neon-blue",
-    position: { x: 0, y: -175 }
+    position: { x: 0, y: -175 },
+    link: "/features/mobile-web-apps"
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ const techNodes = [
     title: "AI/ML, NLP/GenAI",
     description: "Advanced AI solutions and machine learning models",
     color: "neon-purple",
-    position: { x: 151, y: -87 }
+    position: { x: 151, y: -87 },
+    link: "/features/ai-ml-nlp"
   },
   {
     id: 3,
@@ -27,7 +29,8 @@ const techNodes = [
     title: "Cloud, Big Data Analytics",
     description: "Scalable cloud infrastructure and data analytics",
     color: "neon-green",
-    position: { x: 151, y: 87 }
+    position: { x: 151, y: 87 },
+    link: "/features/cloud-big-data"
   },
   {
     id: 4,
@@ -35,7 +38,8 @@ const techNodes = [
     title: "Blockchain, DLT",
     description: "Distributed ledger technologies and smart contracts",
     color: "neon-blue",
-    position: { x: 0, y: 175 }
+    position: { x: 0, y: 175 },
+    link: "/features/blockchain-dlt"
   },
   {
     id: 5,
@@ -43,7 +47,8 @@ const techNodes = [
     title: "VLSI IC, EDA/CAD",
     description: "Integrated circuit design and electronic automation",
     color: "neon-purple",
-    position: { x: -151, y: 87 }
+    position: { x: -151, y: 87 },
+    link: "/features/vlsi-eda-cad"
   },
   {
     id: 6,
@@ -51,7 +56,8 @@ const techNodes = [
     title: "IoT, Embedded",
     description: "Internet of Things and embedded system solutions",
     color: "neon-green",
-    position: { x: -151, y: -87 }
+    position: { x: -151, y: -87 },
+    link: "/features/iot-embedded-robotics"
   }
 ];
 
@@ -179,22 +185,25 @@ export const HeroSection = () => {
               {techNodes.map((node, index) => {
                 const Icon = node.icon;
                 return (
-                  <motion.div
+                  <Link
                     key={node.id}
-                    className="absolute"
-                    style={{
-                      left: `calc(50% + ${node.position.x}px)`,
-                      top: `calc(50% + ${node.position.y}px)`,
-                      transform: 'translate(-50%, -50%)'
-                    }}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 1.2 + index * 0.15 }}
-                    whileHover={{ scale: 1.1, y: -5 }}
-                    onMouseEnter={() => setHoveredNode(node.id)}
-                    onMouseLeave={() => setHoveredNode(null)}
+                    to={node.link}
                   >
-                    <div className="relative w-20 h-20 md:w-22 md:h-22 lg:w-24 lg:h-24">
+                    <motion.div
+                      className="absolute"
+                      style={{
+                        left: `calc(50% + ${node.position.x}px)`,
+                        top: `calc(50% + ${node.position.y}px)`,
+                        transform: 'translate(-50%, -50%)'
+                      }}
+                      initial={{ opacity: 0, scale: 0 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.6, delay: 1.2 + index * 0.15 }}
+                      whileHover={{ scale: 1.1, y: -5 }}
+                      onMouseEnter={() => setHoveredNode(node.id)}
+                      onMouseLeave={() => setHoveredNode(null)}
+                    >
+                      <div className="relative w-20 h-20 md:w-22 md:h-22 lg:w-24 lg:h-24">
                       {/* Hexagon Shape */}
                       <div className={`absolute inset-0 bg-gradient-to-br from-${node.color}/10 via-background/80 to-background/60 backdrop-blur-sm border border-${node.color}/40 cursor-pointer`}>
                         <div className="w-full h-full" style={{
@@ -245,6 +254,7 @@ export const HeroSection = () => {
                       )}
                     </div>
                   </motion.div>
+                  </Link>
                 );
               })}
 

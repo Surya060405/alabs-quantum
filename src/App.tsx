@@ -15,6 +15,14 @@ import Industries from "./pages/quantaforge/Industries";
 import Technologies from "./pages/quantaforge/Technologies";
 import Contact from "./pages/quantaforge/Contact";
 
+// Feature pages
+import MobileWebApps from "./pages/features/MobileWebApps";
+import AiMlNlp from "./pages/features/AiMlNlp";
+import CloudBigData from "./pages/features/CloudBigData";
+import BlockchainDlt from "./pages/features/BlockchainDlt";
+import VlsiEdaCad from "./pages/features/VlsiEdaCad";
+import IotEmbeddedRobotics from "./pages/features/IotEmbeddedRobotics";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -34,6 +42,14 @@ const App = () => (
           <Route path="/quantaforge/industries" element={<Industries />} />
           <Route path="/quantaforge/technologies" element={<Technologies />} />
           <Route path="/quantaforge/contact" element={<Contact />} />
+          
+          {/* Feature routes */}
+          <Route path="/features/mobile-web-apps" element={<MobileWebApps />} />
+          <Route path="/features/ai-ml-nlp" element={<AiMlNlp />} />
+          <Route path="/features/cloud-big-data" element={<CloudBigData />} />
+          <Route path="/features/blockchain-dlt" element={<BlockchainDlt />} />
+          <Route path="/features/vlsi-eda-cad" element={<VlsiEdaCad />} />
+          <Route path="/features/iot-embedded-robotics" element={<IotEmbeddedRobotics />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
