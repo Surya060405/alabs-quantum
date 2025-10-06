@@ -12,7 +12,7 @@ const caseStudies = [
     architecture: "The architecture involved a custom compiler pass for noise-aware routing and a flexible IR that could be targeted to different neutral-atom backends.",
     results: "Achieved a 3.1x reduction in circuit depth, leading to higher-fidelity results. The system was made portable to a second hardware vendor in just 6 weeks.",
     nextSteps: "Further optimize the compiler for specific algorithms and explore more advanced error mitigation techniques.",
-    quote: "QuantaForge Labs was instrumental in helping us achieve production-grade performance and a key strategic goal of hardware portability.",
+    quote: "Quantum Solutions was instrumental in helping us achieve production-grade performance and a key strategic goal of hardware portability.",
   },
   {
     id: "pharma-randd",
@@ -23,7 +23,7 @@ const caseStudies = [
     architecture: "The solution featured a hybrid quantum-classical workflow, with the VQE algorithm running on a GPU-accelerated quantum simulator and classical optimization loops managed by a control server.",
     results: "The new pipeline resulted in a 30% reduction in compute costs and a significant speedup in simulation times, accelerating the drug discovery process.",
     nextSteps: "Integrate the pipeline with a larger-scale quantum device and explore more complex molecules.",
-    quote: "The hybrid quantum-classical pipeline developed by QuantaForge has given us a significant competitive advantage in our R&D efforts.",
+    quote: "The hybrid quantum-classical pipeline developed by Quantum Solutions has given us a significant competitive advantage in our R&D efforts.",
   },
   {
     id: "web3-custodian",
@@ -34,7 +34,7 @@ const caseStudies = [
     architecture: "The architecture used a combination of PQC algorithms and MPC protocols to secure private keys. Hybrid certificates were used to ensure a smooth transition and backward compatibility.",
     results: "The custodian now has a quantum-resistant wallet solution that meets stringent security and compliance requirements. The migration was completed with zero downtime, ensuring business continuity.",
     nextSteps: "Conduct ongoing security audits and explore the integration of other quantum security technologies like QKD.",
-    quote: "QuantaForge's expertise in PQC and MPC was invaluable in securing our platform for the future. The seamless migration was a huge success.",
+    quote: "Quantum Solutions's expertise in PQC and MPC was invaluable in securing our platform for the future. The seamless migration was a huge success.",
   },
 ];
 

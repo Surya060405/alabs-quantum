@@ -40,7 +40,7 @@ export const QuantaForgeFooter = () => {
           <div className="lg:col-span-2">
             <Link to="/quantaforge" className="flex items-center gap-2 mb-4">
               <Atom className="h-8 w-8 text-quantaforge-secondary" />
-              <span className="text-2xl font-bold quantaforge-text-gradient">QuantaForge Labs</span>
+              <span className="text-2xl font-bold quantaforge-text-gradient">Quantum Solutions</span>
             </Link>
             <p className="text-quantaforge-light/60 mb-6 max-w-sm">
               Build. Secure. Accelerate. Quantum software for real hardware.
@@ -101,7 +101,7 @@ export const QuantaForgeFooter = () => {
 
         <div className="border-t border-quantaforge-secondary/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-quantaforge-light/50 text-sm">
-            © 2025 QuantaForge Labs. All rights reserved.
+            © 2025 Quantum Solutions. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <Link to="/quantaforge/privacy" className="text-quantaforge-light/60 hover:text-quantaforge-secondary">
