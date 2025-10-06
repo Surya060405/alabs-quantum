@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 export const Footer = () => {
   return (
@@ -53,10 +54,10 @@ export const Footer = () => {
           >
             <h4 className="font-semibold text-foreground mb-4">Services</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#" className="hover:text-neon-blue transition-colors">AI/ML Development</a></li>
-              <li><a href="#" className="hover:text-neon-blue transition-colors">Blockchain Solutions</a></li>
-              <li><a href="#" className="hover:text-neon-blue transition-colors">IoT Systems</a></li>
-              <li><a href="#" className="hover:text-neon-blue transition-colors">VLSI Design</a></li>
+              <li><Link to="/#services" className="hover:text-neon-blue transition-colors">AI/ML Development</Link></li>
+              <li><Link to="/#services" className="hover:text-neon-blue transition-colors">Blockchain Solutions</Link></li>
+              <li><Link to="/#services" className="hover:text-neon-blue transition-colors">IoT Systems</Link></li>
+              <li><Link to="/#services" className="hover:text-neon-blue transition-colors">VLSI Design</Link></li>
             </ul>
           </motion.div>
 
@@ -69,9 +70,10 @@ export const Footer = () => {
           >
             <h4 className="font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><a href="#about" className="hover:text-neon-purple transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-neon-purple transition-colors">Research</a></li>
-              <li><a href="#" className="hover:text-neon-purple transition-colors">Publications</a></li>
+              <li><Link to="/#about" className="hover:text-neon-purple transition-colors">About Us</Link></li>
+              <li><Link to="#" className="hover:text-neon-purple transition-colors">Research</Link></li>
+              <li><Link to="#" className="hover:text-neon-purple transition-colors">Publications</Link></li>
+              <li><Link to="/our-team" className="hover:text-neon-purple transition-colors">Our Team</Link></li>
             </ul>
           </motion.div>
 
@@ -108,15 +110,15 @@ export const Footer = () => {
             © 2024 Adyakshar Labs. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-sm text-muted-foreground hover:text-neon-blue transition-colors">
+            <Link to="#" className="text-sm text-muted-foreground hover:text-neon-blue transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-neon-blue transition-colors">
+            </Link>
+            <Link to="#" className="text-sm text-muted-foreground hover:text-neon-blue transition-colors">
               Terms of Service
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-neon-blue transition-colors">
+            </Link>
+            <Link to="#" className="text-sm text-muted-foreground hover:text-neon-blue transition-colors">
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

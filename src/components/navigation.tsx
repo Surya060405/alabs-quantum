@@ -21,6 +21,7 @@ export const Navigation = () => {
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
     { name: "Technologies", href: "#technologies" },
+    { name: "Our Team", href: "#our-team" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -41,7 +42,9 @@ export const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center"
           >
-            <img src={logo} alt="Adyakshar Labs" className="h-14" />
+            <a href="#home">
+              <img src={logo} alt="Adyakshar Labs" className="h-14" />
+            </a>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -58,7 +61,7 @@ export const Navigation = () => {
               </motion.a>
             ))}
             <Button className="bg-primary hover:bg-primary/80 text-primary-foreground glow-neon-blue">
-              Get Started
+              <a href="#contact">Get Started</a>
             </Button>
           </div>
 
@@ -93,7 +96,7 @@ export const Navigation = () => {
               </a>
             ))}
             <Button className="w-full mt-4 bg-primary hover:bg-primary/80 text-primary-foreground">
-              Get Started
+              <a href="#contact">Get Started</a>
             </Button>
           </motion.div>
         )}
