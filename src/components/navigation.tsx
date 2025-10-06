@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
@@ -17,12 +18,12 @@ export const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Technologies", href: "#technologies" },
-    { name: "Our Team", href: "#our-team" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/#home" },
+    { name: "About", href: "/#about" },
+    { name: "Services", href: "/#services" },
+    { name: "Technologies", href: "/#technologies" },
+    { name: "Our Team", href: "/#our-team" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -42,27 +43,29 @@ export const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center"
           >
-            <a href="#home">
+            <Link to="/">
               <img src={logo} alt="Adyakshar Labs" className="h-14" />
-            </a>
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                whileHover={{ y: -2 }}
-                className="text-foreground/80 hover:text-neon-blue transition-colors duration-300 relative group"
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-blue transition-all duration-300 group-hover:w-full" />
-              </motion.a>
+              <Link key={item.name} to={item.href}>
+                <motion.span
+                  whileHover={{ y: -2 }}
+                  className="text-foreground/80 hover:text-neon-blue transition-colors duration-300 relative group inline-block"
+                >
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-blue transition-all duration-300 group-hover:w-full" />
+                </motion.span>
+              </Link>
             ))}
-            <Button className="bg-primary hover:bg-primary/80 text-primary-foreground glow-neon-blue">
-              <a href="#contact">Get Started</a>
-            </Button>
+            <Link to="/#contact">
+              <Button className="bg-primary hover:bg-primary/80 text-primary-foreground glow-neon-blue">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,18 +89,20 @@ export const Navigation = () => {
             className="md:hidden mt-4 glassmorphism rounded-lg p-4 bg-white/95 dark:bg-background/10"
           >
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="block py-2 text-foreground/80 hover:text-neon-blue transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
-            <Button className="w-full mt-4 bg-primary hover:bg-primary/80 text-primary-foreground">
-              <a href="#contact">Get Started</a>
-            </Button>
+            <Link to="/#contact" className="block mt-4">
+              <Button className="w-full bg-primary hover:bg-primary/80 text-primary-foreground">
+                Get Started
+              </Button>
+            </Link>
           </motion.div>
         )}
       </div>
