@@ -64,7 +64,7 @@ export const QuantaForgeNavigation = () => {
         <div className="flex items-center justify-between h-20">
           <Link to="/quantaforge" className="flex items-center gap-2 group">
             <Atom className="h-8 w-8 text-quantaforge-secondary group-hover:rotate-180 transition-transform duration-500" />
-            <span className="text-2xl font-bold quantaforge-text-gradient">Quantum Solutions</span>
+            <span className="text-2xl font-bold quantaforge-text-gradient">Quantum Labs</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

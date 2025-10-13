@@ -33,7 +33,7 @@ export const ValuePillars = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-quantaforge-light">
-            Value Pillars
+            Our Core Capabilities
           </h2>
           <p className="text-lg text-quantaforge-light/60 max-w-2xl mx-auto">
             Three core capabilities that transform quantum devices into production-ready systems

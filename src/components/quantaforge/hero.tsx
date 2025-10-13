@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CompanyBadge } from "./company-badge";
 
 export const QuantaForgeHero = () => {
   return (
@@ -39,15 +40,17 @@ export const QuantaForgeHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            <CompanyBadge />
+            
             <h1 className="text-5xl md:text-7xl font-bold mb-6 quantaforge-text-gradient">
-              Build. Secure. Accelerate.
+              Welcome to Quantum Labs by Adyakshar Laboratories
             </h1>
             <p className="text-xl md:text-2xl text-quantaforge-light/80 mb-4">
-              Quantum software for real hardware
+              Pioneering Quantum Computing Solutions for the Next Generation
             </p>
             <p className="text-lg md:text-xl text-quantaforge-light/60 mb-12 max-w-3xl mx-auto">
               From compiler stacks for real quantum hardware to quantum-secure tokenization 
-              and simulation for drug discovery—ship production-grade quantum software.
+              and simulation for drug discovery—ship production-grade quantum software with the power of quantum computing.
             </p>
           </motion.div>
 

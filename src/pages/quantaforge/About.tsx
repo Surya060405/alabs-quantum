@@ -1,8 +1,9 @@
 import { useEffect } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { QuantaForgeNavigation } from "@/components/quantaforge/navigation";
 import { QuantaForgeFooter } from "@/components/quantaforge/footer";
-import { motion } from "framer-motion";
-import { Target, Rocket, Users, Award } from "lucide-react";
+import { Lightbulb, Target, Users, Rocket, Code, Wrench, Shield, Network, Award, ArrowRight } from "lucide-react";
 
 const AboutPage = () => {
   useEffect(() => {
@@ -11,143 +12,278 @@ const AboutPage = () => {
 
   const values = [
     {
-      icon: Target,
-      title: "Precision Engineering",
-      description: "We build quantum software with the same rigor as quantum hardware - every qubit, every gate matters."
+      icon: Lightbulb,
+      title: "Innovation First",
+      description: "Pioneering quantum computing solutions at the cutting edge of technology"
     },
     {
-      icon: Rocket,
-      title: "Innovation First",
-      description: "Turning cutting-edge quantum research into production-ready solutions that deliver real value today."
+      icon: Target,
+      title: "Practical Solutions",
+      description: "Making quantum computing accessible and applicable to real-world challenges"
     },
     {
       icon: Users,
       title: "Partnership Approach",
-      description: "We work alongside your team, understanding your unique challenges and co-creating tailored solutions."
+      description: "Collaborating closely with clients from proof-of-concept to production"
     },
     {
-      icon: Award,
-      title: "Proven Excellence",
-      description: "Our solutions have helped leading organizations achieve 3x+ improvements in quantum circuit performance."
+      icon: Rocket,
+      title: "Future-Focused",
+      description: "Building the foundation for the next generation of computing"
+    }
+  ];
+
+  const services = [
+    {
+      icon: Code,
+      title: "Quantum Software Development",
+      description: "Custom software solutions leveraging quantum algorithms to solve industry-specific problems, enhancing performance and scalability beyond classical computing limits."
+    },
+    {
+      icon: Wrench,
+      title: "Quantum Hardware Engineering",
+      description: "Hardware solutions designed to support quantum computing applications, including quantum processors and specialized hardware components that bridge quantum and classical systems."
+    },
+    {
+      icon: Users,
+      title: "Quantum Consulting",
+      description: "Expertise and guidance in navigating the complex landscape of quantum computing, from proof-of-concept development to full-scale implementation and integration."
+    },
+    {
+      icon: Lightbulb,
+      title: "Research & Innovation",
+      description: "Cutting-edge research on quantum algorithms, quantum machine learning, and quantum cryptography, tailored to meet the evolving needs of our clients."
+    },
+    {
+      icon: Network,
+      title: "Quantum Integration",
+      description: "Seamlessly integrating quantum solutions with existing business processes and IT infrastructure to drive real-world value and measurable results."
+    }
+  ];
+
+  const whyItems = [
+    {
+      title: "Optimize Complex Processes",
+      description: "Streamline operations across industries like healthcare, finance, manufacturing, and logistics with quantum-powered optimization."
+    },
+    {
+      title: "Accelerate Data Analysis & Machine Learning",
+      description: "Leverage computational power that exceeds classical computers to enhance analytics and ML algorithms."
+    },
+    {
+      title: "Enable Quantum-Resilient Cryptography",
+      description: "Ensure the security of sensitive data in the quantum era with post-quantum cryptographic solutions."
+    },
+    {
+      title: "Solve the Unsolvable",
+      description: "Harness quantum algorithms to tackle problems that were previously thought intractable by classical computing."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-quantaforge-dark text-quantaforge-light">
+    <div className="min-h-screen bg-quantaforge-dark">
       <QuantaForgeNavigation />
       
-      <main className="container mx-auto px-4 py-24 sm:py-32">
-        {/* Hero Section */}
-        <div className="max-w-4xl mx-auto text-center mb-24">
-          <motion.h1 
-            className="text-5xl font-bold tracking-tight sm:text-6xl quantaforge-text-gradient mb-6"
-            initial={{ opacity: 0, y: 20 }}
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 quantum-grid opacity-20" />
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto text-center"
           >
-            About Quantum Solutions
-          </motion.h1>
-          <motion.p 
-            className="text-xl text-quantaforge-light/70 leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            A specialized division of Adyakshar Labs, we bridge the gap between quantum research and real-world applications. 
-            Our mission is to make quantum computing practical, secure, and accessible for organizations ready to harness its power.
-          </motion.p>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-quantaforge-secondary/10 border border-quantaforge-secondary/30 backdrop-blur-sm mb-6">
+              <span className="text-sm text-quantaforge-secondary font-medium">
+                A Division of Adyakshar Laboratories, Inc.
+              </span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 quantaforge-text-gradient">
+              About Quantum Labs
+            </h1>
+            <p className="text-xl text-quantaforge-light/70 leading-relaxed">
+              Pioneering the future of quantum computing through innovation, expertise, and partnership
+            </p>
+          </motion.div>
         </div>
+      </section>
 
-        {/* Mission & Vision */}
-        <div className="max-w-6xl mx-auto mb-24">
-          <div className="grid md:grid-cols-2 gap-12">
-            <motion.div 
-              className="p-8 rounded-3xl bg-quantaforge-dark/50 ring-1 ring-inset ring-quantaforge-secondary/20"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl font-bold text-quantaforge-secondary mb-4">Our Mission</h2>
-              <p className="text-quantaforge-light/70 leading-relaxed">
-                To accelerate the quantum advantage by delivering high-performance compiler toolchains, 
-                quantum-safe cryptography, and AI-powered simulation platforms that transform how 
-                organizations approach quantum computing challenges.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              className="p-8 rounded-3xl bg-quantaforge-dark/50 ring-1 ring-inset ring-quantaforge-secondary/20"
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl font-bold text-quantaforge-secondary mb-4">Our Vision</h2>
-              <p className="text-quantaforge-light/70 leading-relaxed">
-                A world where quantum computing is not a distant promise but a practical tool driving 
-                innovation in pharmaceuticals, finance, security, and beyond - with Quantum Solutions 
-                as the trusted partner making it happen.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Core Values */}
-        <div className="max-w-6xl mx-auto mb-24">
-          <motion.h2 
-            className="text-4xl font-bold text-center quantaforge-text-gradient mb-16"
+      {/* Parent Company Context */}
+      <section className="py-16 bg-quantaforge-primary/30">
+        <div className="container mx-auto px-4">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto"
           >
-            What Drives Us
-          </motion.h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
-              <motion.div
-                key={value.title}
-                className="p-6 rounded-2xl bg-quantaforge-dark/50 ring-1 ring-inset ring-quantaforge-light/10 hover:ring-quantaforge-secondary/30 transition-all"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <value.icon className="h-10 w-10 text-quantaforge-secondary mb-4" />
-                <h3 className="text-xl font-bold text-quantaforge-light mb-3">{value.title}</h3>
-                <p className="text-quantaforge-light/70">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="glassmorphism p-8 rounded-2xl border border-quantaforge-secondary/20">
+                <h2 className="text-3xl font-bold mb-4 text-quantaforge-light">
+                  Adyakshar Laboratories
+                </h2>
+                <p className="text-quantaforge-light/70 leading-relaxed mb-4">
+                  At Adyakshar Laboratories, Inc. (A-Labs), we are driven by the belief that innovation and transformation are the cornerstones of the future. As a leading technology consulting house with a strong presence in both the US and India, we have been at the forefront of delivering custom software and hardware solutions that drive digital innovation and transformation for enterprises across industries.
+                </p>
+                <Link to="/" className="inline-flex items-center text-quantaforge-secondary hover:text-quantaforge-accent transition-colors">
+                  Learn more about Adyakshar Labs
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+
+              <div className="glassmorphism p-8 rounded-2xl border border-quantaforge-secondary/20">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-quantaforge-secondary to-quantaforge-accent flex items-center justify-center">
+                    <Rocket className="h-6 w-6 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-quantaforge-secondary">
+                    Quantum Labs
+                  </h2>
+                </div>
+                <p className="text-quantaforge-light/70 leading-relaxed">
+                  We are proud to introduce our new division, <span className="text-quantaforge-secondary font-semibold">Quantum Labs</span>—a cutting-edge venture dedicated to pioneering quantum computing solutions. Quantum Labs combines our deep expertise in technology consulting, custom software development, and hardware engineering with the transformative power of quantum computing.
+                </p>
+              </div>
+            </div>
+          </motion.div>
         </div>
+      </section>
 
-        {/* Why Choose Us */}
-        <motion.div 
-          className="max-w-4xl mx-auto text-center p-12 rounded-3xl bg-gradient-to-br from-quantaforge-secondary/10 to-quantaforge-dark/50 ring-1 ring-inset ring-quantaforge-secondary/20"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl font-bold quantaforge-text-gradient mb-6">Why Choose Quantum Solutions?</h2>
-          <p className="text-lg text-quantaforge-light/70 leading-relaxed mb-8">
-            We're not just quantum software developers - we're quantum application engineers. 
-            With deep expertise spanning compiler optimization, post-quantum cryptography, and 
-            quantum simulation, we've helped organizations achieve measurable results: 3x deeper 
-            circuits, 30% cost savings, and zero-downtime migrations to quantum-safe security.
-          </p>
-          <p className="text-quantaforge-light/60">
-            Part of the{" "}
-            <a href="/" className="text-quantaforge-secondary hover:underline font-semibold">
-              Adyakshar Labs
-            </a>{" "}
-            family, we bring the same commitment to innovation and excellence that defines all our work.
-          </p>
-        </motion.div>
-      </main>
+      {/* Mission Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <h2 className="text-4xl font-bold mb-6 text-quantaforge-light">
+              Our Mission
+            </h2>
+            <p className="text-xl text-quantaforge-light/70 leading-relaxed">
+              To make quantum computing accessible, practical, and transformative for businesses across industries, delivering novel solutions that tackle complex computational challenges.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
+      {/* Why Quantum Labs Section */}
+      <section className="py-20 bg-quantaforge-darker">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-5xl mx-auto"
+          >
+            <h2 className="text-4xl font-bold mb-8 text-quantaforge-light text-center">
+              Why Choose Quantum Labs?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {whyItems.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.2 }}
+                  className="glassmorphism p-6 rounded-2xl border border-quantaforge-secondary/20"
+                >
+                  <h3 className="text-2xl font-bold mb-4 text-quantaforge-light">
+                    {item.title}
+                  </h3>
+                  <p className="text-quantaforge-light/70 leading-relaxed">
+                    {item.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto"
+          >
+            <h2 className="text-4xl font-bold mb-8 text-quantaforge-light text-center">
+              Our Services
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.2 }}
+                  className="glassmorphism p-6 rounded-2xl border border-quantaforge-secondary/20"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-quantaforge-secondary to-quantaforge-accent flex items-center justify-center">
+                      <service.icon className="h-5 w-5 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-quantaforge-secondary">
+                      {service.title}
+                    </h3>
+                  </div>
+                  <p className="text-quantaforge-light/70 leading-relaxed">
+                    {service.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Values Section */}
+      <section className="py-20 bg-quantaforge-primary/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-5xl mx-auto"
+          >
+            <h2 className="text-4xl font-bold mb-8 text-quantaforge-light text-center">
+              Our Core Values
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {values.map((value, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.2 }}
+                  className="glassmorphism p-6 rounded-2xl border border-quantaforge-secondary/20"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-quantaforge-secondary to-quantaforge-accent flex items-center justify-center">
+                      <value.icon className="h-5 w-5 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-quantaforge-secondary">
+                      {value.title}
+                    </h3>
+                  </div>
+                  <p className="text-quantaforge-light/70 leading-relaxed">
+                    {value.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
       <QuantaForgeFooter />
     </div>
   );

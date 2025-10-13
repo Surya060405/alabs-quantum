@@ -31,13 +31,13 @@ export const QuantaForgeFooter = () => {
           <div className="lg:col-span-2">
             <Link to="/quantaforge" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-2 mb-4">
               <Atom className="h-8 w-8 text-quantaforge-secondary" />
-              <span className="text-2xl font-bold quantaforge-text-gradient">Quantum Solutions</span>
+              <span className="text-2xl font-bold quantaforge-text-gradient">Quantum Labs</span>
             </Link>
-            <p className="text-quantaforge-light/60 mb-6 max-w-sm">
-              Build. Secure. Accelerate. Quantum software for real hardware.
+            <p className="text-quantaforge-light/60 mb-4 max-w-sm">
+              Pioneering quantum computing solutions for the next generation
             </p>
             <p className="text-sm text-quantaforge-light/50 mb-4">
-              A specialized division of <Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-quantaforge-secondary hover:underline">Adyakshar Labs</Link>
+              A Division of <Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-quantaforge-secondary hover:underline">Adyakshar Laboratories, Inc.</Link>
             </p>
             <div className="flex gap-4">
               <motion.a
@@ -93,7 +93,7 @@ export const QuantaForgeFooter = () => {
 
         <div className="border-t border-quantaforge-secondary/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-quantaforge-light/50 text-sm">
-            © 2025 Quantum Solutions. All rights reserved.
+            © 2025 Quantum Labs by Adyakshar Laboratories, Inc. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm">
             <Link to="/quantaforge/privacy" onClick={() => window.scrollTo(0, 0)} className="text-quantaforge-light/60 hover:text-quantaforge-secondary">

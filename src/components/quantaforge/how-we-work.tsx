@@ -37,8 +37,11 @@ export const HowWeWork = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-quantaforge-light">
             How We Work
           </h2>
-          <p className="text-lg text-quantaforge-light/60 max-w-2xl mx-auto">
+          <p className="text-lg text-quantaforge-light/60 max-w-2xl mx-auto mb-4">
             From first call to production deployment
+          </p>
+          <p className="text-base text-quantaforge-light/50 max-w-3xl mx-auto">
+            We take a technical partnership approach, providing end-to-end guidance and seamless integration with your existing infrastructure to deliver real-world value
           </p>
         </motion.div>
 
