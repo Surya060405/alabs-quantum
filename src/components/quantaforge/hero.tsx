@@ -44,10 +44,12 @@ export const QuantaForgeHero = () => {
             <CompanyBadge />
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6 quantaforge-text-gradient flex flex-col items-center gap-4">
-              <span>Welcome to Quantum</span>
-              <span className="flex items-center gap-3">
-                Labs by
-                <img src={logo} alt="Adyakshar Laboratories" className="h-12 md:h-16" />
+              <span className="underline decoration-2 underline-offset-4">
+                Welcome to Quantum Labs
+              </span>
+              <span className="flex items-center gap-3 text-3xl md:text-4xl">
+                <span className="italic font-light">a division of</span>
+                <img src={logo} alt="Adyakshar Laboratories" className="h-10 md:h-12" />
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-quantaforge-light/80 mb-4">
