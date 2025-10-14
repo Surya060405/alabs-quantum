@@ -22,23 +22,23 @@ const resources = {
 
 export const ResourcesSection = () => {
   return (
-    <section id="resources-section" className="py-24 sm:py-32 bg-quantaforge-dark">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl quantaforge-text-gradient">
+    <section id="resources-section" className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 bg-quantaforge-dark">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
+        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight quantaforge-text-gradient">
             Resources
           </h2>
-          <p className="mt-6 text-lg leading-8 text-quantaforge-light/70">
+          <p className="mt-4 md:mt-6 text-base sm:text-lg leading-7 md:leading-8 text-quantaforge-light/70 px-4">
             Dive deeper into our technology, methodologies, and best practices.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           
-          <div className="p-8 rounded-3xl bg-quantaforge-dark/50 ring-1 ring-inset ring-quantaforge-light/10">
-            <div className="flex items-center gap-4 mb-4">
-                <FileText className="h-8 w-8 text-quantaforge-secondary" />
-                <h3 className="text-2xl font-bold text-quantaforge-light">Whitepapers</h3>
+          <div className="p-6 md:p-8 rounded-3xl bg-quantaforge-dark/50 ring-1 ring-inset ring-quantaforge-light/10">
+            <div className="flex items-center gap-3 md:gap-4 mb-4">
+                <FileText className="h-6 w-6 md:h-8 md:w-8 text-quantaforge-secondary" />
+                <h3 className="text-xl md:text-2xl font-bold text-quantaforge-light">Whitepapers</h3>
             </div>
             <ul className="space-y-3">
               {resources.whitepapers.map((paper) => (
@@ -52,10 +52,10 @@ export const ResourcesSection = () => {
             </ul>
           </div>
           
-          <div className="p-8 rounded-3xl bg-quantaforge-dark/50 ring-1 ring-inset ring-quantaforge-light/10">
-            <div className="flex items-center gap-4 mb-4">
-                <BarChart2 className="h-8 w-8 text-quantaforge-secondary" />
-                <h3 className="text-2xl font-bold text-quantaforge-light">Benchmarks</h3>
+          <div className="p-6 md:p-8 rounded-3xl bg-quantaforge-dark/50 ring-1 ring-inset ring-quantaforge-light/10">
+            <div className="flex items-center gap-3 md:gap-4 mb-4">
+                <BarChart2 className="h-6 w-6 md:h-8 md:w-8 text-quantaforge-secondary" />
+                <h3 className="text-xl md:text-2xl font-bold text-quantaforge-light">Benchmarks</h3>
             </div>
             <p className="text-quantaforge-light/80 mb-4">{resources.benchmarks.description}</p>
             <a href={resources.benchmarks.href} className="flex items-center group text-quantaforge-secondary font-semibold">
@@ -63,10 +63,10 @@ export const ResourcesSection = () => {
             </a>
           </div>
 
-          <div className="p-8 rounded-3xl bg-quantaforge-dark/50 ring-1 ring-inset ring-quantaforge-light/10">
-            <div className="flex items-center gap-4 mb-4">
-                <BookOpen className="h-8 w-8 text-quantaforge-secondary" />
-                <h3 className="text-2xl font-bold text-quantaforge-light">Playbooks</h3>
+          <div className="p-6 md:p-8 rounded-3xl bg-quantaforge-dark/50 ring-1 ring-inset ring-quantaforge-light/10">
+            <div className="flex items-center gap-3 md:gap-4 mb-4">
+                <BookOpen className="h-6 w-6 md:h-8 md:w-8 text-quantaforge-secondary" />
+                <h3 className="text-xl md:text-2xl font-bold text-quantaforge-light">Playbooks</h3>
             </div>
             <ul className="space-y-3">
               {resources.playbooks.map((playbook) => (
@@ -80,10 +80,10 @@ export const ResourcesSection = () => {
             </ul>
           </div>
 
-          <div className="p-8 rounded-3xl bg-quantaforge-dark/50 ring-1 ring-inset ring-quantaforge-light/10">
-            <div className="flex items-center gap-4 mb-4">
-                <HelpCircle className="h-8 w-8 text-quantaforge-secondary" />
-                <h3 className="text-2xl font-bold text-quantaforge-light">FAQ</h3>
+          <div className="p-6 md:p-8 rounded-3xl bg-quantaforge-dark/50 ring-1 ring-inset ring-quantaforge-light/10">
+            <div className="flex items-center gap-3 md:gap-4 mb-4">
+                <HelpCircle className="h-6 w-6 md:h-8 md:w-8 text-quantaforge-secondary" />
+                <h3 className="text-xl md:text-2xl font-bold text-quantaforge-light">FAQ</h3>
             </div>
             <p className="text-quantaforge-light/80 mb-4">{resources.faq.description}</p>
             <a href={resources.faq.href} className="flex items-center group text-quantaforge-secondary font-semibold">

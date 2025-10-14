@@ -26,21 +26,21 @@ const steps = [
 
 export const HowWeWork = () => {
   return (
-    <section className="py-24 bg-quantaforge-primary/50">
-      <div className="container mx-auto px-4">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-quantaforge-primary/50">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-quantaforge-light">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-quantaforge-light">
             How We Work
           </h2>
-          <p className="text-lg text-quantaforge-light/60 max-w-2xl mx-auto mb-4">
+          <p className="text-base sm:text-lg text-quantaforge-light/60 max-w-2xl mx-auto mb-4 px-4">
             From first call to production deployment
           </p>
-          <p className="text-base text-quantaforge-light/50 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base text-quantaforge-light/50 max-w-3xl mx-auto px-4">
             We take a technical partnership approach, providing end-to-end guidance and seamless integration with your existing infrastructure to deliver real-world value
           </p>
         </motion.div>
@@ -53,24 +53,24 @@ export const HowWeWork = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex gap-6 mb-12 last:mb-0"
+              className="flex gap-4 md:gap-6 mb-8 md:mb-12 last:mb-0"
             >
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-quantaforge-secondary to-quantaforge-accent flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">{step.number}</span>
+                <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-quantaforge-secondary to-quantaforge-accent flex items-center justify-center">
+                  <span className="text-lg md:text-2xl font-bold text-white">{step.number}</span>
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-2xl font-bold mb-2 text-quantaforge-light">
+                <h3 className="text-xl md:text-2xl font-bold mb-2 text-quantaforge-light">
                   {step.title}
                 </h3>
-                <p className="text-quantaforge-light/70 text-lg">
+                <p className="text-quantaforge-light/70 text-sm md:text-base lg:text-lg">
                   {step.description}
                 </p>
               </div>
               {index < steps.length - 1 && (
-                <div className="flex-shrink-0 hidden md:block">
-                  <ArrowRight className="h-6 w-6 text-quantaforge-secondary/50" />
+                <div className="flex-shrink-0 hidden lg:block">
+                  <ArrowRight className="h-5 w-5 md:h-6 md:w-6 text-quantaforge-secondary/50" />
                 </div>
               )}
             </motion.div>

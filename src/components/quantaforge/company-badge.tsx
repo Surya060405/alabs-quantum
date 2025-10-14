@@ -10,7 +10,7 @@ export const CompanyBadge = () => {
       className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-quantaforge-secondary/10 border border-quantaforge-secondary/30 backdrop-blur-sm mb-6"
     >
       <span className="text-sm text-quantaforge-secondary font-medium">
-        An Initiative of{" "}
+        An Initiative from{" "}
         <Link 
           to="/adyakshar" 
           className="underline hover:text-quantaforge-accent transition-colors"

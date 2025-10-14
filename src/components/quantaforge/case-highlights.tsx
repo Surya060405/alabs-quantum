@@ -27,23 +27,23 @@ const cases = [
 
 export const CaseHighlights = () => {
   return (
-    <section className="py-24 bg-quantaforge-dark">
-      <div className="container mx-auto px-4">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-quantaforge-dark">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-quantaforge-light">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-quantaforge-light">
             Case Highlights
           </h2>
-          <p className="text-lg text-quantaforge-light/60 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-quantaforge-light/60 max-w-2xl mx-auto px-4">
             Real results from real deployments
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {cases.map((caseStudy, index) => (
             <motion.div
               key={caseStudy.company}

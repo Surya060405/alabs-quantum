@@ -35,20 +35,20 @@ export const QuantaForgeFooter = () => {
 
   return (
     <footer className="bg-quantaforge-dark border-t border-quantaforge-secondary/20">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 mb-8 md:mb-12">
           <div className="lg:col-span-2">
             <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-2 mb-4">
-              <Atom className="h-8 w-8 text-quantaforge-secondary" />
-              <span className="text-2xl font-bold quantaforge-text-gradient">Quantum Labs</span>
+              <Atom className="h-6 w-6 md:h-8 md:w-8 text-quantaforge-secondary" />
+              <span className="text-xl md:text-2xl font-bold quantaforge-text-gradient">Quantum Labs</span>
             </Link>
-            <p className="text-quantaforge-light/60 mb-4 max-w-sm">
+            <p className="text-sm md:text-base text-quantaforge-light/60 mb-4 max-w-sm">
               Pioneering quantum computing solutions for the next generation
             </p>
-            <p className="text-sm text-quantaforge-light/50 mb-4">
+            <p className="text-xs md:text-sm text-quantaforge-light/50 mb-4">
               A Division of <Link to="/adyakshar" onClick={() => window.scrollTo(0, 0)} className="text-quantaforge-secondary hover:underline">Adyakshar Laboratories, Inc.</Link>
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3 md:gap-4">
               <motion.a
                 href="#"
                 className="text-quantaforge-light/60 hover:text-quantaforge-secondary transition-colors"
@@ -82,8 +82,8 @@ export const QuantaForgeFooter = () => {
 
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h3 className="text-quantaforge-light font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-2">
+              <h3 className="text-quantaforge-light font-semibold mb-3 md:mb-4 text-sm md:text-base">{section.title}</h3>
+              <ul className="space-y-1.5 md:space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
