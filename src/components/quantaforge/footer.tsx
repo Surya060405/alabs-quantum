@@ -5,13 +5,13 @@ export const QuantaForgeFooter = () => {
     title: "Solutions",
     links: [{
       name: "Quantum Compiler Studio",
-      href: "/quantumlabs/compiler"
+      href: "/compiler"
     }, {
       name: "Quantum-Secure Tokenization",
-      href: "/quantumlabs/tokenization"
+      href: "/tokenization"
     }, {
       name: "Quantum Simulation & AI",
-      href: "/quantumlabs/simulation"
+      href: "/simulation"
     }]
   }, {
     title: "Research",

@@ -45,9 +45,9 @@ export const QuantaForgeNavigation = () => {
   ];
   
   const solutionItems = [
-      { name: "Quantum Compiler Studio", href: "/quantumlabs/compiler"},
-      { name: "Quantum-Secure Tokenization", href: "/quantumlabs/tokenization"},
-      { name: "Quantum Simulation & AI", href: "/quantumlabs/simulation"},
+      { name: "Quantum Compiler Studio", href: "/compiler"},
+      { name: "Quantum-Secure Tokenization", href: "/tokenization"},
+      { name: "Quantum Simulation & AI", href: "/simulation"},
       { name: "Research & Development", href: "/quantumlabs/research"},
   ]
 

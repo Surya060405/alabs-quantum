@@ -41,6 +41,9 @@ const App = () => (
           
           {/* QuantaForge routes */}
           <Route path="/quantumlabs" element={<QuantaForgeIndex />} />
+          <Route path="/compiler" element={<Compiler />} />
+          <Route path="/tokenization" element={<Tokenization />} />
+          <Route path="/simulation" element={<Simulation />} />
           <Route path="/quantumlabs/compiler" element={<Compiler />} />
           <Route path="/quantumlabs/tokenization" element={<Tokenization />} />
           <Route path="/quantumlabs/simulation" element={<Simulation />} />

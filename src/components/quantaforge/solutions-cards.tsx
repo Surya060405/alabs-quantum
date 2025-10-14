@@ -9,7 +9,7 @@ const solutions = [
     title: "Quantum Compiler Studio",
     description: "Hardware-aware compilers with routing, scheduling, pulse-level optimization, and error-aware transpilation. Turn any quantum device into a reliable computer.",
     features: ["QIR/OpenQASM compatible", "Gate decomposition", "Pulse optimization", "Error mitigation"],
-    href: "/quantumlabs/compiler",
+    href: "/compiler",
     gradient: "from-quantaforge-secondary to-quantaforge-accent",
   },
   {
@@ -17,7 +17,7 @@ const solutions = [
     title: "Quantum-Secure Tokenization",
     description: "Post-quantum cryptography, QKD-ready interfaces, and tokenization rails for Web3 and enterprise. Future-proof your security infrastructure today.",
     features: ["PQC key management", "QKD integration", "Blockchain security", "Compliance-ready"],
-    href: "/quantumlabs/tokenization",
+    href: "/tokenization",
     gradient: "from-quantaforge-accent to-quantaforge-success",
   },
   {
@@ -25,7 +25,7 @@ const solutions = [
     title: "Quantum Simulation & AI",
     description: "Accelerate drug discovery and materials research with VQE/QAOA solvers, molecular simulation, and hybrid quantum-classical workflows integrated with HPC/ML.",
     features: ["Molecular simulation", "Hybrid workflows", "HPC integration", "Variational solvers"],
-    href: "/quantumlabs/simulation",
+    href: "/simulation",
     gradient: "from-quantaforge-success to-quantaforge-secondary",
   },
   {
