@@ -17,31 +17,31 @@ export const QuantaForgeFooter = () => {
     title: "Research",
     links: [{
       name: "Research & Development",
-      href: "/quantumlabs/research"
+      href: "/research"
     }, {
       name: "Quantum EDA",
-      href: "/quantumlabs/research#rd-section"
+      href: "/research#rd-section"
     }, {
       name: "Quantum FPGA",
-      href: "/quantumlabs/research#rd-section"
+      href: "/research#rd-section"
     }, {
       name: "Quantum Finance",
-      href: "/quantumlabs/research#rd-section"
+      href: "/research#rd-section"
     }]
   }, {
     title: "Company",
     links: [{
       name: "About Us",
-      href: "/quantumlabs/about"
+      href: "/about"
     }, {
       name: "Technology",
-      href: "/quantumlabs/technologies"
+      href: "/technologies"
     }, {
       name: "Case Studies",
-      href: "/quantumlabs/case-studies"
+      href: "/case-studies"
     }, {
       name: "Contact",
-      href: "/quantumlabs/contact"
+      href: "/contact"
     }]
   }];
   return <footer className="bg-quantaforge-dark border-t border-quantaforge-secondary/20">

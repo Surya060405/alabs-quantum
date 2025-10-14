@@ -33,7 +33,7 @@ const solutions = [
     title: "Research & Development",
     description: "Explore cutting-edge quantum research in EDA, FPGA, and Finance. From quantum circuit design to algorithmic trading, we push the boundaries of quantum computing.",
     features: ["Quantum EDA", "Quantum FPGA", "Quantum Finance", "Advanced algorithms"],
-    href: "/quantumlabs/research",
+    href: "/research",
     gradient: "from-quantaforge-secondary/80 to-quantaforge-primary",
   },
 ];

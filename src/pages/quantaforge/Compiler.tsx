@@ -87,7 +87,7 @@ const Compiler = () => {
               <p className="text-2xl text-quantaforge-light/70 mb-8">
                 Hardware heterogeneity, constrained connectivity, short coherence times, and noisy gates make raw circuits impractical. The right compiler stack can be the difference between a failed experiment and production-ready results.
               </p>
-              <Link to="/quantumlabs/contact">
+              <Link to="/contact">
                 
               </Link>
             </motion.div>
@@ -225,10 +225,10 @@ const Compiler = () => {
                 Request a sample report | See benchmark methodology
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link to="/quantumlabs/contact">
+                <Link to="/contact">
                   
                 </Link>
-                <Link to="/quantumlabs/benchmarks">
+                <Link to="/benchmarks">
                   
                 </Link>
               </div>

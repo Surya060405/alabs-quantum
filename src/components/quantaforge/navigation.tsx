@@ -38,17 +38,17 @@ export const QuantaForgeNavigation = () => {
   };
 
   const navItems = [
-    { name: "Industries", href: "/quantumlabs/industries" },
-    { name: "Technology", href: "/quantumlabs/technologies" },
+    { name: "Industries", href: "/industries" },
+    { name: "Technology", href: "/technologies" },
     { name: "Pricing", href: "#pricing-section" },
-    { name: "About", href: "/quantumlabs/about" },
+    { name: "About", href: "/about" },
   ];
   
   const solutionItems = [
       { name: "Quantum Compiler Studio", href: "/compiler"},
       { name: "Quantum-Secure Tokenization", href: "/tokenization"},
       { name: "Quantum Simulation & AI", href: "/simulation"},
-      { name: "Research & Development", href: "/quantumlabs/research"},
+      { name: "Research & Development", href: "/research"},
   ]
 
   return (

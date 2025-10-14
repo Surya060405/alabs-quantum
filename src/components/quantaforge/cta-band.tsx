@@ -23,8 +23,8 @@ export const CTABand = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/quantumlabs/contact">
-              <Button 
+            <Link to="/contact">
+              <Button
                 size="lg" 
                 className="bg-quantaforge-secondary text-quantaforge-dark hover:bg-quantaforge-secondary/90 quantaforge-glow text-base md:text-lg px-6 md:px-8 min-h-[44px]"
               >

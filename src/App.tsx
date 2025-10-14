@@ -47,6 +47,13 @@ const App = () => (
           <Route path="/quantumlabs/compiler" element={<Compiler />} />
           <Route path="/quantumlabs/tokenization" element={<Tokenization />} />
           <Route path="/quantumlabs/simulation" element={<Simulation />} />
+          <Route path="/industries" element={<Industries />} />
+          <Route path="/technologies" element={<Technologies />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/research" element={<Research />} />
           <Route path="/quantumlabs/industries" element={<Industries />} />
           <Route path="/quantumlabs/technologies" element={<Technologies />} />
           <Route path="/quantumlabs/contact" element={<Contact />} />

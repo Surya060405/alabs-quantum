@@ -84,7 +84,7 @@ const Tokenization = () => {
               <p className="text-lg text-quantaforge-light/60 mb-8 max-w-3xl">
                 We help enterprises and Web3 teams migrate to post-quantum cryptography (PQC) and build tokenization rails that remain secure against quantum adversaries. Integrate lattice-based KEMs/signatures, forward-secure key rotation, and QKD-ready interfaces without disrupting user experience.
               </p>
-              <Link to="/quantumlabs/contact">
+              <Link to="/contact">
                 <Button className="bg-quantaforge-accent text-white hover:bg-quantaforge-accent/90 shadow-lg shadow-quantaforge-accent/30">
                   Book a PQC readiness assessment
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -204,7 +204,7 @@ const Tokenization = () => {
               <p className="text-lg text-quantaforge-light/70 mb-8">
                 Let's discuss a staged migration to quantum-resistant tokenization.
               </p>
-              <Link to="/quantumlabs/contact">
+              <Link to="/contact">
                 <Button size="lg" className="bg-quantaforge-accent text-white hover:bg-quantaforge-accent/90 shadow-lg shadow-quantaforge-accent/30">
                   Book a PQC readiness assessment
                   <ArrowRight className="ml-2 h-5 w-5" />

@@ -72,7 +72,7 @@ const Simulation = () => {
                 Quantum Simulation and AI
               </h1>
               
-              <Link to="/quantumlabs/contact">
+              <Link to="/contact">
                 <Button className="bg-quantaforge-success text-quantaforge-dark hover:bg-quantaforge-success/90 shadow-lg shadow-quantaforge-success/30">
                   Explore sample molecules & benchmarks
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -160,7 +160,7 @@ const Simulation = () => {
               <p className="text-lg text-quantaforge-light/70 mb-8">
                 See how our quantum simulation workflows can give you a competitive edge.
               </p>
-              <Link to="/quantumlabs/contact">
+              <Link to="/contact">
                 <Button size="lg" className="bg-quantaforge-success text-quantaforge-dark hover:bg-quantaforge-success/90 shadow-lg shadow-quantaforge-success/30">
                   Explore sample molecules & benchmarks
                   <ArrowRight className="ml-2 h-5 w-5" />
