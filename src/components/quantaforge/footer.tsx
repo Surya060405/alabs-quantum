@@ -28,6 +28,7 @@ export const QuantaForgeFooter = () => {
         { name: "Technology", href: "/quantumlabs/technologies" },
         { name: "Case Studies", href: "/quantumlabs/case-studies" },
         { name: "Resources", href: "/quantumlabs/resources" },
+        { name: "FAQs", href: "/quantumlabs/resources#faqs" },
         { name: "Contact", href: "/quantumlabs/contact" },
       ],
     },
