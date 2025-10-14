@@ -39,7 +39,7 @@ export const QuantaForgeHero = () => {
                 <span className="absolute bottom-[-6px] left-0 w-full h-1 bg-quantaforge-secondary"></span>
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-quantaforge-light/70 italic flex items-center gap-2 flex-wrap justify-center mb-8">
+            <p className="text-lg md:text-xl text-quantaforge-light/70 italic flex items-center gap-4 flex-wrap justify-center mb-8">
               A division of
               <span className="flex items-center gap-2">
                 <img src={logo} alt="Adyakshar Labs" className="h-6 md:h-8" />
