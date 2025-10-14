@@ -133,7 +133,7 @@ export const QuantaForgeNavigation = () => {
 
         {isMobileMenuOpen && (
           <motion.div
-            className="md:hidden pb-6"
+            className="md:hidden pb-6 bg-quantaforge-dark/98 backdrop-blur-lg border-t border-quantaforge-secondary/20 rounded-b-lg shadow-lg"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
