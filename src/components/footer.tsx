@@ -6,9 +6,9 @@ export const Footer = () => {
   const location = useLocation();
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (location.pathname === "/" && href.startsWith("/#")) {
+    if (location.pathname === "/adyakshar" && href.startsWith("/adyakshar#")) {
       e.preventDefault();
-      const id = href.replace("/#", "");
+      const id = href.replace("/adyakshar#", "");
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -58,8 +58,8 @@ export const Footer = () => {
           >
             <h4 className="font-semibold text-foreground mb-4">Company</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li><Link to="/#about" onClick={(e) => handleNavClick(e, "/#about")} className="hover:text-neon-purple transition-colors">About Us</Link></li>
-              <li><Link to="/#our-team" onClick={(e) => handleNavClick(e, "/#our-team")} className="hover:text-neon-purple transition-colors">Our Team</Link></li>
+              <li><Link to="/adyakshar#about" onClick={(e) => handleNavClick(e, "/adyakshar#about")} className="hover:text-neon-purple transition-colors">About Us</Link></li>
+              <li><Link to="/adyakshar#our-team" onClick={(e) => handleNavClick(e, "/adyakshar#our-team")} className="hover:text-neon-purple transition-colors">Our Team</Link></li>
             </ul>
           </motion.div>
 

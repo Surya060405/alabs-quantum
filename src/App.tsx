@@ -36,7 +36,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<QuantaForgeIndex />} />
+          <Route path="/adyakshar" element={<Index />} />
           
           {/* QuantaForge routes */}
           <Route path="/quantumlabs" element={<QuantaForgeIndex />} />

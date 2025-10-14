@@ -38,7 +38,7 @@ export const QuantaForgeFooter = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           <div className="lg:col-span-2">
-            <Link to="/quantumlabs" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-2 mb-4">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-2 mb-4">
               <Atom className="h-8 w-8 text-quantaforge-secondary" />
               <span className="text-2xl font-bold quantaforge-text-gradient">Quantum Labs</span>
             </Link>
@@ -46,7 +46,7 @@ export const QuantaForgeFooter = () => {
               Pioneering quantum computing solutions for the next generation
             </p>
             <p className="text-sm text-quantaforge-light/50 mb-4">
-              A Division of <Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-quantaforge-secondary hover:underline">Adyakshar Laboratories, Inc.</Link>
+              A Division of <Link to="/adyakshar" onClick={() => window.scrollTo(0, 0)} className="text-quantaforge-secondary hover:underline">Adyakshar Laboratories, Inc.</Link>
             </p>
             <div className="flex gap-4">
               <motion.a

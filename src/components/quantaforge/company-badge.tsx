@@ -12,7 +12,7 @@ export const CompanyBadge = () => {
       <span className="text-sm text-quantaforge-secondary font-medium">
         An Initiative of{" "}
         <Link 
-          to="/" 
+          to="/adyakshar" 
           className="underline hover:text-quantaforge-accent transition-colors"
         >
           Adyakshar Laboratories, Inc.

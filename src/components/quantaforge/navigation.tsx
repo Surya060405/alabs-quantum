@@ -63,7 +63,7 @@ export const QuantaForgeNavigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link to="/quantumlabs" className="flex items-center gap-3 group relative">
+          <Link to="/" className="flex items-center gap-3 group relative">
             <div className="relative">
               <div className="absolute inset-0 bg-quantaforge-secondary/20 blur-xl rounded-full group-hover:bg-quantaforge-secondary/40 transition-all duration-500" />
               <Atom className="h-10 w-10 text-quantaforge-secondary group-hover:rotate-180 group-hover:scale-110 transition-all duration-700 relative z-10 drop-shadow-[0_0_8px_rgba(0,229,255,0.5)]" />
@@ -111,7 +111,7 @@ export const QuantaForgeNavigation = () => {
                 </Link>
               )
             ))}
-            <Link to="/">
+            <Link to="/adyakshar">
               <Button variant="outline" size="sm" className="border-quantaforge-secondary/50 text-quantaforge-secondary hover:bg-quantaforge-secondary/10">
                 ← Adyakshar Labs
               </Button>
@@ -161,7 +161,7 @@ export const QuantaForgeNavigation = () => {
                 </Link>
               )
             ))}
-            <Link to="/">
+            <Link to="/adyakshar">
               <Button variant="outline" className="w-full mt-3 border-quantaforge-secondary/50 text-quantaforge-secondary">
                 ← Adyakshar Labs
               </Button>

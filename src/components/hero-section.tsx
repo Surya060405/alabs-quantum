@@ -126,10 +126,12 @@ export const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold glow-blue hover:scale-105 transition-all duration-300">
-                Explore Our Work
-              </button>
-              <Link to="/quantumlabs">
+              <Link to="/adyakshar#services">
+                <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold glow-blue hover:scale-105 transition-all duration-300">
+                  Explore Our Work
+                </button>
+              </Link>
+              <Link to="/">
                 <button className="px-8 py-4 bg-quantaforge-secondary text-white rounded-lg font-semibold hover:scale-105 transition-all duration-300 flex items-center gap-2 shadow-lg border border-[hsl(229,84%,35%)]/30">
                   <Atom className="h-5 w-5 animate-pulse" />
                   Explore Quantum Solutions

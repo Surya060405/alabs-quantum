@@ -19,9 +19,9 @@ export const Navigation = () => {
   }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (location.pathname === "/" && href.startsWith("/#")) {
+    if (location.pathname === "/adyakshar" && href.startsWith("/adyakshar#")) {
       e.preventDefault();
-      const id = href.replace("/#", "");
+      const id = href.replace("/adyakshar#", "");
       const element = document.getElementById(id);
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -31,12 +31,12 @@ export const Navigation = () => {
   };
 
   const navItems = [
-    { name: "Home", href: "/#home" },
-    { name: "About", href: "/#about" },
-    { name: "Services", href: "/#services" },
-    { name: "Technologies", href: "/#technologies" },
-    { name: "Our Team", href: "/#our-team" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Home", href: "/adyakshar#home" },
+    { name: "About", href: "/adyakshar#about" },
+    { name: "Services", href: "/adyakshar#services" },
+    { name: "Technologies", href: "/adyakshar#technologies" },
+    { name: "Our Team", href: "/adyakshar#our-team" },
+    { name: "Contact", href: "/adyakshar#contact" },
   ];
 
   return (
@@ -56,7 +56,7 @@ export const Navigation = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center"
           >
-            <Link to="/">
+            <Link to="/adyakshar">
               <img src={logo} alt="Adyakshar Labs" className="h-14" />
             </Link>
           </motion.div>
@@ -74,7 +74,7 @@ export const Navigation = () => {
                 </motion.span>
               </Link>
             ))}
-            <Link to="/#contact" onClick={(e) => handleNavClick(e, "/#contact")}>
+            <Link to="/adyakshar#contact" onClick={(e) => handleNavClick(e, "/adyakshar#contact")}>
               <Button className="bg-primary hover:bg-primary/80 text-primary-foreground glow-neon-blue">
                 Get Started
               </Button>
@@ -111,7 +111,7 @@ export const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Link to="/#contact" className="block mt-4" onClick={(e) => handleNavClick(e, "/#contact")}>
+            <Link to="/adyakshar#contact" className="block mt-4" onClick={(e) => handleNavClick(e, "/adyakshar#contact")}>
               <Button className="w-full bg-primary hover:bg-primary/80 text-primary-foreground">
                 Get Started
               </Button>
