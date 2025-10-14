@@ -36,7 +36,7 @@ export const QuantaForgeHero = () => {
               <span className="block quantaforge-text-gradient relative inline-block pb-3">
                 Quantum Labs
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-quantaforge-secondary"></span>
-                <span className="absolute bottom-[-6px] left-0 w-full h-1 bg-quantaforge-secondary"></span>
+                
               </span>
             </h1>
             <p className="text-lg md:text-xl text-quantaforge-light/70 italic flex items-center gap-4 flex-wrap justify-center mb-8">
