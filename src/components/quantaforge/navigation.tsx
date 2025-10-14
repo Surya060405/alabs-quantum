@@ -40,6 +40,7 @@ export const QuantaForgeNavigation = () => {
   const navItems = [
     { name: "Industries", href: "/quantaforge/industries" },
     { name: "Technology", href: "/quantaforge/technologies" },
+    { name: "Research", href: "#rd-section" },
     { name: "Pricing", href: "#pricing-section" },
     { name: "Resources", href: "#resources-section" },
     { name: "About", href: "/quantaforge/about" },

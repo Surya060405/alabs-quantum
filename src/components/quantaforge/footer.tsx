@@ -13,6 +13,14 @@ export const QuantaForgeFooter = () => {
       ],
     },
     {
+      title: "Research",
+      links: [
+        { name: "Quantum EDA", href: "/quantaforge#rd-section" },
+        { name: "Quantum FPGA", href: "/quantaforge#rd-section" },
+        { name: "Quantum Finance", href: "/quantaforge#rd-section" },
+      ],
+    },
+    {
       title: "Company",
       links: [
         { name: "About Us", href: "/quantaforge/about" },
@@ -27,7 +35,7 @@ export const QuantaForgeFooter = () => {
   return (
     <footer className="bg-quantaforge-dark border-t border-quantaforge-secondary/20">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           <div className="lg:col-span-2">
             <Link to="/quantaforge" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-2 mb-4">
               <Atom className="h-8 w-8 text-quantaforge-secondary" />
