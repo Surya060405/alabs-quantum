@@ -55,7 +55,7 @@ export const RevolutionCTA = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <Link to="/quantaforge/contact">
+            <Link to="/quantumlabs/contact">
               <Button 
                 size="lg" 
                 className="bg-quantaforge-secondary text-quantaforge-dark hover:bg-quantaforge-secondary/90 quantaforge-glow text-lg px-8"
@@ -64,7 +64,7 @@ export const RevolutionCTA = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link to="/quantaforge/resources">
+            <Link to="/quantumlabs/resources">
               <Button 
                 size="lg" 
                 variant="outline" 

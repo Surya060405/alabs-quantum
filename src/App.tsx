@@ -39,17 +39,17 @@ const App = () => (
           <Route path="/" element={<Index />} />
           
           {/* QuantaForge routes */}
-          <Route path="/quantaforge" element={<QuantaForgeIndex />} />
-          <Route path="/quantaforge/compiler" element={<Compiler />} />
-          <Route path="/quantaforge/tokenization" element={<Tokenization />} />
-          <Route path="/quantaforge/simulation" element={<Simulation />} />
-          <Route path="/quantaforge/industries" element={<Industries />} />
-          <Route path="/quantaforge/technologies" element={<Technologies />} />
-          <Route path="/quantaforge/contact" element={<Contact />} />
-          <Route path="/quantaforge/about" element={<About />} />
-          <Route path="/quantaforge/case-studies" element={<CaseStudies />} />
-          <Route path="/quantaforge/resources" element={<Resources />} />
-          <Route path="/quantaforge/research" element={<Research />} />
+          <Route path="/quantumlabs" element={<QuantaForgeIndex />} />
+          <Route path="/quantumlabs/compiler" element={<Compiler />} />
+          <Route path="/quantumlabs/tokenization" element={<Tokenization />} />
+          <Route path="/quantumlabs/simulation" element={<Simulation />} />
+          <Route path="/quantumlabs/industries" element={<Industries />} />
+          <Route path="/quantumlabs/technologies" element={<Technologies />} />
+          <Route path="/quantumlabs/contact" element={<Contact />} />
+          <Route path="/quantumlabs/about" element={<About />} />
+          <Route path="/quantumlabs/case-studies" element={<CaseStudies />} />
+          <Route path="/quantumlabs/resources" element={<Resources />} />
+          <Route path="/quantumlabs/research" element={<Research />} />
           
           {/* Feature routes */}
           <Route path="/features/mobile-web-apps" element={<MobileWebApps />} />

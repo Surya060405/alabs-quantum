@@ -65,7 +65,7 @@ export const QuantaForgeHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <Link to="/quantaforge/contact">
+            <Link to="/quantumlabs/contact">
               <Button 
                 size="lg" 
                 className="bg-quantaforge-secondary text-quantaforge-dark hover:bg-quantaforge-secondary/90 quantaforge-glow text-lg px-8"

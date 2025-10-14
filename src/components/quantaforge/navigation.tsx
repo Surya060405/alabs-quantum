@@ -26,30 +26,30 @@ export const QuantaForgeNavigation = () => {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
     e.preventDefault();
-    if (location.pathname === "/quantaforge" || location.pathname === "/quantaforge/") {
+    if (location.pathname === "/quantumlabs" || location.pathname === "/quantumlabs/") {
       const section = document.getElementById(sectionId);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      window.location.href = `/quantaforge#${sectionId}`;
+      window.location.href = `/quantumlabs#${sectionId}`;
     }
     setIsMobileMenuOpen(false);
   };
 
   const navItems = [
-    { name: "Industries", href: "/quantaforge/industries" },
-    { name: "Technology", href: "/quantaforge/technologies" },
+    { name: "Industries", href: "/quantumlabs/industries" },
+    { name: "Technology", href: "/quantumlabs/technologies" },
     { name: "Pricing", href: "#pricing-section" },
     { name: "Resources", href: "#resources-section" },
-    { name: "About", href: "/quantaforge/about" },
+    { name: "About", href: "/quantumlabs/about" },
   ];
   
   const solutionItems = [
-      { name: "Quantum Compiler Studio", href: "/quantaforge/compiler"},
-      { name: "Quantum-Secure Tokenization", href: "/quantaforge/tokenization"},
-      { name: "Quantum Simulation & AI", href: "/quantaforge/simulation"},
-      { name: "Research & Development", href: "/quantaforge/research"},
+      { name: "Quantum Compiler Studio", href: "/quantumlabs/compiler"},
+      { name: "Quantum-Secure Tokenization", href: "/quantumlabs/tokenization"},
+      { name: "Quantum Simulation & AI", href: "/quantumlabs/simulation"},
+      { name: "Research & Development", href: "/quantumlabs/research"},
   ]
 
   return (
@@ -63,7 +63,7 @@ export const QuantaForgeNavigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link to="/quantaforge" className="flex items-center gap-2 group">
+          <Link to="/quantumlabs" className="flex items-center gap-2 group">
             <Atom className="h-8 w-8 text-quantaforge-secondary group-hover:rotate-180 transition-transform duration-500" />
             <span className="text-2xl font-bold quantaforge-text-gradient">Quantum Labs</span>
           </Link>
@@ -111,7 +111,7 @@ export const QuantaForgeNavigation = () => {
                 ← Adyakshar Labs
               </Button>
             </Link>
-            <Link to="/quantaforge/contact">
+            <Link to="/quantumlabs/contact">
               <Button className="bg-quantaforge-secondary text-quantaforge-dark hover:bg-quantaforge-secondary/90 quantaforge-glow">
                 Book a Scoping
               </Button>
@@ -161,7 +161,7 @@ export const QuantaForgeNavigation = () => {
                 ← Adyakshar Labs
               </Button>
             </Link>
-            <Link to="/quantaforge/contact">
+            <Link to="/quantumlabs/contact">
               <Button className="w-full mt-2 bg-quantaforge-secondary text-quantaforge-dark">
                 Book a Scoping
               </Button>
