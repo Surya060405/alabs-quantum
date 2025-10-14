@@ -32,7 +32,7 @@ export const QuantaForgeNavigation = () => {
         section.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      window.location.href = `/quantumlabs#${sectionId}`;
+      window.location.href = `/#${sectionId}`;
     }
     setIsMobileMenuOpen(false);
   };

@@ -111,7 +111,7 @@ const Technologies = () => {
               <p className="text-lg text-quantaforge-light/70 mb-8">
                 Let's discuss how our technology stack can accelerate your quantum roadmap.
               </p>
-              <Link to="/quantaforge/contact">
+              <Link to="/quantumlabs/contact">
                 <Button size="lg" className="bg-quantaforge-accent text-white hover:bg-quantaforge-accent/90 shadow-lg shadow-quantaforge-accent/30">
                   Contact Us
                   <ArrowRight className="ml-2 h-5 w-5" />

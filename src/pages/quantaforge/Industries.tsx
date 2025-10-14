@@ -202,7 +202,7 @@ const Industries = () => {
               <p className="text-lg text-quantaforge-light/70 mb-8">
                 Let's discuss how quantum computing can solve your specific challenges
               </p>
-              <Link to="/quantaforge/contact">
+              <Link to="/quantumlabs/contact">
                 <Button size="lg" className="bg-quantaforge-secondary text-quantaforge-dark hover:bg-quantaforge-secondary/90 quantaforge-glow">
                   Book a Technical Scoping
                   <ArrowRight className="ml-2 h-5 w-5" />
