@@ -50,8 +50,8 @@ export const QuantaForgeHero = () => {
                   Quantum Labs
                 </span>
               </span>
-              <span className="flex flex-wrap items-center justify-center gap-2 md:gap-3 text-2xl sm:text-3xl md:text-4xl">
-                <span className="italic font-light">A division of</span>
+              <span className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+                <span className="italic font-light text-sm sm:text-base md:text-lg opacity-70">A division of</span>
                 <img src={logo} alt="Adyakshar Laboratories" className="h-8 sm:h-10 md:h-12" />
               </span>
             </h1>
