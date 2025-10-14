@@ -41,7 +41,6 @@ export const QuantaForgeNavigation = () => {
     { name: "Industries", href: "/quantumlabs/industries" },
     { name: "Technology", href: "/quantumlabs/technologies" },
     { name: "Pricing", href: "#pricing-section" },
-    { name: "Resources", href: "#resources-section" },
     { name: "About", href: "/quantumlabs/about" },
   ];
   
@@ -111,16 +110,6 @@ export const QuantaForgeNavigation = () => {
                 </Link>
               )
             ))}
-            <Link to="/adyakshar">
-              <Button variant="outline" size="sm" className="border-quantaforge-secondary/50 text-quantaforge-secondary hover:bg-quantaforge-secondary/10">
-                ← Adyakshar Labs
-              </Button>
-            </Link>
-            <Link to="/quantumlabs/contact">
-              <Button className="bg-quantaforge-secondary text-quantaforge-dark hover:bg-quantaforge-secondary/90 quantaforge-glow">
-                Book a Scoping
-              </Button>
-            </Link>
           </div>
 
           <button
@@ -161,16 +150,6 @@ export const QuantaForgeNavigation = () => {
                 </Link>
               )
             ))}
-            <Link to="/adyakshar">
-              <Button variant="outline" className="w-full mt-3 border-quantaforge-secondary/50 text-quantaforge-secondary">
-                ← Adyakshar Labs
-              </Button>
-            </Link>
-            <Link to="/quantumlabs/contact">
-              <Button className="w-full mt-2 bg-quantaforge-secondary text-quantaforge-dark">
-                Book a Scoping
-              </Button>
-            </Link>
           </motion.div>
         )}
       </div>

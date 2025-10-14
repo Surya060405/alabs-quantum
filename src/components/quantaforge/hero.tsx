@@ -1,8 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowRight, Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { CompanyBadge } from "./company-badge";
 import logo from "@/assets/logo.png";
 
 export const QuantaForgeHero = () => {
@@ -41,7 +37,6 @@ export const QuantaForgeHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <CompanyBadge />
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 quantaforge-text-gradient flex flex-col items-center gap-3 md:gap-4">
               <span className="text-center">
@@ -64,30 +59,6 @@ export const QuantaForgeHero = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 px-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <Link to="/quantumlabs/contact">
-              <Button 
-                size="lg" 
-                className="bg-quantaforge-secondary text-quantaforge-dark hover:bg-quantaforge-secondary/90 quantaforge-glow text-base md:text-lg px-6 md:px-8 min-h-[44px]"
-              >
-                Book a technical scoping
-                <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
-              </Button>
-            </Link>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-quantaforge-secondary/50 text-quantaforge-secondary hover:bg-quantaforge-secondary/10 text-base md:text-lg px-6 md:px-8 min-h-[44px]"
-            >
-              <Download className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-              Download capabilities brief
-            </Button>
-          </motion.div>
 
           <motion.p
             className="text-sm text-quantaforge-light/50"

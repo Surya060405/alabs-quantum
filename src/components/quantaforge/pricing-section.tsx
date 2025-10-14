@@ -72,11 +72,6 @@ export const PricingSection = () => {
                   ))}
                 </ul>
               </div>
-              <div className="flex-1 flex flex-col justify-end p-6 sm:p-8 md:p-10 mt-auto">
-                 <Button className="w-full bg-quantaforge-secondary text-quantaforge-dark hover:bg-quantaforge-secondary/90 quantaforge-glow text-sm md:text-base min-h-[44px]">
-                  {tier.cta}
-                </Button>
-              </div>
             </div>
           ))}
         </div>
