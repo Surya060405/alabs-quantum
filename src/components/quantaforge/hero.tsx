@@ -1,8 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowRight, Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { CompanyBadge } from "./company-badge";
 import logo from "@/assets/logo.png";
 export const QuantaForgeHero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -35,8 +31,6 @@ export const QuantaForgeHero = () => {
         }} transition={{
           duration: 0.8
         }}>
-            <CompanyBadge />
-            
             <h1 className="text-5xl md:text-7xl font-bold mb-6 quantaforge-text-gradient flex flex-col items-center gap-4">
               <span>Welcome to Quantum</span>
               <span className="flex items-center gap-3">
@@ -53,29 +47,7 @@ export const QuantaForgeHero = () => {
             </p>
           </motion.div>
 
-          <motion.div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.8,
-          delay: 0.2
-        }}>
-            <Link to="/quantumlabs/contact">
-              <Button size="lg" className="bg-quantaforge-secondary text-quantaforge-dark hover:bg-quantaforge-secondary/90 quantaforge-glow text-lg px-8">
-                Book a technical scoping
-                
-              </Button>
-            </Link>
-            <Button size="lg" variant="outline" className="border-quantaforge-secondary/50 text-quantaforge-secondary hover:bg-quantaforge-secondary/10 text-lg px-8">
-              
-              Download capabilities brief
-            </Button>
-          </motion.div>
-
-          <motion.p className="text-sm text-quantaforge-light/50" initial={{
+          <motion.p className="text-sm text-quantaforge-light/50 mt-12" initial={{
           opacity: 0
         }} animate={{
           opacity: 1

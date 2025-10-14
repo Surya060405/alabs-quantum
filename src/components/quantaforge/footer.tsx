@@ -68,18 +68,10 @@ export const QuantaForgeFooter = () => {
           ))}
         </div>
 
-        <div className="border-t border-quantaforge-secondary/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-quantaforge-secondary/20 pt-8 text-center">
           <p className="text-quantaforge-light/50 text-sm">
             © 2025 Quantum Labs by Adyakshar Laboratories, Inc. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm">
-            <Link to="/quantumlabs/privacy" onClick={() => window.scrollTo(0, 0)} className="text-quantaforge-light/60 hover:text-quantaforge-secondary">
-              Privacy Policy
-            </Link>
-            <Link to="/quantumlabs/terms" onClick={() => window.scrollTo(0, 0)} className="text-quantaforge-light/60 hover:text-quantaforge-secondary">
-              Terms of Service
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
