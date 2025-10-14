@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Atom, Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Atom } from "lucide-react";
 
 export const QuantaForgeFooter = () => {
   const footerSections = [
@@ -47,36 +46,6 @@ export const QuantaForgeFooter = () => {
             <p className="text-xs md:text-sm text-quantaforge-light/50 mb-4">
               A Division of <Link to="/adyakshar" onClick={() => window.scrollTo(0, 0)} className="text-quantaforge-secondary hover:underline">Adyakshar Laboratories, Inc.</Link>
             </p>
-            <div className="flex gap-3 md:gap-4">
-              <motion.a
-                href="#"
-                className="text-quantaforge-light/60 hover:text-quantaforge-secondary transition-colors"
-                whileHover={{ scale: 1.1 }}
-              >
-                <Github className="h-5 w-5" />
-              </motion.a>
-              <motion.a
-                href="#"
-                className="text-quantaforge-light/60 hover:text-quantaforge-secondary transition-colors"
-                whileHover={{ scale: 1.1 }}
-              >
-                <Linkedin className="h-5 w-5" />
-              </motion.a>
-              <motion.a
-                href="#"
-                className="text-quantaforge-light/60 hover:text-quantaforge-secondary transition-colors"
-                whileHover={{ scale: 1.1 }}
-              >
-                <Twitter className="h-5 w-5" />
-              </motion.a>
-              <motion.a
-                href="#"
-                className="text-quantaforge-light/60 hover:text-quantaforge-secondary transition-colors"
-                whileHover={{ scale: 1.1 }}
-              >
-                <Mail className="h-5 w-5" />
-              </motion.a>
-            </div>
           </div>
 
           {footerSections.map((section) => (
