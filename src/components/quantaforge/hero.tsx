@@ -33,24 +33,16 @@ export const QuantaForgeHero = () => {
         }} className="flex flex-col items-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 text-center">
               <span className="block text-quantaforge-secondary mb-2">Welcome to</span>
-              <span className="block quantaforge-text-gradient relative inline-block pb-3">
+              <span className="block quantaforge-text-gradient relative inline-block pb-2">
                 Quantum Labs
                 <span className="absolute bottom-0 left-0 w-full h-1 bg-quantaforge-secondary"></span>
-                <span className="absolute bottom-[-6px] left-0 w-full h-1 bg-quantaforge-secondary"></span>
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-quantaforge-light/70 italic flex items-center gap-4 flex-wrap justify-center mb-8">
+            <p className="text-lg md:text-xl text-quantaforge-light/70 italic flex items-center gap-2 flex-wrap justify-center">
               A division of
               <span className="flex items-center gap-2">
                 <img src={logo} alt="Adyakshar Labs" className="h-6 md:h-8" />
               </span>
-            </p>
-            <p className="text-xl md:text-2xl text-quantaforge-light/80 mb-4">
-              Pioneering Quantum Computing Solutions for the Next Generation
-            </p>
-            <p className="text-base md:text-lg text-quantaforge-light/70 max-w-4xl mx-auto">
-              From compiler stacks for real quantum hardware to quantum-secure tokenization 
-              and simulation for drug discovery—ship production-grade quantum software with the power of quantum computing.
             </p>
           </motion.div>
         </div>
