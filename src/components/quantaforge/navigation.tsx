@@ -70,7 +70,6 @@ export const QuantaForgeNavigation = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-2xl font-bold quantaforge-text-gradient tracking-tight leading-none">Quantum Labs</span>
-              <span className="text-xs text-quantaforge-light/50 font-light tracking-wider">by Adyakshar</span>
             </div>
           </Link>
 
