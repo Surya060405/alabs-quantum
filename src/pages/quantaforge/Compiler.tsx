@@ -206,35 +206,6 @@ const Compiler = () => {
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="py-24 bg-quantaforge-dark">
-          <div className="container mx-auto px-4">
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} className="max-w-3xl mx-auto text-center">
-              <h2 className="text-4xl font-bold mb-6 text-quantaforge-light">
-                Ready to make your quantum device useful, faster?
-              </h2>
-              <p className="text-lg text-quantaforge-light/70 mb-8">
-                Request a sample report | See benchmark methodology
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link to="/contact">
-                  
-                </Link>
-                <Link to="/benchmarks">
-                  
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
       </main>
 
       <QuantaForgeFooter />
