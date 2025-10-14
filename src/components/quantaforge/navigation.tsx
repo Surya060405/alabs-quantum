@@ -26,7 +26,7 @@ export const QuantaForgeNavigation = () => {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
     e.preventDefault();
-    if (location.pathname === "/quantumlabs" || location.pathname === "/quantumlabs/") {
+    if (location.pathname === "/" || location.pathname === "/quantumlabs" || location.pathname === "/quantumlabs/") {
       const section = document.getElementById(sectionId);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
