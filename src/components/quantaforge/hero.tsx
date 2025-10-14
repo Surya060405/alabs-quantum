@@ -46,7 +46,7 @@ export const QuantaForgeHero = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 quantaforge-text-gradient flex flex-col items-center gap-3 md:gap-4">
               <span className="text-center">
                 Welcome to{" "}
-                <span className="underline decoration-quantaforge-secondary decoration-2 underline-offset-4 whitespace-nowrap">
+                <span className="font-orbitron font-bold tracking-wider underline decoration-quantaforge-secondary decoration-2 underline-offset-4 whitespace-nowrap">
                   Quantum Labs
                 </span>
               </span>
