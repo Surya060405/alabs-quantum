@@ -101,7 +101,7 @@ const AboutPage = () => {
             <div className="grid md:grid-cols-2 gap-12">
               
 
-              <div className="glassmorphism p-8 rounded-2xl border border-quantaforge-secondary/20">
+              <div className="glassmorphism p-8 rounded-2xl border border-quantaforge-secondary/20 text-center">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-quantaforge-secondary to-quantaforge-accent flex items-center justify-center">
                     <Rocket className="h-6 w-6 text-white" />
