@@ -30,33 +30,29 @@ export const QuantaForgeHero = () => {
           y: 0
         }} transition={{
           duration: 0.8
-        }}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 quantaforge-text-gradient flex flex-col items-center gap-4">
-              <span>Welcome to Quantum</span>
-              <span className="flex items-center gap-3">
-                Labs by
-                <img src={logo} alt="Adyakshar Laboratories" className="h-12 md:h-16" />
+        }} className="flex flex-col items-center">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-center">
+              <span className="block text-quantaforge-secondary mb-2">Welcome to</span>
+              <span className="block quantaforge-text-gradient relative inline-block pb-3">
+                Quantum Labs
+                <span className="absolute bottom-0 left-0 w-full h-1 bg-quantaforge-secondary"></span>
+                <span className="absolute bottom-[-6px] left-0 w-full h-1 bg-quantaforge-secondary"></span>
               </span>
             </h1>
+            <p className="text-lg md:text-xl text-quantaforge-light/70 italic flex items-center gap-4 flex-wrap justify-center mb-8">
+              A division of
+              <span className="flex items-center gap-2">
+                <img src={logo} alt="Adyakshar Labs" className="h-6 md:h-8" />
+              </span>
+            </p>
             <p className="text-xl md:text-2xl text-quantaforge-light/80 mb-4">
               Pioneering Quantum Computing Solutions for the Next Generation
             </p>
-            <p className="text-lg md:text-xl text-quantaforge-light/60 mb-12 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-quantaforge-light/70 max-w-4xl mx-auto">
               From compiler stacks for real quantum hardware to quantum-secure tokenization 
               and simulation for drug discovery—ship production-grade quantum software with the power of quantum computing.
             </p>
           </motion.div>
-
-          <motion.p className="text-sm text-quantaforge-light/50 mt-12" initial={{
-          opacity: 0
-        }} animate={{
-          opacity: 1
-        }} transition={{
-          duration: 0.8,
-          delay: 0.4
-        }}>
-            Trusted by leading quantum startups, labs, and Fortune 500 R&D
-          </motion.p>
         </div>
       </div>
 
