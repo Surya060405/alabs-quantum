@@ -87,37 +87,7 @@ const AboutPage = () => {
       </section>
 
       {/* Parent Company Context */}
-      <section className="py-16 bg-quantaforge-primary/30">
-        <div className="container mx-auto px-4">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              
-
-              <div className="glassmorphism p-8 rounded-2xl border border-quantaforge-secondary/20 text-center">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-quantaforge-secondary to-quantaforge-accent flex items-center justify-center">
-                    <Rocket className="h-6 w-6 text-white" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-quantaforge-secondary">
-                    Quantum Labs
-                  </h2>
-                </div>
-                <p className="text-quantaforge-light/70 leading-relaxed">
-                  We are proud to introduce our new division, <span className="text-quantaforge-secondary font-semibold">Quantum Labs</span>—a cutting-edge venture dedicated to pioneering quantum computing solutions. Quantum Labs combines our deep expertise in technology consulting, custom software development, and hardware engineering with the transformative power of quantum computing.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      
 
       {/* Mission Section */}
       <section className="py-16">
