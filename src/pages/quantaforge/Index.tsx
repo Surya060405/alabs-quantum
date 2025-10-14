@@ -8,7 +8,6 @@ import { HowWeWork } from "@/components/quantaforge/how-we-work";
 import { BenchmarksSection } from "@/components/quantaforge/benchmarks-section";
 import { SolutionsCards } from "@/components/quantaforge/solutions-cards";
 import { CaseHighlights } from "@/components/quantaforge/case-highlights";
-import { RDSection } from "@/components/quantaforge/rd-section";
 import { PricingSection } from "@/components/quantaforge/pricing-section";
 import { ResourcesSection } from "@/components/quantaforge/resources-section";
 import { RevolutionCTA } from "@/components/quantaforge/revolution-cta";
@@ -39,7 +38,6 @@ const QuantaForgeIndex = () => {
         <section id="solutions-section">
           <SolutionsCards />
         </section>
-        <RDSection />
         <CaseHighlights />
         <PricingSection />
         <ResourcesSection />

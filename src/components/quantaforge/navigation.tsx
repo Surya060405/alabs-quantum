@@ -40,7 +40,6 @@ export const QuantaForgeNavigation = () => {
   const navItems = [
     { name: "Industries", href: "/quantaforge/industries" },
     { name: "Technology", href: "/quantaforge/technologies" },
-    { name: "Research", href: "#rd-section" },
     { name: "Pricing", href: "#pricing-section" },
     { name: "Resources", href: "#resources-section" },
     { name: "About", href: "/quantaforge/about" },
@@ -50,6 +49,7 @@ export const QuantaForgeNavigation = () => {
       { name: "Quantum Compiler Studio", href: "/quantaforge/compiler"},
       { name: "Quantum-Secure Tokenization", href: "/quantaforge/tokenization"},
       { name: "Quantum Simulation & AI", href: "/quantaforge/simulation"},
+      { name: "Research & Development", href: "/quantaforge/research"},
   ]
 
   return (

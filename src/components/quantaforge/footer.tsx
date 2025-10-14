@@ -15,9 +15,10 @@ export const QuantaForgeFooter = () => {
     {
       title: "Research",
       links: [
-        { name: "Quantum EDA", href: "/quantaforge#rd-section" },
-        { name: "Quantum FPGA", href: "/quantaforge#rd-section" },
-        { name: "Quantum Finance", href: "/quantaforge#rd-section" },
+        { name: "Research & Development", href: "/quantaforge/research" },
+        { name: "Quantum EDA", href: "/quantaforge/research#rd-section" },
+        { name: "Quantum FPGA", href: "/quantaforge/research#rd-section" },
+        { name: "Quantum Finance", href: "/quantaforge/research#rd-section" },
       ],
     },
     {

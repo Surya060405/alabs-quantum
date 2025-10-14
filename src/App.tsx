@@ -17,6 +17,7 @@ import Contact from "./pages/quantaforge/Contact";
 import About from "./pages/quantaforge/About";
 import CaseStudies from "./pages/quantaforge/CaseStudies";
 import Resources from "./pages/quantaforge/Resources";
+import Research from "./pages/quantaforge/Research";
 
 // Feature pages
 import MobileWebApps from "./pages/features/MobileWebApps";
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/quantaforge/about" element={<About />} />
           <Route path="/quantaforge/case-studies" element={<CaseStudies />} />
           <Route path="/quantaforge/resources" element={<Resources />} />
+          <Route path="/quantaforge/research" element={<Research />} />
           
           {/* Feature routes */}
           <Route path="/features/mobile-web-apps" element={<MobileWebApps />} />
