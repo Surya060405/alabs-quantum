@@ -18,6 +18,17 @@ export const RDSection = () => {
           name: "Front End",
           subtitle: "Functional Design, Verification & Early Estimation",
           topics: [
+            "Quantum circuit synthesis and optimization algorithms",
+            "Automated quantum gate decomposition",
+            "Cross-platform quantum compiler design (Qiskit, Cirq, t|ket⟩ interoperability)",
+            "Noise-aware circuit simulation and error modeling",
+            "Quantum-classical co-design workflows",
+            "Machine learning–based EDA optimization",
+            "Quantum design verification and test automation",
+            "Quantum RTL (Register Transfer Level) abstraction development",
+            "Quantum-aware timing and resource estimation tools",
+            "Quantum hardware-aware compiler pipelines",
+            "Fault-tolerant quantum circuit synthesis",
             "Hybrid digital-analog quantum design frameworks"
           ]
         },
