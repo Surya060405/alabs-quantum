@@ -13,35 +13,35 @@ const Compiler = () => {
   const whatWeDeliver = [{
     icon: GitBranch,
     title: "Architecture & IR",
-    description: "Design of QIR/OpenQASM-compatible pipelines; custom passes and dialects."
+    description: "Design QIR and OpenQASM-compatible compiler pipelines that translate quantum programs into optimized, hardware-agnostic representations.\n• Develop custom compiler passes and dialects to enable fine-grained control over circuit transformations and intermediate optimizations.\n• Integrate seamlessly with heterogeneous quantum backends, ensuring extensibility, interoperability, and long-term compiler scalability and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: Cpu,
     title: "Gate decomposition",
-    description: "Basis conversion optimized for native gate sets."
+    description: "Convert high-level quantum operations into native gate sets through precision-optimized decomposition strategies.\n• Implement basis conversion techniques tailored to specific hardware to minimize depth and improve fidelity.\n• Enable adaptive compilation workflows that automatically select the most efficient gate representations for each backend and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: Sliders,
     title: "Qubit mapping & routing",
-    description: "Heuristics (e.g., SABRE/A*), noise-aware placement, SWAP minimization."
+    description: "Optimize qubit placement and routing using heuristic algorithms such as SABRE and A*, minimizing SWAP overheads and latency.\n• Incorporate real-time noise profiles for hardware-aware mapping that enhances circuit reliability.\n• Balance connectivity constraints with dynamic routing strategies to achieve optimal hardware utilization and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: Clock,
     title: "Scheduling",
-    description: "ASAP/ALAP scheduling, cross-talk avoidance, idle-time decoupling."
+    description: "Implement advanced ASAP/ALAP scheduling to reduce idle times and improve quantum circuit throughput.\n• Design cross-talk aware schedulers that dynamically reorder operations to preserve coherence and reduce gate interference.\n• Integrate idle-time decoupling and concurrency optimization for consistent execution across variable device topologies and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: Shield,
     title: "Error mitigation",
-    description: "Dynamical decoupling, randomized compiling, twirling, bias-aware transpilation."
+    description: "Incorporate dynamical decoupling, randomized compiling, and twirling techniques to suppress noise accumulation.\n• Utilize bias-aware transpilation strategies that adaptively tailor circuit structure to mitigate systematic errors.\n• Fuse calibration data with runtime adjustments for enhanced resilience against decoherence and gate drift and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: Zap,
     title: "Pulse-level optimization",
-    description: "Drive-shape synthesis, parametric gates, closed-loop calibration hooks."
+    description: "Engineer drive-shape synthesis and parametric gate control for precise pulse-level quantum operations.\n• Utilizing closed-loop calibration hooks to iteratively refine pulse parameters for maximum gate fidelity.\n• Integrate compiler-aware pulse scheduling for hardware-specific timing synchronization and phase correction—and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: Code,
     title: "Hybrid runtime",
-    description: "Mid-circuit measurement/branching, classical feedback, parameter sweeping."
+    description: "Enable mid-circuit measurements and classical feedback for adaptive quantum execution.\n• Orchestrate parameter sweeping and branching logic for hybrid quantum-classical workflows at runtime.\n• Bridge quantum and classical computation layers for ultra-fast decision loops within dynamic experiments and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: Atom,
     title: "QEC-ready design",
-    description: "Logical op compilation, syndrome orchestration, decoder integration."
+    description: "Compile logical operations compatible with error-corrected architectures and fault-tolerant protocols.\n• Coordinate syndrome extraction, correction, and decoder integration for next-generation quantum error correction stacks.\n• Build compiler pathways that future-proof quantum workloads for scalable, logical-qubit architectures and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }];
   const engagementModels = [{
     icon: Rocket,
@@ -84,8 +84,8 @@ const Compiler = () => {
               <p className="text-3xl md:text-4xl font-bold mb-6 text-quantaforge-light">
                 Make any quantum device useful, faster.
               </p>
-              <p className="text-2xl text-quantaforge-light/70 mb-8">
-                Hardware heterogeneity, constrained connectivity, short coherence times, and noisy gates make raw circuits impractical. The right compiler stack can be the difference between a failed experiment and production-ready results.
+              <p className="text-lg text-quantaforge-light/70 mb-8 leading-relaxed">
+                Transform raw quantum potential into practical performance. Make any quantum device useful and faster. Overcome hardware heterogeneity, constrained connectivity, and short coherence times through a compiler stack built for real-world scalability. Quantum Compiler Studio integrates advanced IR architectures, noise-aware routing, and precision gate decomposition with dynamic scheduling and pulse-level optimization. From logical-qubit compilation to QEC-ready design, it turns fragile circuits into production-grade quantum outcomes and more.
               </p>
               <Link to="/contact">
                 
@@ -127,7 +127,9 @@ const Compiler = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold mb-2 text-quantaforge-light">{item.title}</h3>
-                      <p className="text-quantaforge-light/70">{item.description}</p>
+                      <div className="text-quantaforge-light/70 space-y-2 whitespace-pre-line">
+                        {item.description}
+                      </div>
                     </div>
                   </div>
                 </motion.div>)}

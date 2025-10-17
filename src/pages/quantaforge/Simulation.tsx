@@ -13,23 +13,23 @@ const Simulation = () => {
   const whatWeBuild = [{
     icon: Beaker,
     title: "Chemistry pipelines",
-    description: "Electronic structure (VQE, ADAPT-VQE), excited states, unitary coupled-cluster, problem mapping (Jordan-Wigner/Bravyi-Kitaev), ansätze libraries."
+    description: "Simulate complex molecular systems using adaptive variational solvers that capture electronic correlations with quantum precision.\n• Utilize automated ansatz selection and hybrid optimization to model ground and excited states through scalable VQE and ADAPT-VQE frameworks.\n• Integrate problem mappings via Jordan Wigner and Bravyi Kitaev transformations, enabling efficient encoding of molecular Hamiltonians on quantum hardware and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: Atom,
     title: "Materials & catalysis",
-    description: "Lattice models, time evolution (Trotter/LCU), variational dynamics, error-aware approximations."
+    description: "Model quantum materials and catalytic reactions through lattice-based Hamiltonians that reveal emergent physical behaviors.\n• Simulate dynamic evolution using Trotterization and Linear Combination of Unitaries (LCU) methods for precision-controlled time propagation.\n• Employ variational dynamics and error-aware approximations to achieve scalable, noise-resilient simulations across real-world material systems and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: BrainCircuit,
     title: "Hybrid ML",
-    description: "Kernel methods, QAOA for optimization, quantum feature maps, classical-quantum loops with PyTorch/JAX bridges."
+    description: "Fuse quantum and classical intelligence through kernel-based learning and variational optimization frameworks.\n• Implement QAOA-driven optimization and quantum feature maps that amplify representational power beyond classical limits.\n• Bridge quantum circuits with PyTorch and JAX for seamless classical–quantum co-training loops, enabling adaptive and data-efficient learning and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: Blend,
     title: "Experiment orchestration",
-    description: "Batch sweepers, parameter servers, active-learning loops, surrogate models."
+    description: "Automate experimental workflows through intelligent batch sweepers and distributed parameter servers for high-throughput exploration.\n• Integrate active-learning loops that dynamically guide experiments toward optimal configurations using real-time feedback.\n• Employ surrogate modeling to predict outcomes, reduce computational overhead, and accelerate quantum–AI co-design cycles and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: Server,
     title: "HPC integration",
-    description: "GPU simulators, tensor-network back-ends, CUDA-Quantum bridges, Slurm/K8s runtimes."
+    description: "Unify large-scale quantum simulations with GPU-accelerated and tensor-network backends for unparalleled computational efficiency.\n• Implement CUDA-Quantum bridges and hybrid HPC workflows to seamlessly integrate classical acceleration with quantum runtimes.\n• Deploy scalable execution environments across Slurm and Kubernetes clusters, enabling adaptive, enterprise-grade quantum workloads and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }];
   const deliverables = [{
     icon: Notebook,
@@ -75,7 +75,9 @@ const Simulation = () => {
               <Link to="/quantumlabs/contact">
                 
               </Link>
-              <p className="text-lg text-quantaforge-light/70 mt-4">Faster insights in chemistry, materials, and design.</p>
+              <p className="text-lg text-quantaforge-light/70 mt-4 leading-relaxed">
+                Accelerate the discovery frontier in chemistry, materials, and intelligent design through quantum-enhanced simulation pipelines. Harness hybrid variational solvers for electronic structure, lattice dynamics, and catalysis bridged seamlessly with adaptive AI models. By coupling quantum kernels with classical accelerators, our platform orchestrates experiments, optimizes workflows, and fuses HPC-scale precision with active-learning autonomy for exponential insight generation.
+              </p>
             </motion.div>
           </div>
         </section>
@@ -111,7 +113,9 @@ const Simulation = () => {
                     <item.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-quantaforge-light">{item.title}</h3>
-                  <p className="text-quantaforge-light/70">{item.description}</p>
+                  <div className="text-quantaforge-light/70 space-y-2 whitespace-pre-line">
+                    {item.description}
+                  </div>
                 </motion.div>)}
             </div>
           </div>
