@@ -12,24 +12,24 @@ const Tokenization = () => {
   }, []);
   const capabilities = [{
     icon: Shield,
-    title: "PQC migration toolkit",
-    description: "Integration of NIST-selected algorithms (CRYSTALS-Kyber/Dilithium, etc.), hybrid TLS, certificate rollout, HSM integration."
+    title: "PQC Migration Toolkit",
+    description: "Integrate NIST-selected algorithms such as CRYSTALS-Kyber and Dilithium into existing cryptographic infrastructures with minimal disruption.\n• Enable hybrid TLS handshakes, certificate rollout, and HSM-backed key management for enterprise-grade migration to post-quantum cryptography.\n• Automate deployment pipelines for cryptographic agility, ensuring forward security and compliance readiness and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: Lock,
-    title: "Tokenization services",
-    description: "Format-preserving tokenization, vaulted/non-vaulted modes, deterministic mapping for analytics, PCI-friendly designs."
+    title: "Tokenization Services",
+    description: "Implement format-preserving and PCI-compliant tokenization architectures for secure data representation.\n• Support vaulted and non-vaulted configurations with deterministic mapping to retain analytical integrity.\n• Deliver scalable tokenization rails that protect sensitive assets while maintaining seamless user experience and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: GitMerge,
-    title: "Blockchain hardening",
-    description: "PQC wallets, threshold signatures/MPC, quantum-safe key derivation, post-quantum L2 bridges."
+    title: "Blockchain Hardening",
+    description: "Secure decentralized ecosystems with PQC-enabled wallets and quantum-safe threshold signature schemes.\n• Incorporate multiparty computation (MPC) and lattice-based key derivation for tamper-resistant consensus.\n• Enable post-quantum L2 bridges to safeguard cross-chain communication from emerging quantum adversaries and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: Router,
-    title: "QKD-ready peering",
-    description: "API to add QKD channels where available; session key management and auditing."
+    title: "QKD-Ready Peering",
+    description: "Deploy APIs that integrate Quantum Key Distribution (QKD) channels wherever available for ultimate link-layer security.\n• Implement automated session key management, rotation, and auditing through programmable interfaces.\n• Bridge classical and quantum communication layers for end-to-end authenticated encryption across distributed systems and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }, {
     icon: FileText,
     title: "Compliance",
-    description: "PCI DSS, GDPR, HIPAA, SOX; chain-of-custody, attestations, key management SOPs."
+    description: "Align cryptographic operations with PCI DSS, GDPR, HIPAA, and SOX regulatory standards.\n• Maintain audit-ready chain-of-custody, policy attestations, and standardized key management procedures.\n• Provide compliance-driven cryptographic assurance designed to meet both enterprise governance and quantum-era risk frameworks and more.\n\nFor more information, please contact info@adyaksharlabs.com"
   }];
   const referenceArchitectures = [{
     icon: Server,
@@ -65,8 +65,8 @@ const Tokenization = () => {
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-quantaforge-accent">
                 Tokenize with quantum-grade security.
               </h1>
-              <p className="text-lg text-quantaforge-light/60 mb-8 max-w-3xl">
-                We help enterprises and Web3 teams migrate to post-quantum cryptography (PQC) and build tokenization rails that remain secure against quantum adversaries. Integrate lattice-based KEMs/signatures, forward-secure key rotation, and QKD-ready interfaces without disrupting user experience.
+              <p className="text-lg text-quantaforge-light/60 mb-8 max-w-3xl leading-relaxed">
+                Future-proof your data, assets, and digital ecosystems against quantum threats. We help enterprises and Web3 teams migrate seamlessly to post-quantum cryptography (PQC) while preserving speed, compliance, and user trust. Our architecture integrates lattice-based KEMs and signature schemes, forward-secure key rotation, and QKD-ready interfaces without disrupting performance. From hybrid TLS frameworks to quantum-safe tokenization and blockchain hardening, we deliver cryptographic resilience engineered for the post-quantum era and more.
               </p>
               <Link to="/quantumlabs/contact">
                 
@@ -106,7 +106,9 @@ const Tokenization = () => {
                     <item.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-quantaforge-light">{item.title}</h3>
-                  <p className="text-quantaforge-light/70">{item.description}</p>
+                  <div className="text-quantaforge-light/70 space-y-2 whitespace-pre-line">
+                    {item.description}
+                  </div>
                 </motion.div>)}
             </div>
           </div>
