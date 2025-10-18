@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export const RDShowcase = () => {
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-quantaforge-dark">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-quantaforge-primary/30">
       <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
