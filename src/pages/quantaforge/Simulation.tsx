@@ -28,31 +28,31 @@ const Simulation = () => {
       icon: Beaker,
       title: "Chemistry pipelines",
       description:
-        "Simulate complex molecular systems using adaptive variational solvers that capture electronic correlations with quantum precision.\n• Utilize automated ansatz selection and hybrid optimization to model ground and excited states through scalable VQE and ADAPT-VQE frameworks.\n• Integrate problem mappings via Jordan Wigner and Bravyi Kitaev transformations, enabling efficient encoding of molecular Hamiltonians on quantum hardware and more.\n\nFor more information, please contact info@alabs-quantum.com",
+        "• Simulate complex molecular systems using adaptive variational solvers that capture electronic correlations with quantum precision.\n• Utilize automated ansatz selection and hybrid optimization to model ground and excited states through scalable VQE and ADAPT-VQE frameworks.\n• Integrate problem mappings via Jordan Wigner and Bravyi Kitaev transformations, enabling efficient encoding of molecular Hamiltonians on quantum hardware and more. For more information, please contact info@adyaksharlabs-quantum.com",
     },
     {
       icon: Atom,
       title: "Materials & catalysis",
       description:
-        "Model quantum materials and catalytic reactions through lattice-based Hamiltonians that reveal emergent physical behaviors.\n• Simulate dynamic evolution using Trotterization and Linear Combination of Unitaries (LCU) methods for precision-controlled time propagation.\n• Employ variational dynamics and error-aware approximations to achieve scalable, noise-resilient simulations across real-world material systems and more.\n\nFor more information, please contact info@alabs-quantum.com",
+        "• Model quantum materials and catalytic reactions through lattice-based Hamiltonians that reveal emergent physical behaviors.\n• Simulate dynamic evolution using Trotterization and Linear Combination of Unitaries (LCU) methods for precision-controlled time propagation.\n• Employ variational dynamics and error-aware approximations to achieve scalable, noise-resilient simulations across real-world material systems and more. For more information, please contact info@adyaksharlabs-quantum.com",
     },
     {
       icon: BrainCircuit,
       title: "Hybrid ML",
       description:
-        "Fuse quantum and classical intelligence through kernel-based learning and variational optimization frameworks.\n• Implement QAOA-driven optimization and quantum feature maps that amplify representational power beyond classical limits.\n• Bridge quantum circuits with PyTorch and JAX for seamless classical–quantum co-training loops, enabling adaptive and data-efficient learning and more.\n\nFor more information, please contact info@alabs-quantum.com",
+        "• Fuse quantum and classical intelligence through kernel-based learning and variational optimization frameworks.\n• Implement QAOA-driven optimization and quantum feature maps that amplify representational power beyond classical limits.\n• Bridge quantum circuits with PyTorch and JAX for seamless classical–quantum co-training loops, enabling adaptive and data-efficient learning and more. For more information, please contact info@adyaksharlabs-quantum.com",
     },
     {
       icon: Blend,
       title: "Experiment orchestration",
       description:
-        "Automate experimental workflows through intelligent batch sweepers and distributed parameter servers for high-throughput exploration.\n• Integrate active-learning loops that dynamically guide experiments toward optimal configurations using real-time feedback.\n• Employ surrogate modeling to predict outcomes, reduce computational overhead, and accelerate quantum–AI co-design cycles and more.\n\nFor more information, please contact info@alabs-quantum.com",
+        "• Automate experimental workflows through intelligent batch sweepers and distributed parameter servers for high-throughput exploration.\n• Integrate active-learning loops that dynamically guide experiments toward optimal configurations using real-time feedback.\n• Employ surrogate modeling to predict outcomes, reduce computational overhead, and accelerate quantum–AI co-design cycles and more. For more information, please contact info@adyaksharlabs-quantum.com",
     },
     {
       icon: Server,
       title: "HPC integration",
       description:
-        "Unify large-scale quantum simulations with GPU-accelerated and tensor-network backends for unparalleled computational efficiency.\n• Implement CUDA-Quantum bridges and hybrid HPC workflows to seamlessly integrate classical acceleration with quantum runtimes.\n• Deploy scalable execution environments across Slurm and Kubernetes clusters, enabling adaptive, enterprise-grade quantum workloads and more.\n\nFor more information, please contact info@alabs-quantum.com",
+        "• Unify large-scale quantum simulations with GPU-accelerated and tensor-network backends for unparalleled computational efficiency.\n• Implement CUDA-Quantum bridges and hybrid HPC workflows to seamlessly integrate classical acceleration with quantum runtimes.\n• Deploy scalable execution environments across Slurm and Kubernetes clusters, enabling adaptive, enterprise-grade quantum workloads and more. For more information, please contact info@adyaksharlabs-quantum.com",
     },
   ];
   const deliverables = [
