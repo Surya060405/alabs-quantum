@@ -28,14 +28,6 @@ const solutions = [
     href: "/simulation",
     gradient: "from-quantaforge-success to-quantaforge-secondary",
   },
-  {
-    icon: Microscope,
-    title: "Research & Development",
-    description: "Explore cutting-edge quantum research in EDA, FPGA, and Finance. From quantum circuit design to algorithmic trading, we push the boundaries of quantum computing.",
-    features: ["Quantum EDA", "Quantum FPGA", "Quantum Finance", "Advanced algorithms"],
-    href: "/research",
-    gradient: "from-quantaforge-secondary/80 to-quantaforge-primary",
-  },
 ];
 
 export const SolutionsCards = () => {
@@ -56,7 +48,7 @@ export const SolutionsCards = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.title}
