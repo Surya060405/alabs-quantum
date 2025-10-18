@@ -55,7 +55,7 @@ export const AboutQuantumLabs = () => {
             Introducing Quantum Labs
           </h3>
           <p className="text-sm md:text-base text-quantaforge-light/70 leading-relaxed max-w-3xl mx-auto">
-            We are proud to introduce our new division, <span className="text-quantaforge-secondary font-semibold">Quantum Labs</span>—a cutting-edge venture dedicated to pioneering quantum computing solutions. Quantum Labs combines our deep expertise in technology consulting, custom software development, and hardware engineering with the transformative power of quantum computing to offer businesses unique, scalable, and disruptive solutions for the next generation of digital innovation.
+            We are proud to introduce our new division, <span className="text-quantaforge-secondary font-semibold">Quantum Labs</span>, a cutting-edge venture dedicated to pioneering quantum computing solutions. Quantum Labs combines our deep expertise in technology consulting, custom software development, and hardware engineering with the transformative power of quantum computing to offer businesses unique, scalable, and disruptive solutions for the next generation of digital innovation.
           </p>
         </motion.div>
 
