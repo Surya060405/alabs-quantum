@@ -5,6 +5,7 @@ import { QuantaForgeHero } from "@/components/quantaforge/hero";
 import { AboutQuantumLabs } from "@/components/quantaforge/about-section";
 import { ValuePillars } from "@/components/quantaforge/value-pillars";
 import { SolutionsCards } from "@/components/quantaforge/solutions-cards";
+import { RDShowcase } from "@/components/quantaforge/rd-showcase";
 import { CaseHighlights } from "@/components/quantaforge/case-highlights";
 import { PricingSection } from "@/components/quantaforge/pricing-section";
 import { QuantaForgeFooter } from "@/components/quantaforge/footer";
@@ -31,6 +32,7 @@ const QuantaForgeIndex = () => {
         <section id="solutions-section">
           <SolutionsCards />
         </section>
+        <RDShowcase />
         <CaseHighlights />
         <PricingSection />
       </main>
