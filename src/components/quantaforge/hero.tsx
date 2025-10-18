@@ -48,10 +48,7 @@ export const QuantaForgeHero = () => {
             <p className="text-xl md:text-2xl text-quantaforge-light/80 mb-4">
               Pioneering Quantum Computing Solutions for the Next Generation
             </p>
-            <p className="text-base md:text-lg text-quantaforge-light/70 max-w-4xl mx-auto">
-              From compiler stacks for real quantum hardware to quantum-secure tokenization 
-              and simulation for drug discovery—ship production-grade quantum software with the power of quantum computing.
-            </p>
+            <p className="text-base md:text-lg text-quantaforge-light/70 max-w-4xl mx-auto">From compiler stacks for real quantum hardware to quantum-secure tokenization and simulation for drug discovery, ship production-grade quantum software with the power of quantum computing.</p>
           </motion.div>
         </div>
       </div>
