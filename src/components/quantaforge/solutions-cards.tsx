@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Cpu, Shield, Atom } from "lucide-react";
+import { ArrowRight, Cpu, Shield, Atom, Microscope } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const solutions = [
@@ -28,6 +28,14 @@ const solutions = [
     href: "/simulation",
     gradient: "from-quantaforge-success to-quantaforge-secondary",
   },
+  {
+    icon: Microscope,
+    title: "Research & Development",
+    description: "Explore cutting-edge quantum research in EDA, FPGA, and Finance. From quantum circuit design to algorithmic trading, we push the boundaries of quantum computing.",
+    features: ["Quantum EDA", "Quantum FPGA", "Quantum Finance", "Advanced algorithms"],
+    href: "/research",
+    gradient: "from-quantaforge-secondary/80 to-quantaforge-primary",
+  },
 ];
 
 export const SolutionsCards = () => {
@@ -44,7 +52,7 @@ export const SolutionsCards = () => {
             Our Solutions
           </h2>
           <p className="text-base sm:text-lg text-quantaforge-light/60 max-w-2xl mx-auto px-4">
-            Three specialized pillars for production-grade quantum computing
+            Four specialized pillars for production-grade quantum computing
           </p>
         </motion.div>
 

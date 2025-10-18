@@ -1,9 +1,6 @@
 import { Navigation } from "@/components/navigation";
 import { HeroSection } from "@/components/hero-section";
 import { AboutQuantumLabs } from "@/components/quantaforge/about-section";
-import { SolutionsCards } from "@/components/quantaforge/solutions-cards";
-import { RDShowcase } from "@/components/quantaforge/rd-showcase";
-import { CaseHighlights } from "@/components/quantaforge/case-highlights";
 import { ServicesSection } from "@/components/services-section";
 import { TechnologiesSection } from "@/components/technologies-section";
 import { OurTeamSection } from "@/components/our-team-section";
@@ -17,9 +14,6 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutQuantumLabs />
-        <SolutionsCards />
-        <RDShowcase />
-        <CaseHighlights />
         <ServicesSection />
         <TechnologiesSection />
         <OurTeamSection />
