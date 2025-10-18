@@ -6,13 +6,13 @@ export const SuccessStoriesSection = () => {
     {
       title: "Circuits That Think",
       content:
-        "While experimenting with our compiler stack, we managed to make even imperfect quantum hardware perform smarter. Seeing raw circuits turn stable after noise-aware routing and pulse optimization felt incredible. It wasn’t just debugging—it was like watching logic find rhythm through physics. That day, quantum felt real, not theoretical.",
+        "While experimenting with our compiler stack, we managed to make even imperfect quantum hardware perform smarter. Seeing raw circuits turn stable after noise-aware routing and pulse optimization felt incredible. It wasn’t just debugging, it was like watching logic find rhythm through physics. That day, quantum felt real, not theoretical.",
       contact: "info@alabs-quantum.com",
     },
     {
       title: "Locks for the Quantum Future",
       content:
-        "During our PQC integration test, we built a tokenization system that secured blockchain transactions against future quantum threats without slowing anything down. What amazed us most was how smoothly it fit into existing systems. It proved that post-quantum security doesn’t have to break usability—it can strengthen trust seamlessly.",
+        "During our PQC integration test, we built a tokenization system that secured blockchain transactions against future quantum threats without slowing anything down. What amazed us most was how smoothly it fit into existing systems. It proved that post-quantum security doesn’t have to break usability, it can strengthen trust seamlessly.",
       contact: "info@alabs-quantum.com",
     },
     {
