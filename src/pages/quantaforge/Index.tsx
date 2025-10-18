@@ -8,6 +8,7 @@ import { SolutionsCards } from "@/components/quantaforge/solutions-cards";
 import { RDShowcase } from "@/components/quantaforge/rd-showcase";
 import { CaseHighlights } from "@/components/quantaforge/case-highlights";
 import { PricingSection } from "@/components/quantaforge/pricing-section";
+import { SuccessStoriesSection } from "@/components/quantaforge/success-stories-section";
 import { QuantaForgeFooter } from "@/components/quantaforge/footer";
 
 const QuantaForgeIndex = () => {
@@ -33,6 +34,7 @@ const QuantaForgeIndex = () => {
           <SolutionsCards />
         </section>
         <RDShowcase />
+        <SuccessStoriesSection />
         <CaseHighlights />
         <PricingSection />
       </main>

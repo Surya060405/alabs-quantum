@@ -44,7 +44,7 @@ const Contact = () => {
                       <div>
                         <div className="font-semibold text-quantaforge-light mb-1">Email</div>
                         <a href="mailto:info@adyaksharlabs.com" className="text-quantaforge-light/70 hover:text-quantaforge-secondary">
-                          info@adyaksharlabs.com
+                          info@alabs-quantum.com
                         </a>
                       </div>
                     </div>

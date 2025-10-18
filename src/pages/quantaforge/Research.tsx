@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { QuantaForgeNavigation } from "@/components/quantaforge/navigation";
 import { RDSection } from "@/components/quantaforge/rd-section";
+import { SuccessStoriesSection } from "@/components/quantaforge/success-stories-section";
 import { QuantaForgeFooter } from "@/components/quantaforge/footer";
 
 const Research = () => {
@@ -25,6 +26,7 @@ const Research = () => {
       <QuantaForgeNavigation />
       <main className="pt-20">
         <RDSection />
+        <SuccessStoriesSection />
       </main>
       <QuantaForgeFooter />
     </div>
