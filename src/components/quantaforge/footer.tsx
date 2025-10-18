@@ -50,7 +50,7 @@ export const QuantaForgeFooter = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 mb-8 md:mb-12">
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center group relative">
-            <img src={TransparentLogo} alt="Quantum Labs Logo" className="h-64 w-auto" />
+            <img src={TransparentLogo} alt="Quantum Labs Logo" className="h-12 w-auto" />
           </Link>
             <p className="text-sm md:text-base text-quantaforge-light/60 mb-4 max-w-sm">
               Pioneering quantum computing solutions for the next generation
