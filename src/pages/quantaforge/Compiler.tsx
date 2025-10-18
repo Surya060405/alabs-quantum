@@ -31,49 +31,49 @@ const Compiler = () => {
       icon: GitBranch,
       title: "Architecture & IR",
       description:
-        "• Design QIR and OpenQASM-compatible compiler pipelines that translate quantum programs into optimized, hardware-agnostic representations.\n• Develop custom compiler passes and dialects to enable fine-grained control over circuit transformations and intermediate optimizations.\n• Integrate seamlessly with heterogeneous quantum backends, ensuring extensibility, interoperability, and long-term compiler scalability and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Design QIR and OpenQASM-compatible compiler pipelines that translate quantum programs into optimized, hardware-agnostic representations.\n• Develop custom compiler passes and dialects to enable fine-grained control over circuit transformations and intermediate optimizations.\n• Integrate seamlessly with heterogeneous quantum backends, ensuring extensibility, interoperability, and long-term compiler scalability and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
     {
       icon: Cpu,
       title: "Gate decomposition",
       description:
-        "• Convert high-level quantum operations into native gate sets through precision-optimized decomposition strategies.\n• Implement basis conversion techniques tailored to specific hardware to minimize depth and improve fidelity.\n• Enable adaptive compilation workflows that automatically select the most efficient gate representations for each backend and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Convert high-level quantum operations into native gate sets through precision-optimized decomposition strategies.\n• Implement basis conversion techniques tailored to specific hardware to minimize depth and improve fidelity.\n• Enable adaptive compilation workflows that automatically select the most efficient gate representations for each backend and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
     {
       icon: Sliders,
       title: "Qubit mapping & routing",
       description:
-        "• Optimize qubit placement and routing using heuristic algorithms such as SABRE and A*, minimizing SWAP overheads and latency.\n• Incorporate real-time noise profiles for hardware-aware mapping that enhances circuit reliability.\n• Balance connectivity constraints with dynamic routing strategies to achieve optimal hardware utilization and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Optimize qubit placement and routing using heuristic algorithms such as SABRE and A*, minimizing SWAP overheads and latency.\n• Incorporate real-time noise profiles for hardware-aware mapping that enhances circuit reliability.\n• Balance connectivity constraints with dynamic routing strategies to achieve optimal hardware utilization and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
     {
       icon: Clock,
       title: "Scheduling",
       description:
-        "• Implement advanced ASAP/ALAP scheduling to reduce idle times and improve quantum circuit throughput.\n• Design cross-talk aware schedulers that dynamically reorder operations to preserve coherence and reduce gate interference.\n• Integrate idle-time decoupling and concurrency optimization for consistent execution across variable device topologies and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Implement advanced ASAP/ALAP scheduling to reduce idle times and improve quantum circuit throughput.\n• Design cross-talk aware schedulers that dynamically reorder operations to preserve coherence and reduce gate interference.\n• Integrate idle-time decoupling and concurrency optimization for consistent execution across variable device topologies and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
     {
       icon: Shield,
       title: "Error mitigation",
       description:
-        "• Incorporate dynamical decoupling, randomized compiling, and twirling techniques to suppress noise accumulation.\n• Utilize bias-aware transpilation strategies that adaptively tailor circuit structure to mitigate systematic errors.\n• Fuse calibration data with runtime adjustments for enhanced resilience against decoherence and gate drift and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Incorporate dynamical decoupling, randomized compiling, and twirling techniques to suppress noise accumulation.\n• Utilize bias-aware transpilation strategies that adaptively tailor circuit structure to mitigate systematic errors.\n• Fuse calibration data with runtime adjustments for enhanced resilience against decoherence and gate drift and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
     {
       icon: Zap,
       title: "Pulse-level optimization",
       description:
-        "• Engineer drive-shape synthesis and parametric gate control for precise pulse-level quantum operations.\n• Utilizing closed-loop calibration hooks to iteratively refine pulse parameters for maximum gate fidelity.\n• Integrate compiler-aware pulse scheduling for hardware-specific timing synchronization and phase correction—and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Engineer drive-shape synthesis and parametric gate control for precise pulse-level quantum operations.\n• Utilizing closed-loop calibration hooks to iteratively refine pulse parameters for maximum gate fidelity.\n• Integrate compiler-aware pulse scheduling for hardware-specific timing synchronization and phase correction—and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
     {
       icon: Code,
       title: "Hybrid runtime",
       description:
-        "• Enable mid-circuit measurements and classical feedback for adaptive quantum execution.\n• Orchestrate parameter sweeping and branching logic for hybrid quantum-classical workflows at runtime.\n• Bridge quantum and classical computation layers for ultra-fast decision loops within dynamic experiments and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Enable mid-circuit measurements and classical feedback for adaptive quantum execution.\n• Orchestrate parameter sweeping and branching logic for hybrid quantum-classical workflows at runtime.\n• Bridge quantum and classical computation layers for ultra-fast decision loops within dynamic experiments and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
     {
       icon: Atom,
       title: "QEC-ready design",
       description:
-        "• Compile logical operations compatible with error-corrected architectures and fault-tolerant protocols.\n• Coordinate syndrome extraction, correction, and decoder integration for next-generation quantum error correction stacks.\n• Build compiler pathways that future-proof quantum workloads for scalable, logical-qubit architectures and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Compile logical operations compatible with error-corrected architectures and fault-tolerant protocols.\n• Coordinate syndrome extraction, correction, and decoder integration for next-generation quantum error correction stacks.\n• Build compiler pathways that future-proof quantum workloads for scalable, logical-qubit architectures and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
   ];
   const engagementModels = [

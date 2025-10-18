@@ -15,31 +15,31 @@ const Tokenization = () => {
       icon: Shield,
       title: "PQC Migration Toolkit",
       description:
-        "• Integrate NIST-selected algorithms such as CRYSTALS-Kyber and Dilithium into existing cryptographic infrastructures with minimal disruption.\n• Enable hybrid TLS handshakes, certificate rollout, and HSM-backed key management for enterprise-grade migration to post-quantum cryptography.\n• Automate deployment pipelines for cryptographic agility, ensuring forward security and compliance readiness and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Integrate NIST-selected algorithms such as CRYSTALS-Kyber and Dilithium into existing cryptographic infrastructures with minimal disruption.\n• Enable hybrid TLS handshakes, certificate rollout, and HSM-backed key management for enterprise-grade migration to post-quantum cryptography.\n• Automate deployment pipelines for cryptographic agility, ensuring forward security and compliance readiness and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
     {
       icon: Lock,
       title: "Tokenization Services",
       description:
-        "• Implement format-preserving and PCI-compliant tokenization architectures for secure data representation.\n• Support vaulted and non-vaulted configurations with deterministic mapping to retain analytical integrity.\n• Deliver scalable tokenization rails that protect sensitive assets while maintaining seamless user experience and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Implement format-preserving and PCI-compliant tokenization architectures for secure data representation.\n• Support vaulted and non-vaulted configurations with deterministic mapping to retain analytical integrity.\n• Deliver scalable tokenization rails that protect sensitive assets while maintaining seamless user experience and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
     {
       icon: GitMerge,
       title: "Blockchain Hardening",
       description:
-        "• Secure decentralized ecosystems with PQC-enabled wallets and quantum-safe threshold signature schemes.\n• Incorporate multiparty computation (MPC) and lattice-based key derivation for tamper-resistant consensus.\n• Enable post-quantum L2 bridges to safeguard cross-chain communication from emerging quantum adversaries and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Secure decentralized ecosystems with PQC-enabled wallets and quantum-safe threshold signature schemes.\n• Incorporate multiparty computation (MPC) and lattice-based key derivation for tamper-resistant consensus.\n• Enable post-quantum L2 bridges to safeguard cross-chain communication from emerging quantum adversaries and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
     {
       icon: Router,
       title: "QKD-Ready Peering",
       description:
-        "• Deploy APIs that integrate Quantum Key Distribution (QKD) channels wherever available for ultimate link-layer security.\n• Implement automated session key management, rotation, and auditing through programmable interfaces.\n• Bridge classical and quantum communication layers for end-to-end authenticated encryption across distributed systems and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Deploy APIs that integrate Quantum Key Distribution (QKD) channels wherever available for ultimate link-layer security.\n• Implement automated session key management, rotation, and auditing through programmable interfaces.\n• Bridge classical and quantum communication layers for end-to-end authenticated encryption across distributed systems and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
     {
       icon: FileText,
       title: "Compliance",
       description:
-        "• Align cryptographic operations with PCI DSS, GDPR, HIPAA, and SOX regulatory standards.\n• Maintain audit-ready chain-of-custody, policy attestations, and standardized key management procedures.\n• Provide compliance-driven cryptographic assurance designed to meet both enterprise governance and quantum-era risk frameworks and more. For more information, please contact info@adyaksharlabs-quantum.com",
+        "Align cryptographic operations with PCI DSS, GDPR, HIPAA, and SOX regulatory standards.\n• Maintain audit-ready chain-of-custody, policy attestations, and standardized key management procedures.\n• Provide compliance-driven cryptographic assurance designed to meet both enterprise governance and quantum-era risk frameworks and more.\n\nFor more information, please contact\ninfo@adyaksharlabs.com",
     },
   ];
   const referenceArchitectures = [
