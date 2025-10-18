@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Atom } from "lucide-react";
+import TransparentLogo from "@/assets/transparent_Logo.png";
 export const QuantaForgeFooter = () => {
   const footerSections = [{
     title: "Solutions",
@@ -48,10 +49,9 @@ export const QuantaForgeFooter = () => {
       <div className="container mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 mb-8 md:mb-12">
           <div className="lg:col-span-2">
-            <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center gap-2 mb-4">
-              <Atom className="h-6 w-6 md:h-8 md:w-8 text-quantaforge-secondary" />
-              <span className="text-xl md:text-2xl font-bold quantaforge-text-gradient">Quantum Labs</span>
-            </Link>
+            <Link to="/" className="flex items-center group relative">
+            <img src={TransparentLogo} alt="Quantum Labs Logo" className="h-64 w-auto" />
+          </Link>
             <p className="text-sm md:text-base text-quantaforge-light/60 mb-4 max-w-sm">
               Pioneering quantum computing solutions for the next generation
             </p>

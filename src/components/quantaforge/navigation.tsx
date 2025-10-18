@@ -64,7 +64,7 @@ export const QuantaForgeNavigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center group relative">
-            <img src={TransparentLogo} alt="Quantum Labs Logo" className="h-52 w-auto" />
+            <img src={TransparentLogo} alt="Quantum Labs Logo" className="h-64 w-auto" />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
