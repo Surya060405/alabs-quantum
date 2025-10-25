@@ -1,73 +1,119 @@
-# Welcome to your Lovable project
+# Quantum Labs - Quantum Computing Solutions Platform
 
-## Project info
+A modern web platform showcasing Adyakshar Laboratories' quantum computing solutions and services, including QuantaForge™ - our comprehensive suite of quantum development tools.
 
-**URL**: https://lovable.dev/projects/81a89765-dfcc-46f6-87d7-1a325a2d72c5
+## About
 
-## How can I edit this code?
+This platform serves as the digital presence for Quantum Labs, featuring our flagship products:
+- **QuantaForge Compiler Studio**: Advanced quantum circuit compilation and optimization
+- **QuantaForge Secured Tokenization**: Enterprise-grade quantum security solutions
+- **QuantaForge Simulation & AI**: High-performance quantum simulation tools
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Animations**: Framer Motion
+- **Routing**: React Router DOM
+- **Forms**: React Hook Form with Zod validation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/81a89765-dfcc-46f6-87d7-1a325a2d72c5) and start prompting.
+## Prerequisites
 
-Changes made via Lovable will be committed automatically to this repo.
+- Node.js (v18 or higher)
+- npm or yarn package manager
 
-**Use your preferred IDE**
+## Development Setup
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd <project-directory>
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Follow these steps:
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+   The application will be available at `http://localhost:8080`
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Available Scripts
 
-# Step 3: Install the necessary dependencies.
-npm i
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build production bundle
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality checks
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## Project Structure
+
+```
+src/
+├── assets/          # Images, logos, and static assets
+├── components/      # Reusable UI components
+│   ├── quantaforge/ # QuantaForge-specific components
+│   └── ui/          # Base UI components (shadcn)
+├── hooks/           # Custom React hooks
+├── lib/             # Utility functions and helpers
+├── pages/           # Page components and routes
+│   ├── features/    # Feature-specific pages
+│   └── quantaforge/ # QuantaForge product pages
+└── main.tsx         # Application entry point
 ```
 
-**Edit a file directly in GitHub**
+## Key Features
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Responsive design optimized for all devices
+- Modern UI with smooth animations and transitions
+- SEO-optimized with proper meta tags and semantic HTML
+- Accessible components following WCAG guidelines
+- Dark mode support
+- Performance optimized with code splitting
 
-**Use GitHub Codespaces**
+## Building for Production
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+The optimized production build will be generated in the `dist` directory.
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The application can be deployed to any static hosting service:
 
-## How can I deploy this project?
+- **Vercel**: Connect your repository and deploy automatically
+- **Netlify**: Drag and drop the `dist` folder or connect via Git
+- **AWS S3 + CloudFront**: Upload build files to S3 bucket
+- **GitHub Pages**: Use with appropriate base path configuration
 
-Simply open [Lovable](https://lovable.dev/projects/81a89765-dfcc-46f6-87d7-1a325a2d72c5) and click on Share -> Publish.
+The project includes a `vercel.json` configuration for seamless Vercel deployment with proper routing support.
 
-## Can I connect a custom domain to my Lovable project?
+## Environment Configuration
 
-Yes, you can!
+For production deployments, ensure proper environment variables are configured for:
+- API endpoints (if applicable)
+- Analytics tracking
+- Third-party integrations
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Browser Support
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contact
+
+**Adyakshar Laboratories**  
+Email: info@adyaksharlabs-quantum.com
+
+## License
+
+Proprietary - All rights reserved by Adyakshar Laboratories
