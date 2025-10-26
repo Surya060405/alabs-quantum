@@ -4,33 +4,28 @@ import { QuantaForgeNavigation } from "@/components/quantaforge/navigation";
 import { RDSection } from "@/components/quantaforge/rd-section";
 import { SuccessStoriesSection } from "@/components/quantaforge/success-stories-section";
 import { QuantaForgeFooter } from "@/components/quantaforge/footer";
-
 const Research = () => {
   const location = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   useEffect(() => {
     if (location.hash) {
       const section = document.getElementById(location.hash.substring(1));
       if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+        section.scrollIntoView({
+          behavior: "smooth"
+        });
       }
     }
   }, [location]);
-
-  return (
-    <div className="min-h-screen bg-quantaforge-dark">
+  return <div className="min-h-screen bg-quantaforge-dark">
       <QuantaForgeNavigation />
       <main className="pt-20">
         <RDSection />
-        <SuccessStoriesSection />
+        
       </main>
       <QuantaForgeFooter />
-    </div>
-  );
+    </div>;
 };
-
 export default Research;
