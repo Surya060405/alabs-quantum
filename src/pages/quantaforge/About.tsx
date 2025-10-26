@@ -201,6 +201,106 @@ const AboutPage = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* What You Get Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl font-bold mb-8 text-quantaforge-light text-center">
+              What You Get
+            </h2>
+            <div className="space-y-6">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="glassmorphism p-6 rounded-xl border border-quantaforge-secondary/20"
+              >
+                <p className="text-quantaforge-light/80 leading-relaxed">
+                  <span className="text-quantaforge-secondary font-semibold">Time‑to‑insight:</span> quantum‑enhanced simulation pipelines with AI/active learning.
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="glassmorphism p-6 rounded-xl border border-quantaforge-secondary/20"
+              >
+                <p className="text-quantaforge-light/80 leading-relaxed">
+                  <span className="text-quantaforge-secondary font-semibold">Time‑to‑execution:</span> hardware‑agnostic, noise‑aware compilation from IR to pulse‑level.
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="glassmorphism p-6 rounded-xl border border-quantaforge-secondary/20"
+              >
+                <p className="text-quantaforge-light/80 leading-relaxed">
+                  <span className="text-quantaforge-secondary font-semibold">Time‑to‑secure:</span> PQC migration, tokenization, QKD‑ready peering for post‑quantum risk.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Lean-Team Impacts Section */}
+      <section className="py-20 bg-quantaforge-primary/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl font-bold mb-8 text-quantaforge-light text-center">
+              Lean‑Team Impacts
+            </h2>
+            <div className="space-y-6">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="glassmorphism p-6 rounded-xl border border-quantaforge-secondary/20"
+              >
+                <p className="text-quantaforge-light/80 leading-relaxed">
+                  <span className="text-quantaforge-secondary font-semibold">Automate model tuning, passes of the compiler, number of simulations</span> → fewer engineer‑hours per release.
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="glassmorphism p-6 rounded-xl border border-quantaforge-secondary/20"
+              >
+                <p className="text-quantaforge-light/80 leading-relaxed">
+                  <span className="text-quantaforge-secondary font-semibold">Cross‑platform portability</span> → less vendor lock‑in and retraining.
+                </p>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="glassmorphism p-6 rounded-xl border border-quantaforge-secondary/20"
+              >
+                <p className="text-quantaforge-light/80 leading-relaxed">
+                  <span className="text-quantaforge-secondary font-semibold">Compliance‑ready tokenization/PQC</span> → lower audit and ops overhead.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
       
       <QuantaForgeFooter />
     </div>;
