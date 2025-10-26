@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import TransparentLogo from "@/assets/transparent_Logo.png";
+import TransparentLogo from "@/assets/transparent_logo_new.png";
 import { Cpu, Shield, Atom, Code, Wrench, Users, Lightbulb, Network } from "lucide-react";
 const whyItems = [{
   icon: Cpu,
