@@ -188,6 +188,43 @@ const Tokenization = () => {
           </div>
         </section>
 
+        {/* Application and Use Cases */}
+        <section className="py-24 bg-quantaforge-primary/50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-4 text-quantaforge-light">Application and Use Cases</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto space-y-4">
+              {[
+                "Enterprise migration to post-quantum encryption for financial and healthcare data.",
+                "Quantum-safe payment tokenization for digital banking and blockchain networks.",
+                "Securing cross-chain communication through quantum-resistant protocols.",
+                "Implementing hybrid TLS frameworks for quantum-era secure web communication.",
+                "Building compliance-ready infrastructures for future regulatory requirements.",
+                "Quantum‑safe data protection in finance/healthcare; payment tokenization; secure cross‑chain comms; regulated‑industry readiness.",
+              ].map((useCase, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-start gap-4 p-4 rounded-lg bg-quantaforge-dark/50 border border-quantaforge-accent/20"
+                >
+                  <CheckCircle className="h-6 w-6 text-quantaforge-accent flex-shrink-0 mt-1" />
+                  <p className="text-quantaforge-light/80">{useCase}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Reference Architectures */}
         <section className="py-24 bg-quantaforge-primary/50">
           <div className="container mx-auto px-4">

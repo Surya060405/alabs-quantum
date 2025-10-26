@@ -208,6 +208,42 @@ const Simulation = () => {
           </div>
         </section>
 
+        {/* Application and Use Cases */}
+        <section className="py-24 bg-quantaforge-primary/50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-4 text-quantaforge-light">Application and Use Cases</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto space-y-4">
+              {[
+                "Electronic structure & reaction mechanisms; lattice models and emergent phenomena.",
+                "Exploring lattice models in quantum materials and studying emergent phenomena.",
+                "AI‑assisted quantum chemistry workflows and methodologies for drug/catalyst discovery; large‑scale parameter optimization.",
+                "Accelerating parameter tuning and optimization in large-scale simulation environments.",
+                "Supporting hybrid quantum–classical co-design experiments.",
+              ].map((useCase, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-start gap-4 p-4 rounded-lg bg-quantaforge-dark/50 border border-quantaforge-success/20"
+                >
+                  <CheckCircle className="h-6 w-6 text-quantaforge-success flex-shrink-0 mt-1" />
+                  <p className="text-quantaforge-light/80">{useCase}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Deliverables */}
         <section className="py-24 bg-quantaforge-primary/50">
           <div className="container mx-auto px-4">

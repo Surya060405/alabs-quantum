@@ -238,6 +238,42 @@ const Compiler = () => {
           </div>
         </section>
 
+        {/* Application and Use Cases */}
+        <section className="py-24 bg-quantaforge-primary/50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-4 text-quantaforge-light">Application and Use Cases</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto space-y-4">
+              {[
+                "Optimizing quantum circuits for chemistry, optimization, and cryptography workloads.",
+                "Adapting algorithms to different quantum backends (e.g., IBM Q, IonQ, Rigetti).",
+                "Automating error mitigation for near-term noisy devices.",
+                "Supporting compiler research for quantum software engineering.",
+                "Preparing industrial workloads for future error-corrected quantum computers.",
+              ].map((useCase, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-start gap-4 p-4 rounded-lg bg-quantaforge-dark/50 border border-quantaforge-secondary/20"
+                >
+                  <CheckCircle className="h-6 w-6 text-quantaforge-secondary flex-shrink-0 mt-1" />
+                  <p className="text-quantaforge-light/80">{useCase}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Engagement Models */}
         <section className="py-24 bg-quantaforge-primary/50">
           <div className="container mx-auto px-4">
