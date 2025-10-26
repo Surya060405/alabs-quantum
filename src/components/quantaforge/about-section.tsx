@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Cpu, Shield, Atom, Code, Wrench, Users, Lightbulb, Network } from "lucide-react";
-import quantumLabsLogo from "@/assets/logo_ALabs.png";
 const whyItems = [{
   icon: Cpu,
   title: "Optimize Complex Processes",
@@ -52,12 +51,9 @@ export const AboutQuantumLabs = () => {
       }} viewport={{
         once: true
       }} className="max-w-4xl mx-auto mb-12 md:mb-20 text-center">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4 md:mb-6">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-quantaforge-secondary">
-              Introducing
-            </h3>
-            <img src={quantumLabsLogo} alt="Quantum Labs" className="h-8 sm:h-10 md:h-12 w-auto" />
-          </div>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-quantaforge-secondary">
+            Introducing Quantum Labs
+          </h3>
           <p className="text-sm md:text-base text-quantaforge-light/70 leading-relaxed max-w-3xl mx-auto">
             <span className="text-quantaforge-secondary font-semibold">Quantum Labs</span> (a division of Adyakshar Labs) helps engineering leaders ship credible quantum initiatives with lean teams and predictable ROI. Our technology stack spans Quantum Simulation & AI, Quantum Compiler Studio, and Quantum‑Safe Tokenization, integrating with your GPUs/HPC, existing ML frameworks, and major quantum backends. You gain faster iteration, lower manpower cost, and a secure path to production and PQC migration—without a hiring spike. Founded by accomplished high tech veterans from different domains, Quantum Labs aspires to be a trusted solution partner for emerging quantum entrepreneurs and R&D teams. For more information about Quantum Labs and its novel solutions in the quantum landscape, please visit: <a href="https://www.alabs-quantum.com" target="_blank" rel="noopener noreferrer" className="text-quantaforge-secondary hover:underline">www.alabs-quantum.com</a> or contact us via email: <a href="mailto:info@alabs-quantum.com" className="text-quantaforge-secondary hover:underline">info@alabs-quantum.com</a>
           </p>
