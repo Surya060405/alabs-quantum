@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import logo from "@/assets/logo_ALabs.png";
+import TransparentLogo from "@/assets/transparent_Logo.png"; // Import the transparent logo
+
 export const QuantaForgeHero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">

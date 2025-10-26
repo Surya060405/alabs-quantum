@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { QuantaForgeNavigation } from "@/components/quantaforge/navigation";
 import { QuantaForgeFooter } from "@/components/quantaforge/footer";
 import { Lightbulb, Target, Users, Rocket, Code, Wrench, Shield, Network, Award, ArrowRight } from "lucide-react";
+import TransparentLogo from "@/assets/transparent_Logo.png"; // Import the transparent logo
+
 const AboutPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -76,8 +78,8 @@ const AboutPage = () => {
           duration: 0.8
         }} className="max-w-4xl mx-auto text-center">
             
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 quantaforge-text-gradient">
-              About Quantum Labs
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 quantaforge-text-gradient flex items-center justify-center gap-2">
+              About <img src={TransparentLogo} alt="Quantum Labs Logo" className="h-12 mx-4 mt-4 md:h-16 w-auto" />
             </h1>
             <p className="text-xl text-quantaforge-light/70 leading-relaxed">
               Pioneering the future of quantum computing through innovation, expertise, and partnership
