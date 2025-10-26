@@ -52,10 +52,10 @@ export const AboutQuantumLabs = () => {
       }} viewport={{
         once: true
       }} className="max-w-4xl mx-auto mb-12 md:mb-20 text-center">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-quantaforge-secondary">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-quantaforge-secondary flex items-center justify-center gap-2">
             Introducing 
+            <img src={TransparentLogo} alt="Quantum Labs Logo" className="h-8 sm:h-10 md:h-12 w-auto" />
           </h3>
-          <img src={TransparentLogo} alt="Quantum Labs Logo" className="h-12 mx-4 mt-4 md:h-16 w-auto" />
           <p className="text-sm md:text-base text-quantaforge-light/70 leading-relaxed max-w-3xl mx-auto">
             <span className="text-quantaforge-secondary font-semibold">Quantum Labs</span> (a division of Adyakshar Labs) helps engineering leaders ship credible quantum initiatives with lean teams and predictable ROI. Our technology stack spans Quantum Simulation & AI, Quantum Compiler Studio, and Quantum‑Safe Tokenization, integrating with your GPUs/HPC, existing ML frameworks, and major quantum backends. You gain faster iteration, lower manpower cost, and a secure path to production and PQC migration—without a hiring spike. Founded by accomplished high tech veterans from different domains, Quantum Labs aspires to be a trusted solution partner for emerging quantum entrepreneurs and R&D teams. For more information about Quantum Labs and its novel solutions in the quantum landscape, please visit: <a href="https://www.alabs-quantum.com" target="_blank" rel="noopener noreferrer" className="text-quantaforge-secondary hover:underline">www.alabs-quantum.com</a> or contact us via email: <a href="mailto:info@alabs-quantum.com" className="text-quantaforge-secondary hover:underline">info@alabs-quantum.com</a>
           </p>
