@@ -170,8 +170,46 @@ const Simulation = () => {
           </div>
         </section>
 
-        {/* Deliverables */}
+        {/* Value Propositions */}
         <section className="py-24 bg-quantaforge-dark">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-4 text-quantaforge-light">Value Propositions</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto space-y-4">
+              {[
+                "Bridges quantum level precision with classical computing speed for realistic, noise-resilient modeling.",
+                "Reduces simulation costs and time through intelligent automation and adaptive learning.",
+                "Provides modular integration and supports cloud as well as on-prem interoperability with leading ML frameworks like PyTorch, JAX, HPC schedulers etc.",
+                "Offers scalable, HPC-compatible execution for enterprise and academic research.",
+                "Fosters interdisciplinary R&D between quantum computing, materials science, and AI.",
+                "Replace manual sweep/tuning with active‑learning; reduce expensive wet‑lab or long HPC queues via pre‑deployment simulation.",
+                "Standardize workflows to use pipelines across projects instead of one‑off scripts.",
+              ].map((value, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-start gap-4 p-4 rounded-lg bg-quantaforge-primary/50 border border-quantaforge-success/20"
+                >
+                  <CheckCircle className="h-6 w-6 text-quantaforge-success flex-shrink-0 mt-1" />
+                  <p className="text-quantaforge-light/80">{value}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Deliverables */}
+        <section className="py-24 bg-quantaforge-primary/50">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{
@@ -279,6 +317,55 @@ const Simulation = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Pilot to Production */}
+        <section className="py-24 bg-quantaforge-dark">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-4xl font-bold mb-12 text-quantaforge-light">Pilot to Production</h2>
+              <div className="space-y-6">
+                {[
+                  {
+                    phase: "0–2 weeks",
+                    description: "problem framing + dataset/hamiltonian prep; success metrics."
+                  },
+                  {
+                    phase: "3–6 weeks",
+                    description: "hybrid solver baselines; AI‑assisted tuning; HPC sizing."
+                  },
+                  {
+                    phase: "7–12 weeks",
+                    description: "validation + report; hand‑off with reproducible pipelines."
+                  }
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.15 }}
+                    className="p-6 rounded-xl border border-quantaforge-success/20 bg-quantaforge-primary/50"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-quantaforge-success to-quantaforge-accent flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold">{index + 1}</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-quantaforge-success mb-2">{item.phase}</h3>
+                        <p className="text-quantaforge-light/70">{item.description}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </section>
 

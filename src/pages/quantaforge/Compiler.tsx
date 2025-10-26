@@ -200,8 +200,46 @@ const Compiler = () => {
           </div>
         </section>
 
-        {/* Engagement Models */}
+        {/* Value Propositions */}
         <section className="py-24 bg-quantaforge-dark">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-4 text-quantaforge-light">Value Propositions</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto space-y-4">
+              {[
+                "Converts fragile quantum circuits into hardware-ready, stable implementations.",
+                "Reduces execution latency and noise effects through adaptive compilation.",
+                "Provides deep control from high-level IR down to pulse execution.",
+                "Future-proofs enterprise quantum workloads for the era of logical qubits.",
+                "Automates mapping/routing/scheduling; reduce human gate‑level intervention.",
+                "Cross‑platform portability lowers rework when switching vendors.",
+                "Pulse‑level tooling lets a small team reach the desired performance level which was once limited to device specialists.",
+              ].map((value, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-start gap-4 p-4 rounded-lg bg-quantaforge-primary/50 border border-quantaforge-secondary/20"
+                >
+                  <CheckCircle className="h-6 w-6 text-quantaforge-secondary flex-shrink-0 mt-1" />
+                  <p className="text-quantaforge-light/80">{value}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Engagement Models */}
+        <section className="py-24 bg-quantaforge-primary/50">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{
@@ -373,6 +411,55 @@ const Compiler = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Pilot to Production */}
+        <section className="py-24 bg-quantaforge-primary/50">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-4xl font-bold mb-12 text-quantaforge-light">Pilot to Production</h2>
+              <div className="space-y-6">
+                {[
+                  {
+                    phase: "0–2 weeks",
+                    description: "workload intake; IR standardization; baseline transpilation."
+                  },
+                  {
+                    phase: "3–6 weeks",
+                    description: "mapping/scheduling policy tuning; initial mitigation."
+                  },
+                  {
+                    phase: "7–12 weeks",
+                    description: "pulse‑level passes where applicable; KPI review; CI/CD integration."
+                  }
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.15 }}
+                    className="p-6 rounded-xl border border-quantaforge-secondary/20 bg-quantaforge-dark/50"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-quantaforge-secondary to-quantaforge-accent flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold">{index + 1}</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-quantaforge-secondary mb-2">{item.phase}</h3>
+                        <p className="text-quantaforge-light/70">{item.description}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </section>
       </main>

@@ -151,8 +151,45 @@ const Tokenization = () => {
           </div>
         </section>
 
-        {/* Reference Architectures */}
+        {/* Value Propositions */}
         <section className="py-24 bg-quantaforge-dark">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h2 className="text-4xl font-bold mb-4 text-quantaforge-light">Value Propositions</h2>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto space-y-4">
+              {[
+                "Delivers forward-secure, quantum-resistant encryption across all layers.",
+                "Enables cryptographic agility and smooth PQC migration for legacy systems.",
+                "Strengthens Web3, IoT, and financial networks against quantum adversaries.",
+                "Ensures compliance and audit-readiness for enterprise-grade cryptographic governance.",
+                "Bridges classical and quantum security models for long-term digital resilience.",
+                "Quantum‑safe data protection in finance/healthcare; payment tokenization; secure cross‑chain comms; regulated‑industry readiness.",
+              ].map((value, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-start gap-4 p-4 rounded-lg bg-quantaforge-primary/50 border border-quantaforge-accent/20"
+                >
+                  <CheckCircle className="h-6 w-6 text-quantaforge-accent flex-shrink-0 mt-1" />
+                  <p className="text-quantaforge-light/80">{value}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Reference Architectures */}
+        <section className="py-24 bg-quantaforge-primary/50">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{
@@ -311,6 +348,55 @@ const Tokenization = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Pilot to Production */}
+        <section className="py-24 bg-quantaforge-dark">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+            >
+              <h2 className="text-4xl font-bold mb-12 text-quantaforge-light">Pilot to Production</h2>
+              <div className="space-y-6">
+                {[
+                  {
+                    phase: "0–2 weeks",
+                    description: "crypto inventory; risk mapping; pilot boundary."
+                  },
+                  {
+                    phase: "3–6 weeks",
+                    description: "hybrid TLS enablement; tokenization in a gold path."
+                  },
+                  {
+                    phase: "7–12 weeks",
+                    description: "phased PQC rollout; SIEM/control integration; go‑live."
+                  }
+                ].map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.15 }}
+                    className="p-6 rounded-xl border border-quantaforge-accent/20 bg-quantaforge-primary/50"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-quantaforge-accent to-quantaforge-success flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold">{index + 1}</span>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-quantaforge-accent mb-2">{item.phase}</h3>
+                        <p className="text-quantaforge-light/70">{item.description}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </section>
 
