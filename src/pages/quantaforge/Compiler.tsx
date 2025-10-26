@@ -298,6 +298,83 @@ const Compiler = () => {
             </div>
           </div>
         </section>
+
+        {/* Success Stories */}
+        <section className="py-24 bg-quantaforge-dark relative overflow-hidden">
+          <div className="absolute inset-0 quantum-grid opacity-20" />
+          <div className="absolute top-1/4 right-3/4 w-96 h-96 bg-quantaforge-secondary/10 rounded-full blur-[120px]" />
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 quantaforge-text-gradient">
+                Success Stories
+              </h2>
+              <p className="text-xl text-quantaforge-light/70 max-w-3xl mx-auto">
+                Real-world achievements in quantum compiler optimization
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Architecture & IR",
+                  content: "QIR / OpenQASM pipelines for hardware‑independent translation."
+                },
+                {
+                  title: "Qubit Mapping & Routing",
+                  content: "SABRE, A*; ASAP/ALAP scheduling with cross‑talk‑aware optimization techniques."
+                },
+                {
+                  title: "Error Mitigation",
+                  content: "Randomized compiling, twirling, bias‑aware transpilation."
+                },
+                {
+                  title: "Pulse-Level Optimization",
+                  content: "Drive‑shape synthesis, closed‑loop calibration; hybrid runtime with MCM and branching."
+                },
+                {
+                  title: "QEC-Ready Design",
+                  content: "For logical‑qubit architectures."
+                },
+                {
+                  title: "Advanced Scheduling",
+                  content: "Implemented advanced ASAP/ALAP scheduling and cross-talk-aware optimization for better throughput."
+                }
+              ].map((story, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="glassmorphism bg-quantaforge-primary/30 backdrop-blur-xl border-quantaforge-light/10 rounded-xl p-8 flex flex-col"
+                >
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-quantaforge-secondary/20 border border-quantaforge-secondary/30 mb-6">
+                    <CheckCircle className="h-7 w-7 text-quantaforge-secondary" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-quantaforge-light mb-4">
+                    {story.title}
+                  </h3>
+                  <p className="text-quantaforge-light/80 text-base flex-grow">
+                    {story.content}
+                  </p>
+                  <p className="text-quantaforge-secondary text-sm font-medium mt-6">
+                    For more information, contact:{" "}
+                    <a href="mailto:info@alabs-quantum.com" className="hover:underline">
+                      info@alabs-quantum.com
+                    </a>
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
 
       <QuantaForgeFooter />

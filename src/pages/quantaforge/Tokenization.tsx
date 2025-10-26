@@ -249,6 +249,71 @@ const Tokenization = () => {
           </div>
         </section>
 
+        {/* Success Stories */}
+        <section className="py-24 bg-quantaforge-dark relative overflow-hidden">
+          <div className="absolute inset-0 quantum-grid opacity-20" />
+          <div className="absolute top-1/4 left-3/4 w-96 h-96 bg-quantaforge-accent/10 rounded-full blur-[120px]" />
+          
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 quantaforge-text-gradient">
+                Success Stories
+              </h2>
+              <p className="text-xl text-quantaforge-light/70 max-w-3xl mx-auto">
+                Real-world achievements in quantum-resistant security
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {[
+                {
+                  title: "PQC Migration Toolkit",
+                  content: "Kyber, Dilithium; hybrid TLS; cryptographic agility."
+                },
+                {
+                  title: "Tokenization Services",
+                  content: "PCI‑compliant, format‑preserving; blockchain hardening with PQC‑enabled wallets and MPC‑based consensus."
+                },
+                {
+                  title: "QKD-Ready Peering",
+                  content: "QKD‑ready peering and compliance frameworks (GDPR, PCI DSS, HIPAA)."
+                }
+              ].map((story, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="glassmorphism bg-quantaforge-primary/30 backdrop-blur-xl border-quantaforge-light/10 rounded-xl p-8 flex flex-col"
+                >
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-quantaforge-accent/20 border border-quantaforge-accent/30 mb-6">
+                    <CheckCircle className="h-7 w-7 text-quantaforge-accent" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-quantaforge-light mb-4">
+                    {story.title}
+                  </h3>
+                  <p className="text-quantaforge-light/80 text-base flex-grow">
+                    {story.content}
+                  </p>
+                  <p className="text-quantaforge-accent text-sm font-medium mt-6">
+                    For more information, contact:{" "}
+                    <a href="mailto:info@alabs-quantum.com" className="hover:underline">
+                      info@alabs-quantum.com
+                    </a>
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
       </main>
 
