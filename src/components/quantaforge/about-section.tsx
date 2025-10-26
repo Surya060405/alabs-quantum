@@ -71,7 +71,7 @@ export const AboutQuantumLabs = () => {
         >
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-quantaforge-secondary flex items-center justify-center gap-2">
             Introducing
-            <img src={TransparentLogo} alt="Quantum Labs Logo" className="h-12 mx-4 mt-4 md:h-16 w-auto" />
+            <img src={TransparentLogo} alt="Quantum Labs Logo" className="h-12 mx-2 mt-4 md:h-16 w-auto" />
           </h3>
           <p className="text-sm md:text-base text-quantaforge-light/70 leading-relaxed max-w-3xl mx-auto">
             <span className="text-quantaforge-secondary font-semibold">Quantum Labs</span> (a division of Adyakshar
