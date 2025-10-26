@@ -38,9 +38,6 @@ export const QuantaForgeFooter = () => {
       name: "Technology",
       href: "/technologies"
     }, {
-      name: "Case Studies",
-      href: "/case-studies"
-    }, {
       name: "Contact",
       href: "/contact"
     }]

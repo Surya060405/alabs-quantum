@@ -15,7 +15,6 @@ import Industries from "./pages/quantaforge/Industries";
 import Technologies from "./pages/quantaforge/Technologies";
 import Contact from "./pages/quantaforge/Contact";
 import About from "./pages/quantaforge/About";
-import CaseStudies from "./pages/quantaforge/CaseStudies";
 import Resources from "./pages/quantaforge/Resources";
 import Research from "./pages/quantaforge/Research";
 
@@ -51,14 +50,12 @@ const App = () => (
           <Route path="/technologies" element={<Technologies />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/research" element={<Research />} />
           <Route path="/quantumlabs/industries" element={<Industries />} />
           <Route path="/quantumlabs/technologies" element={<Technologies />} />
           <Route path="/quantumlabs/contact" element={<Contact />} />
           <Route path="/quantumlabs/about" element={<About />} />
-          <Route path="/quantumlabs/case-studies" element={<CaseStudies />} />
           <Route path="/quantumlabs/resources" element={<Resources />} />
           <Route path="/quantumlabs/research" element={<Research />} />
           
